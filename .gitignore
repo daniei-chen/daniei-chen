@@ -1,0 +1,14 @@
+# 本地预览产物（刻意不提交）
+preview/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
