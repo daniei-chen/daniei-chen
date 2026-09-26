@@ -82,6 +82,14 @@ AURORA = {
 }
 
 
+def project_repos(data: dict) -> list[dict]:
+    """排除与用户名同名的仓库（主页 README 的载体），它不是项目。
+    不这么做的话，主页上会冒出一张"关于主页仓库自己"的项目卡，
+    语言构成的字节统计也会被 tools/ 里的 Python 带偏。"""
+    login = data["user"]["login"].lower()
+    return [r for r in data["repos"] if r["name"].lower() != login]
+
+
 def esc(s: str) -> str:
     return sx.escape(s, {'"': "&quot;"})
 
@@ -299,9 +307,9 @@ def stats(mode: str, data: dict) -> str:
     p = PAL[mode]
     W, H = 1000, 116
     c = data["contributions"]
-    stars = sum(r["stars"] for r in data["repos"])
+    stars = sum(r["stars"] for r in project_repos(data))
     days = (date.today() - date.fromisoformat(data["user"]["created_at"][:10])).days
-    items = [("公开仓库", len(data["repos"]), p["cyan"]),
+    items = [("项目仓库", len(project_repos(data)), p["cyan"]),
              ("获得星标", stars, p["violet2"]),
              ("公开贡献", c["total"], p["teal"]),
              ("加入天数", days, p["pink"])]
@@ -451,18 +459,287 @@ def activity(mode: str, data: dict) -> str:
     return svg(W, H, "加入以来的每日提交", defs, "".join(body))
 
 
+# ----------------------------------------------------------------------------
+# 6) 章节标题组件
+# ----------------------------------------------------------------------------
+SECTIONS = [
+    ("about", "🧑‍💻", "关于我", "About"),
+    ("stack", "🛠", "技术栈", "Tech Stack"),
+    ("projects", "🚀", "在做的东西", "Projects"),
+    ("stats", "📈", "数据与轨迹", "Stats & Activity"),
+    ("focus", "🎯", "方向与投入", "Focus"),
+]
+
+
+def header(icon: str, zh: str, en: str, mode: str) -> str:
+    p = PAL[mode]
+    W, H = 1000, 92
+    defs = (f'<linearGradient id="hzh" x1="0" y1="0" x2="1" y2="0">'
+            f'<stop offset="0" stop-color="{p["cyan2"]}"/>'
+            f'<stop offset="0.55" stop-color="{p["cyan"]}"/>'
+            f'<stop offset="1" stop-color="{p["violet2"]}"/></linearGradient>'
+            f'<linearGradient id="hrule" x1="0" y1="0" x2="1" y2="0">'
+            f'<stop offset="0" stop-color="{p["cyan"]}" stop-opacity="0.85"/>'
+            f'<stop offset="0.5" stop-color="{p["violet"]}" stop-opacity="0.45"/>'
+            f'<stop offset="1" stop-color="{p["violet"]}" stop-opacity="0"/></linearGradient>'
+            '<linearGradient id="hsweep" x1="0" y1="0" x2="1" y2="0">'
+            '<stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
+            '<stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.9"/>'
+            '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>'
+            f'<clipPath id="hic"><rect x="0" y="16" width="56" height="56" rx="16"/></clipPath>')
+    body = [
+        # 图标胶囊
+        f'<rect x="0" y="16" width="56" height="56" rx="16" fill="{p["cyan"]}" fill-opacity="0.10" '
+        f'stroke="{p["cyan"]}" stroke-opacity="0.38"/>'
+        f'<g clip-path="url(#hic)"><rect x="-56" y="16" width="56" height="56" fill="{p["cyan"]}" '
+        f'fill-opacity="0.16"><animate attributeName="x" values="-56;56" dur="3.4s" '
+        f'repeatCount="indefinite"/></rect></g>'
+        # 必须显式写 fill：SVG 根元素是 fill="none"，不写 fill 的文字会继承成
+        # none 而完全不可见（插图图标这里已经踩过一次坑）。
+        f'<text x="28" y="54" text-anchor="middle" font-family="{FONT}" font-size="27" '
+        f'fill="{p["text"]}">{icon}</text>',
+        # 中文大标题 + 英文小标
+        f'<text x="76" y="47" font-family="{FONT}" font-size="30" font-weight="800" '
+        f'fill="url(#hzh)">{esc(zh)}</text>'
+        f'<text x="78" y="68" font-family="{FONT}" font-size="11" font-weight="700" '
+        f'letter-spacing="3.2" fill="{p["dim"]}">{esc(en.upper())}</text>',
+        # 底部分隔线 + 扫光
+        f'<rect x="0" y="89" width="{W}" height="2" rx="1" fill="url(#hrule)"/>'
+        '<rect x="-220" y="87.5" width="220" height="5" rx="2.5" fill="url(#hsweep)">'
+        '<animate attributeName="x" values="-220;1000" dur="3.8s" repeatCount="indefinite"/></rect>',
+    ]
+    return svg(W, H, f'{zh} · {en}', defs, "".join(body))
+
+
+# ----------------------------------------------------------------------------
+# 7) 终端卡片（逐行打字）
+# ----------------------------------------------------------------------------
+TERM_LINES = [
+    ("$ whoami", "cmd"),
+    ("陈丹妮 · 独立开发者 / Indie Developer", "out"),
+    ("$ cat stack.txt", "cmd"),
+    ("Flutter · Dart · Android · WebView · Python", "out"),
+    ("$ ls ~/repos", "cmd"),
+    ("小鲸鱼/      ZCode-App/", "out"),
+]
+
+
+def terminal(mode: str) -> str:
+    p = PAL[mode]
+    W = 1000
+    line_h, top = 34, 74
+    H = top + line_h * len(TERM_LINES) + 22
+    cycle = 13.0
+    defs, body = [bg_grad(p, "tmbg")], []
+    body.append(panel(p, "tmbg", W, H, 18))
+    # 标题栏 + 三个圆点
+    body.append(f'<rect x="0" y="0" width="{W}" height="46" rx="18" fill="{p["cyan"]}" '
+                f'fill-opacity="0.05"/><rect x="0" y="30" width="{W}" height="16" '
+                f'fill="{p["cyan"]}" fill-opacity="0.05"/>')
+    for i, c in enumerate((p["pink"], "#FBBF24", p["teal"])):
+        body.append(f'<circle cx="{34 + i*22}" cy="23" r="6" fill="{c}" opacity="0.85"/>')
+    body.append(f'<text x="{W/2}" y="28" text-anchor="middle" font-family="{FONT}" '
+                f'font-size="12" fill="{p["dim"]}">daniei-chen — zsh</text>')
+
+    for i, (text, kind) in enumerate(TERM_LINES):
+        y = top + i * line_h
+        color = p["cyan2"] if kind == "cmd" else p["text"]
+        weight = "600" if kind == "cmd" else "400"
+        tw = text_w(text, 16) + 10
+        t0 = 0.4 + i * 0.62
+        dur = 0.34
+        kt = f"0;{t0/cycle:.4f};{(t0+dur)/cycle:.4f};0.997;1"
+        defs.append(
+            f'<clipPath id="tm{i}"><rect x="34" y="{y-18}" width="0" height="26">'
+            f'<animate attributeName="width" values="0;0;{tw:.0f};{tw:.0f};0" keyTimes="{kt}" '
+            f'dur="{cycle}s" repeatCount="indefinite"/></rect></clipPath>')
+        body.append(
+            f'<g clip-path="url(#tm{i})"><text x="34" y="{y}" font-family="{FONT}" '
+            f'font-size="16" font-weight="{weight}" fill="{color}">{esc(text)}</text></g>')
+    # 末行闪烁光标
+    last_y = top + (len(TERM_LINES)) * line_h - 16
+    body.append(f'<rect x="34" y="{last_y}" width="9" height="18" fill="{p["cyan"]}">'
+                f'<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.44;0.46;0.98;1" '
+                f'dur="13s" repeatCount="indefinite"/></rect>')
+    return svg(W, H, "终端卡片", "".join(defs), "".join(body))
+
+
+# ----------------------------------------------------------------------------
+# 8) 语言构成环形图
+# ----------------------------------------------------------------------------
+LANG_COLOR = {
+    "Dart": "#0175C2", "Python": "#3776AB", "HTML": "#E34F26", "JavaScript": "#F7DF1E",
+    "Kotlin": "#7F52FF", "Shell": "#4EAA25", "PowerShell": "#5391FE", "CSS": "#663399",
+    "C++": "#F34B7D", "Java": "#B07219", "Swift": "#F05138", "Go": "#00ADD8",
+}
+
+
+def lang(mode: str, data: dict) -> str:
+    p = PAL[mode]
+    W, H = 1000, 230
+    agg: dict[str, int] = {}
+    for r in project_repos(data):
+        for k, v in r["langs"].items():
+            agg[k] = agg.get(k, 0) + v
+    items = sorted(agg.items(), key=lambda kv: -kv[1])
+    top, rest = items[:5], sum(v for _, v in items[5:])
+    segs = [[n, v] for n, v in top]
+    if rest:
+        segs.append(["其他", rest])
+    total = sum(v for _, v in segs) or 1
+
+    cx, cy, r, sw = 132, 118, 70, 22
+    circ = 2 * 3.141592653589793 * r
+    defs, body = [bg_grad(p, "lgbg")], [panel(p, "lgbg", W, H, 18)]
+    body.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{p["stroke"]}" '
+                f'stroke-opacity="0.35" stroke-width="{sw}"/>')
+    acc = 0.0
+    for i, (name, val) in enumerate(segs):
+        frac = val / total
+        seg_len = max(circ * frac - 3.0, 1.0)
+        color = LANG_COLOR.get(name, p["violet2"] if name == "其他" else p["teal"])
+        rot = -90 + 360 * acc
+        acc += frac
+        defs.append(f'<linearGradient id="lg{i}" x1="0" y1="0" x2="1" y2="1">'
+                    f'<stop offset="0" stop-color="{color}"/>'
+                    f'<stop offset="1" stop-color="{color}" stop-opacity="0.72"/></linearGradient>')
+        body.append(
+            f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="url(#lg{i})" '
+            f'stroke-width="{sw}" stroke-dasharray="0 {circ:.1f}" '
+            f'transform="rotate({rot:.2f} {cx} {cy})" stroke-linecap="butt">'
+            f'<animate attributeName="stroke-dasharray" values="0 {circ:.1f};{seg_len:.1f} '
+            f'{circ-seg_len:.1f}" dur="0.9s" begin="{0.15 + i*0.13:.2f}s" fill="freeze"/></circle>')
+    # 圆心
+    top_name, top_val = segs[0]
+    body.append(f'<text x="{cx}" y="{cy - 2}" text-anchor="middle" font-family="{FONT}" '
+                f'font-size="30" font-weight="800" fill="{p["cyan2"]}">'
+                f'{top_val*100/total:.0f}%</text>'
+                f'<text x="{cx}" y="{cy + 20}" text-anchor="middle" font-family="{FONT}" '
+                f'font-size="12" fill="{p["muted"]}">{esc(top_name)}</text>')
+    # 图例
+    body.append(f'<text x="290" y="46" font-family="{FONT}" font-size="15" font-weight="700" '
+                f'fill="{p["text"]}">代码语言构成</text>'
+                f'<text x="{W-40}" y="46" text-anchor="end" font-family="{FONT}" font-size="12" '
+                f'fill="{p["dim"]}">按仓库字节统计 · 共 {len(project_repos(data))} 个项目仓库</text>')
+    for i, (name, val) in enumerate(segs):
+        col = i % 2
+        row = i // 2
+        x = 290 + col * 350
+        y = 92 + row * 44
+        color = LANG_COLOR.get(name, p["violet2"] if name == "其他" else p["teal"])
+        pct = val * 100 / total
+        body.append(
+            f'<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" '
+            f'begin="{0.3 + i*0.1:.2f}s" fill="freeze"/>'
+            f'<circle cx="{x}" cy="{y-4}" r="5.5" fill="{color}"/>'
+            f'<text x="{x+16}" y="{y}" font-family="{FONT}" font-size="14" '
+            f'fill="{p["text"]}">{esc(name)}</text>'
+            f'<text x="{x+320}" y="{y}" text-anchor="end" font-family="{FONT}" font-size="13" '
+            f'font-weight="700" fill="{p["muted"]}">{pct:.1f}%</text></g>')
+    return svg(W, H, "代码语言构成", "".join(defs), "".join(body))
+
+
+# ----------------------------------------------------------------------------
+# 9) 项目卡
+# ----------------------------------------------------------------------------
+REPO_META = {
+    "Little-Whale": {
+        "display": "小鲸鱼",
+        "blurb": "粘贴链接，保存无水印原片。解析全程在手机本地完成，链接不上传、不经过任何服务器。",
+    },
+    "ZCode-App": {
+        "display": "ZCode-App",
+        "blurb": "在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。",
+    },
+}
+
+
+def wrap(text: str, max_w: float, size: float) -> list[str]:
+    out, cur = [], ""
+    for ch in text:
+        if text_w(cur + ch, size) > max_w and cur:
+            out.append(cur)
+            cur = ch
+        else:
+            cur += ch
+    if cur:
+        out.append(cur)
+    return out
+
+
+def project(mode: str, repo: dict) -> str:
+    p = PAL[mode]
+    W, H = 1000, 178
+    meta = REPO_META.get(repo["name"], {})
+    display = meta.get("display", repo["name"])
+    blurb = meta.get("blurb", repo["desc"])
+    lic = repo["license"] or "未声明许可"
+    updated = repo["pushed_at"][:10]
+    lcolor = LANG_COLOR.get(repo["lang"], p["cyan"])
+    defs = (bg_grad(p, "pbg")
+            + f'<linearGradient id="pav" x1="0" y1="0" x2="1" y2="1">'
+              f'<stop offset="0" stop-color="{p["cyan"]}"/>'
+              f'<stop offset="1" stop-color="{p["violet"]}"/></linearGradient>'
+            '<linearGradient id="pshine" x1="0" y1="0" x2="1" y2="0">'
+            '<stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
+            '<stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.30"/>'
+            '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>'
+            f'<clipPath id="pclip"><rect width="{W}" height="{H}" rx="18"/></clipPath>')
+    body = [panel(p, "pbg", W, H, 18)]
+    # 扫光
+    body.append(f'<g clip-path="url(#pclip)"><rect x="-260" y="-40" width="200" height="{H+80}" '
+                f'fill="url(#pshine)" transform="skewX(-18)">'
+                f'<animate attributeName="x" values="-260;1120" dur="6s" begin="0.6s" '
+                f'repeatCount="indefinite"/></rect></g>')
+    body.append(
+        f'<rect x="28" y="32" width="76" height="76" rx="20" fill="url(#pav)"/>'
+        f'<text x="66" y="84" text-anchor="middle" font-family="{FONT}" font-size="34" '
+        f'font-weight="800" fill="#FFFFFF">{esc(display[0])}</text>')
+    body.append(f'<text x="126" y="60" font-family="{FONT}" font-size="24" font-weight="800" '
+                f'fill="{p["text"]}">{esc(display)}</text>')
+    # 元信息行
+    mx = 126
+    body.append(f'<circle cx="{mx+4}" cy="82" r="5" fill="{lcolor}"/>'
+                f'<text x="{mx+16}" y="87" font-family="{FONT}" font-size="13" '
+                f'fill="{p["muted"]}">{esc(repo["lang"])}</text>')
+    mx += 16 + text_w(repo["lang"], 13) + 26
+    for ico, val in (("★", repo["stars"]), ("⑂", repo["forks"])):
+        body.append(f'<text x="{mx}" y="87" font-family="{FONT}" font-size="13" '
+                    f'fill="{p["muted"]}">{ico} {val}</text>')
+        mx += 46
+    body.append(f'<text x="{mx}" y="87" font-family="{FONT}" font-size="13" '
+                f'fill="{p["muted"]}">{esc(lic)} · 更新于 {updated}</text>')
+    for i, line in enumerate(wrap(blurb, 800, 14)[:2]):
+        body.append(f'<text x="126" y="{120 + i*26}" font-family="{FONT}" font-size="14" '
+                    f'fill="{p["muted"]}">{esc(line)}</text>')
+    body.append(f'<text x="{W-34}" y="96" text-anchor="end" font-family="{FONT}" font-size="26" '
+                f'fill="{p["cyan"]}" opacity="0.85">&#8594;</text>')
+    return svg(W, H, f'{display} 项目卡', defs, "".join(body))
+
+
 def main() -> None:
     os.makedirs(OUT, exist_ok=True)
     with open(DATA, encoding="utf-8") as f:
         data = json.load(f)
-    jobs = {
+
+    def slug(s: str) -> str:
+        return s.lower().replace("-", "").replace(" ", "").replace("_", "")
+
+    jobs: dict = {
         "banner": lambda m: banner(m),
         "typing": lambda m: typing(m),
         "divider": lambda m: divider(m),
+        "terminal": lambda m: terminal(m),
         "stats": lambda m: stats(m, data),
-        "focus": lambda m: focus(m),
         "activity": lambda m: activity(m, data),
+        "lang": lambda m: lang(m, data),
+        "focus": lambda m: focus(m),
     }
+    for s, icon, zh, en in SECTIONS:
+        jobs[f"hdr-{s}"] = (lambda i, z, e: (lambda m: header(i, z, e, m)))(icon, zh, en)
+    for r in project_repos(data):
+        jobs[f"proj-{slug(r['name'])}"] = (lambda rr: (lambda m: project(m, rr)))(r)
+
     total = 0
     for name, fn in jobs.items():
         for mode in ("dark", "light"):

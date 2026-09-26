@@ -151,11 +151,11 @@ def main() -> None:
     with open(SRC, encoding="utf-8") as f:
         md = f.read()
     body = render(md)
-    # 预览页位于仓库之外，素材在仓库的 assets/ 下；真实 README 里两者同级，
-    # 所以这里只是为本地预览改写相对路径。src 与 srcset 都要改，
+    # 预览页在仓库之外（<parent>/preview/），素材在仓库内（<repo>/assets/），
+    # 所以相对路径必须是 ../repo/assets/。src 与 srcset 都要改，
     # 否则 pick_theme 会从 srcset 里取回未改写的旧路径。
-    body = body.replace('src="assets/', 'src="../assets/')
-    body = body.replace('srcset="assets/', 'srcset="../assets/')
+    body = body.replace('src="assets/', 'src="../repo/assets/')
+    body = body.replace('srcset="assets/', 'srcset="../repo/assets/')
     panels = []
     for theme, label in (("dark", "GitHub 深色模式"), ("light", "GitHub 浅色模式")):
         panels.append(f'<section class="panel {theme}">'
@@ -169,6 +169,17 @@ def main() -> None:
     with open(OUT, "w", encoding="utf-8") as f:
         f.write(doc)
     print(f"wrote {OUT}  {len(doc.encode('utf-8'))} bytes")
+
+    # 就地校验：每个被引用的素材路径在磁盘上必须真实存在。
+    # 上一版正是因为相对路径写错，预览页里所有 SVG 都成了破图而没人发现。
+    refs = sorted(set(re.findall(r'src="([^"]+\.svg)"', doc)))
+    missing = [r for r in refs
+               if not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(OUT), r)))]
+    print(f"引用素材 {len(refs)} 个，缺失 {len(missing)} 个")
+    for m in missing:
+        print(f"  MISSING: {m}")
+    if missing:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
