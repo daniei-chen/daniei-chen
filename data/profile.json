@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-26T03:54:12Z",
+  "generated_at": "2026-09-26T05:47:17Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 0,
     "following": 1,
-    "public_repos": 3,
+    "public_repos": 5,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -18,13 +18,87 @@
       "license": null,
       "url": "https://github.com/daniei-chen/Little-Whale",
       "topics": [],
-      "pushed_at": "2026-09-25T18:13:49Z",
+      "pushed_at": "2026-09-26T04:43:56Z",
       "langs": {
-        "Dart": 402513,
+        "Dart": 446864,
         "HTML": 133107,
-        "PowerShell": 9159,
+        "PowerShell": 11919,
         "Kotlin": 3828
-      }
+      },
+      "empty": false
+    },
+    {
+      "name": "WorkBuddy-API",
+      "desc": "把 CodeBuddy 账号变成 OpenAI 兼容 API 的自托管网关｜OAuth 登录 · 账号池轮转 · 会话粘性 · 额度治理",
+      "lang": "Go",
+      "stars": 1,
+      "forks": 0,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/WorkBuddy-API",
+      "topics": [
+        "codebuddy",
+        "docker",
+        "gateway",
+        "go",
+        "openai-api",
+        "self-hosted",
+        "sse"
+      ],
+      "pushed_at": "2026-09-26T05:27:30Z",
+      "langs": {
+        "Go": 2138485,
+        "Python": 150238,
+        "Shell": 53898,
+        "Batchfile": 3051,
+        "Dockerfile": 2603
+      },
+      "empty": false
+    },
+    {
+      "name": "solar-system",
+      "desc": "单文件、离线可用的真渲染太阳系 3D 仿真｜真实星历 · 25,791 颗恒星 · 从日面到 30 kpc 的尺度之旅",
+      "lang": "HTML",
+      "stars": 1,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/solar-system",
+      "topics": [
+        "astronomy",
+        "offline",
+        "simulation",
+        "single-file",
+        "solar-system",
+        "threejs",
+        "webgl"
+      ],
+      "pushed_at": "2026-09-26T04:44:05Z",
+      "langs": {
+        "HTML": 765931,
+        "JavaScript": 85040,
+        "Python": 14951,
+        "Shell": 2563
+      },
+      "empty": false
+    },
+    {
+      "name": "daniei-chen",
+      "desc": "个人主页 · 深空极光主题｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
+      "lang": "Python",
+      "stars": 1,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/daniei-chen",
+      "topics": [
+        "dart",
+        "flutter",
+        "github-profile",
+        "profile-readme"
+      ],
+      "pushed_at": "2026-09-26T03:54:14Z",
+      "langs": {
+        "Python": 56463
+      },
+      "empty": false
     },
     {
       "name": "ZCode-App",
@@ -43,30 +117,12 @@
         "Kotlin": 18813,
         "Shell": 17061,
         "PowerShell": 3851
-      }
-    },
-    {
-      "name": "daniei-chen",
-      "desc": "个人主页 · 深空极光主题｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
-      "lang": "Python",
-      "stars": 0,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/daniei-chen",
-      "topics": [
-        "dart",
-        "flutter",
-        "github-profile",
-        "profile-readme"
-      ],
-      "pushed_at": "2026-09-26T03:54:04Z",
-      "langs": {
-        "Python": 56463
-      }
+      },
+      "empty": false
     }
   ],
   "contributions": {
-    "total": 17,
+    "total": 45,
     "days": [
       {
         "date": "2025-09-21",
@@ -2284,7 +2340,7 @@
       },
       {
         "date": "2026-09-25",
-        "level": 3,
+        "level": 4,
         "id": "contribution-day-component-5-52",
         "count": 6
       },
@@ -2292,10 +2348,10 @@
         "date": "2026-09-26",
         "level": 4,
         "id": "contribution-day-component-6-52",
-        "count": 8
+        "count": 36
       }
     ],
-    "max": 8,
+    "max": 36,
     "active_days": 5
   }
 }

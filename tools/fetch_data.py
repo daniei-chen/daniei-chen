@@ -75,9 +75,32 @@ def fetch_repos() -> list[dict]:
             "topics": r.get("topics", []),
             "pushed_at": r["pushed_at"],
             "langs": langs,
+            # 用根目录 contents 是否 404 判定空仓库。
+            # 不能用 REST 的 size 字段：刚推送的仓库 size 会滞后为 0
+            # （WorkBuddy-API 实际有 2.1MB Go 代码，size 却仍是 0）。
+            "empty": is_empty_repo(r["contents_url"]),
         })
-    out.sort(key=lambda x: (-x["stars"], x["name"]))
+    out.sort(key=lambda x: (-x["stars"], _neg_time(x["pushed_at"]), x["name"]))
     return out
+
+
+def _neg_time(iso: str) -> float:
+    """用于"最近更新优先"的排序键（取负，配合升序排序）。"""
+    try:
+        return -datetime.fromisoformat(iso.replace("Z", "+00:00")).timestamp()
+    except ValueError:
+        return 0.0
+
+
+def is_empty_repo(contents_url: str) -> bool:
+    url = contents_url.replace("{+path}", "")
+    try:
+        data = fetch_json(url)
+        return not isinstance(data, list) or len(data) == 0
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return True  # GitHub 对空仓库返回 "This repository is empty."
+        raise
 
 
 def fetch_contributions() -> dict:

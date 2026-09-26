@@ -83,11 +83,16 @@ AURORA = {
 
 
 def project_repos(data: dict) -> list[dict]:
-    """排除与用户名同名的仓库（主页 README 的载体），它不是项目。
-    不这么做的话，主页上会冒出一张"关于主页仓库自己"的项目卡，
-    语言构成的字节统计也会被 tools/ 里的 Python 带偏。"""
+    """真正要展示的项目仓库。排除两类：
+
+    1. 与用户名同名的仓库 —— 那是主页 README 的载体，不是项目。
+       不排除的话，主页上会冒出一张"关于主页仓库自己"的项目卡，
+       语言构成的字节统计也会被 tools/ 里的 Python 带偏。
+    2. 空仓库（一个文件都没有）—— 没内容可描述，生成出来的卡片是空壳。
+    """
     login = data["user"]["login"].lower()
-    return [r for r in data["repos"] if r["name"].lower() != login]
+    return [r for r in data["repos"]
+            if r["name"].lower() != login and not r.get("empty")]
 
 
 def esc(s: str) -> str:
@@ -647,6 +652,16 @@ REPO_META = {
         "display": "小鲸鱼",
         "blurb": "粘贴链接，保存无水印原片。解析全程在手机本地完成，链接不上传、不经过任何服务器。",
     },
+    "WorkBuddy-API": {
+        "display": "WorkBuddy2API",
+        "blurb": "自托管的 OpenAI 兼容网关：把 CodeBuddy 账号包装成统一的 /v1/chat/completions 服务，"
+                 "多账号池轮转 + 会话粘性 + 额度治理。",
+    },
+    "solar-system": {
+        "display": "太阳系 · 3D 仿真",
+        "blurb": "单文件、离线可用的真渲染太阳系仿真：真实星历与 25,791 颗恒星，"
+                 "从日面一路退到 30 kpc 回望银河系。",
+    },
     "ZCode-App": {
         "display": "ZCode-App",
         "blurb": "在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。",
@@ -672,10 +687,12 @@ def project(mode: str, repo: dict) -> str:
     W, H = 1000, 178
     meta = REPO_META.get(repo["name"], {})
     display = meta.get("display", repo["name"])
-    blurb = meta.get("blurb", repo["desc"])
+    blurb = meta.get("blurb") or repo["desc"] or "这个仓库还没有写简介。"
     lic = repo["license"] or "未声明许可"
     updated = repo["pushed_at"][:10]
-    lcolor = LANG_COLOR.get(repo["lang"], p["cyan"])
+    # 没识别出主语言时给个中性占位，否则卡片上会出现一个孤零零的色点和空文字
+    lang = repo["lang"] or "未识别"
+    lcolor = LANG_COLOR.get(repo["lang"], p["dim"])
     defs = (bg_grad(p, "pbg")
             + f'<linearGradient id="pav" x1="0" y1="0" x2="1" y2="1">'
               f'<stop offset="0" stop-color="{p["cyan"]}"/>'
@@ -701,8 +718,8 @@ def project(mode: str, repo: dict) -> str:
     mx = 126
     body.append(f'<circle cx="{mx+4}" cy="82" r="5" fill="{lcolor}"/>'
                 f'<text x="{mx+16}" y="87" font-family="{FONT}" font-size="13" '
-                f'fill="{p["muted"]}">{esc(repo["lang"])}</text>')
-    mx += 16 + text_w(repo["lang"], 13) + 26
+                f'fill="{p["muted"]}">{esc(lang)}</text>')
+    mx += 16 + text_w(lang, 13) + 26
     for ico, val in (("★", repo["stars"]), ("⑂", repo["forks"])):
         body.append(f'<text x="{mx}" y="87" font-family="{FONT}" font-size="13" '
                     f'fill="{p["muted"]}">{ico} {val}</text>')
@@ -717,13 +734,19 @@ def project(mode: str, repo: dict) -> str:
     return svg(W, H, f'{display} 项目卡', defs, "".join(body))
 
 
+def slug(s: str) -> str:
+    """仓库名 -> 素材文件名用的 slug（与 make_readme.py 共用，保持唯一来源）。"""
+    return s.lower().replace("-", "").replace(" ", "").replace("_", "")
+
+
+def display_name(repo: dict) -> str:
+    return REPO_META.get(repo["name"], {}).get("display", repo["name"])
+
+
 def main() -> None:
     os.makedirs(OUT, exist_ok=True)
     with open(DATA, encoding="utf-8") as f:
         data = json.load(f)
-
-    def slug(s: str) -> str:
-        return s.lower().replace("-", "").replace(" ", "").replace("_", "")
 
     jobs: dict = {
         "banner": lambda m: banner(m),
@@ -741,15 +764,26 @@ def main() -> None:
         jobs[f"proj-{slug(r['name'])}"] = (lambda rr: (lambda m: project(m, rr)))(r)
 
     total = 0
+    expected = set()
     for name, fn in jobs.items():
         for mode in ("dark", "light"):
-            path = os.path.join(OUT, f"{name}-{mode}.svg")
+            fname = f"{name}-{mode}.svg"
+            expected.add(fname)
+            path = os.path.join(OUT, fname)
             content = fn(mode)
             with open(path, "w", encoding="utf-8") as f:
                 f.write(content)
             total += 1
-            print(f"  {name}-{mode}.svg  {len(content.encode('utf-8'))} bytes")
+    # 清掉不再生成的旧素材（比如仓库被删/改名后残留的项目卡），
+    # 否则 assets/ 里会留下永远不会被引用的孤儿文件
+    removed = []
+    for f in sorted(os.listdir(OUT)):
+        if f.endswith(".svg") and f not in expected:
+            os.remove(os.path.join(OUT, f))
+            removed.append(f)
     print(f"{total} files -> {OUT}")
+    if removed:
+        print(f"  清理孤儿素材 {len(removed)} 个: {', '.join(removed)}")
 
 
 if __name__ == "__main__":
