@@ -684,7 +684,9 @@ def wrap(text: str, max_w: float, size: float) -> list[str]:
 
 def project(mode: str, repo: dict) -> str:
     p = PAL[mode]
-    W, H = 1000, 178
+    topics = repo.get("topics") or []
+    # 有 topic 时卡片高一点，多出一行放标签；没有就不留空白
+    W, H = 1000, 214 if topics else 178
     meta = REPO_META.get(repo["name"], {})
     display = meta.get("display", repo["name"])
     blurb = meta.get("blurb") or repo["desc"] or "这个仓库还没有写简介。"
@@ -729,9 +731,42 @@ def project(mode: str, repo: dict) -> str:
     for i, line in enumerate(wrap(blurb, 800, 14)[:2]):
         body.append(f'<text x="126" y="{120 + i*26}" font-family="{FONT}" font-size="14" '
                     f'fill="{p["muted"]}">{esc(line)}</text>')
+    # topic 标签行：放不下就折叠成 +N
+    if topics:
+        body.extend(_chips(p, topics, 126, 166, W - 64))
     body.append(f'<text x="{W-34}" y="96" text-anchor="end" font-family="{FONT}" font-size="26" '
                 f'fill="{p["cyan"]}" opacity="0.85">&#8594;</text>')
     return svg(W, H, f'{display} 项目卡', defs, "".join(body))
+
+
+def _chips(p: dict, topics: list[str], x0: float, y: float, max_x: float) -> list[str]:
+    """把 topic 画成一排胶囊。宽度不够时最后收一个 +N，避免溢出卡片。"""
+    out: list[str] = []
+    x, shown = x0, 0
+    for i, t in enumerate(topics):
+        w = text_w(t, 11) + 22
+        # 还有剩余项时，预留出 +N 胶囊的位置
+        reserve = 0 if i == len(topics) - 1 else text_w("+9", 11) + 30
+        if x + w + reserve > max_x:
+            break
+        out.append(
+            f'<rect x="{x:.0f}" y="{y}" width="{w:.0f}" height="24" rx="12" '
+            f'fill="{p["cyan"]}" fill-opacity="0.08" stroke="{p["cyan"]}" stroke-opacity="0.28"/>'
+            f'<text x="{x + w / 2:.0f}" y="{y + 16}" text-anchor="middle" font-family="{FONT}" '
+            f'font-size="11" fill="{p["muted"]}">{esc(t)}</text>')
+        x += w + 8
+        shown += 1
+    rest = len(topics) - shown
+    if rest > 0:
+        label = f"+{rest}"
+        w = text_w(label, 11) + 22
+        out.append(
+            f'<rect x="{x:.0f}" y="{y}" width="{w:.0f}" height="24" rx="12" '
+            f'fill="{p["stroke"]}" fill-opacity="0.30" stroke="{p["stroke"]}" '
+            f'stroke-opacity="0.6"/>'
+            f'<text x="{x + w / 2:.0f}" y="{y + 16}" text-anchor="middle" font-family="{FONT}" '
+            f'font-size="11" fill="{p["dim"]}">{label}</text>')
+    return out
 
 
 def slug(s: str) -> str:
