@@ -103,22 +103,22 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/Little-Whale">
+  <a href="https://github.com/daniei-chen/WorkBuddy-API">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-littlewhale-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-littlewhale-light.svg">
-      <img src="assets/proj-littlewhale-dark.svg" alt="小鲸鱼" width="100%">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-workbuddyapi-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-workbuddyapi-light.svg">
+      <img src="assets/proj-workbuddyapi-dark.svg" alt="WorkBuddy2API" width="100%">
     </picture>
   </a>
 </p>
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/WorkBuddy-API">
+  <a href="https://github.com/daniei-chen/Little-Whale">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-workbuddyapi-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-workbuddyapi-light.svg">
-      <img src="assets/proj-workbuddyapi-dark.svg" alt="WorkBuddy2API" width="100%">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-littlewhale-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-littlewhale-light.svg">
+      <img src="assets/proj-littlewhale-dark.svg" alt="小鲸鱼" width="100%">
     </picture>
   </a>
 </p>
