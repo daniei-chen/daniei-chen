@@ -125,22 +125,22 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/solar-system">
+  <a href="https://github.com/daniei-chen/ZCode-App">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-solarsystem-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-solarsystem-light.svg">
-      <img src="assets/proj-solarsystem-dark.svg" alt="太阳系 · 3D 仿真" width="100%">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-zcodeapp-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-zcodeapp-light.svg">
+      <img src="assets/proj-zcodeapp-dark.svg" alt="ZCode-App" width="100%">
     </picture>
   </a>
 </p>
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/ZCode-App">
+  <a href="https://github.com/daniei-chen/solar-system">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-zcodeapp-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-zcodeapp-light.svg">
-      <img src="assets/proj-zcodeapp-dark.svg" alt="ZCode-App" width="100%">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-solarsystem-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-solarsystem-light.svg">
+      <img src="assets/proj-solarsystem-dark.svg" alt="太阳系 · 3D 仿真" width="100%">
     </picture>
   </a>
 </p>
