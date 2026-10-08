@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T03:32:50Z",
+  "generated_at": "2026-10-08T03:33:19Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -100,6 +100,32 @@
       "empty": false
     },
     {
+      "name": "solar-system",
+      "desc": "单文件、离线可用的真渲染太阳系 3D 仿真｜真实星历 · 25,791 颗恒星 · 从日面到 30 kpc 的尺度之旅",
+      "lang": "HTML",
+      "stars": 1,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/solar-system",
+      "topics": [
+        "astronomy",
+        "offline",
+        "simulation",
+        "single-file",
+        "solar-system",
+        "threejs",
+        "webgl"
+      ],
+      "pushed_at": "2026-10-07T09:53:50Z",
+      "langs": {
+        "HTML": 766555,
+        "JavaScript": 85040,
+        "Python": 14951,
+        "Shell": 2563
+      },
+      "empty": false
+    },
+    {
       "name": "daniei-chen",
       "desc": "个人主页 · 深空极光主题｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
       "lang": "Python",
@@ -114,7 +140,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-10-06T03:31:48Z",
+      "pushed_at": "2026-10-07T03:32:57Z",
       "langs": {
         "Python": 68211
       },
@@ -147,36 +173,10 @@
       "pushed_at": "2026-09-27T06:14:54Z",
       "langs": {},
       "empty": true
-    },
-    {
-      "name": "solar-system",
-      "desc": "单文件、离线可用的真渲染太阳系 3D 仿真｜真实星历 · 25,791 颗恒星 · 从日面到 30 kpc 的尺度之旅",
-      "lang": "HTML",
-      "stars": 1,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/solar-system",
-      "topics": [
-        "astronomy",
-        "offline",
-        "simulation",
-        "single-file",
-        "solar-system",
-        "threejs",
-        "webgl"
-      ],
-      "pushed_at": "2026-09-26T04:44:05Z",
-      "langs": {
-        "HTML": 765931,
-        "JavaScript": 85040,
-        "Python": 14951,
-        "Shell": 2563
-      },
-      "empty": false
     }
   ],
   "contributions": {
-    "total": 55,
+    "total": 56,
     "days": [
       {
         "date": "2025-10-05",
@@ -2382,12 +2382,18 @@
       },
       {
         "date": "2026-10-07",
-        "level": 0,
+        "level": 1,
         "id": "contribution-day-component-3-52",
+        "count": 1
+      },
+      {
+        "date": "2026-10-08",
+        "level": 0,
+        "id": "contribution-day-component-4-52",
         "count": 0
       }
     ],
     "max": 38,
-    "active_days": 9
+    "active_days": 10
   }
 }
