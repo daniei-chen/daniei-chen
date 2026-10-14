@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T03:35:28Z",
+  "generated_at": "2026-10-14T03:47:10Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -39,6 +39,35 @@
       "empty": false
     },
     {
+      "name": "Little-Whale",
+      "desc": "视频下载去水印",
+      "lang": "Dart",
+      "stars": 3,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/Little-Whale",
+      "topics": [
+        "android",
+        "bilibili",
+        "dart",
+        "douyin",
+        "flutter",
+        "no-watermark",
+        "offline",
+        "privacy",
+        "video-downloader",
+        "xiaohongshu"
+      ],
+      "pushed_at": "2026-09-26T04:43:56Z",
+      "langs": {
+        "Dart": 446864,
+        "HTML": 133107,
+        "PowerShell": 11919,
+        "Kotlin": 3828
+      },
+      "empty": false
+    },
+    {
       "name": "WorkBuddy-API",
       "desc": "把 CodeBuddy 账号变成 OpenAI 兼容 API 的自托管网关｜OAuth 登录 · 账号池轮转 · 会话粘性 · 额度治理",
       "lang": "Python",
@@ -71,35 +100,6 @@
       "empty": false
     },
     {
-      "name": "Little-Whale",
-      "desc": "视频下载去水印",
-      "lang": "Dart",
-      "stars": 2,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/Little-Whale",
-      "topics": [
-        "android",
-        "bilibili",
-        "dart",
-        "douyin",
-        "flutter",
-        "no-watermark",
-        "offline",
-        "privacy",
-        "video-downloader",
-        "xiaohongshu"
-      ],
-      "pushed_at": "2026-09-26T04:43:56Z",
-      "langs": {
-        "Dart": 446864,
-        "HTML": 133107,
-        "PowerShell": 11919,
-        "Kotlin": 3828
-      },
-      "empty": false
-    },
-    {
       "name": "daniei-chen",
       "desc": "个人主页 · 深空极光主题｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
       "lang": "Python",
@@ -114,7 +114,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-10-12T03:37:33Z",
+      "pushed_at": "2026-10-13T03:35:34Z",
       "langs": {
         "Python": 68211
       },
@@ -2378,6 +2378,12 @@
         "date": "2026-10-13",
         "level": 0,
         "id": "contribution-day-component-2-52",
+        "count": 0
+      },
+      {
+        "date": "2026-10-14",
+        "level": 0,
+        "id": "contribution-day-component-3-52",
         "count": 0
       }
     ],
