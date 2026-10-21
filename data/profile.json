@@ -1,14 +1,43 @@
 {
-  "generated_at": "2026-10-20T08:35:38Z",
+  "generated_at": "2026-10-21T08:37:34Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 0,
     "following": 1,
-    "public_repos": 13,
+    "public_repos": 14,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
+    {
+      "name": "ZCode-App",
+      "desc": "ZCode App · 在手机或平板上远程管理 ZCode 桌面任务的 Flutter 客户端｜扫码接入，原生外壳 + WebView 会话",
+      "lang": "Dart",
+      "stars": 5,
+      "forks": 0,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/ZCode-App",
+      "topics": [
+        "android",
+        "dart",
+        "flutter",
+        "mobile-client",
+        "qr-code",
+        "remote-control",
+        "webview",
+        "zcode"
+      ],
+      "pushed_at": "2026-10-10T08:05:55Z",
+      "langs": {
+        "Dart": 1109869,
+        "Python": 210028,
+        "JavaScript": 55672,
+        "Kotlin": 18813,
+        "Shell": 17061,
+        "PowerShell": 3851
+      },
+      "empty": false
+    },
     {
       "name": "WorkBuddy-API",
       "desc": "把 CodeBuddy 账号变成 OpenAI 兼容 API 的自托管网关｜OAuth 登录 · 账号池轮转 · 会话粘性 · 额度治理",
@@ -40,35 +69,6 @@
         "CSS": 11143,
         "Batchfile": 8205,
         "Standard ML": 384
-      },
-      "empty": false
-    },
-    {
-      "name": "ZCode-App",
-      "desc": "ZCode App · 在手机或平板上远程管理 ZCode 桌面任务的 Flutter 客户端｜扫码接入，原生外壳 + WebView 会话",
-      "lang": "Dart",
-      "stars": 4,
-      "forks": 0,
-      "license": "MIT",
-      "url": "https://github.com/daniei-chen/ZCode-App",
-      "topics": [
-        "android",
-        "dart",
-        "flutter",
-        "mobile-client",
-        "qr-code",
-        "remote-control",
-        "webview",
-        "zcode"
-      ],
-      "pushed_at": "2026-10-10T08:05:55Z",
-      "langs": {
-        "Dart": 1109869,
-        "Python": 210028,
-        "JavaScript": 55672,
-        "Kotlin": 18813,
-        "Shell": 17061,
-        "PowerShell": 3851
       },
       "empty": false
     },
@@ -128,6 +128,62 @@
       "empty": false
     },
     {
+      "name": "DeepSeek-Harness-APP",
+      "desc": "Open-source Android client for self-hosted DeepSeek Harness (DSH). WebView shell, multi-device profiles, task/approval notifications, self-hosted ntfy/UnifiedPush push as a required documented feature (optional to enable). No cloud, telemetry, accounts, or monetization. Unofficial community project.",
+      "lang": "Kotlin",
+      "stars": 1,
+      "forks": 0,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/DeepSeek-Harness-APP",
+      "topics": [
+        "android",
+        "deepseek",
+        "dsh",
+        "kotlin",
+        "ntfy",
+        "open-source",
+        "self-hosted",
+        "unifiedpush",
+        "webview"
+      ],
+      "pushed_at": "2026-10-21T08:20:31Z",
+      "langs": {
+        "Kotlin": 2901177,
+        "JavaScript": 63493,
+        "CSS": 5559
+      },
+      "empty": false
+    },
+    {
+      "name": "Forbidden-City",
+      "desc": "紫禁城程序化 3D 数字复原：单文件 Three.js 可漫游场景（七殿室内 / 四时段 / SSAO / 小人跳跃与 NPC），零外部资源。",
+      "lang": "JavaScript",
+      "stars": 1,
+      "forks": 1,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/Forbidden-City",
+      "topics": [
+        "3d-reconstruction",
+        "beijing",
+        "chinese-architecture",
+        "cultural-heritage",
+        "forbidden-city",
+        "javascript",
+        "procedural-generation",
+        "single-file",
+        "ssao",
+        "threejs",
+        "webgl"
+      ],
+      "pushed_at": "2026-10-21T01:29:40Z",
+      "langs": {
+        "JavaScript": 687878,
+        "HTML": 45083,
+        "Python": 3718
+      },
+      "empty": false
+    },
+    {
       "name": "daniei-chen",
       "desc": "个人主页 · 深空极光主题｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
       "lang": "Python",
@@ -142,7 +198,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-10-19T08:56:48Z",
+      "pushed_at": "2026-10-20T08:35:46Z",
       "langs": {
         "Python": 68211
       },
@@ -197,35 +253,6 @@
       "empty": true
     },
     {
-      "name": "Forbidden-City",
-      "desc": "紫禁城程序化 3D 数字复原：单文件 Three.js 可漫游场景（七殿室内 / 四时段 / SSAO / 小人跳跃与 NPC），零外部资源。",
-      "lang": "JavaScript",
-      "stars": 0,
-      "forks": 1,
-      "license": "MIT",
-      "url": "https://github.com/daniei-chen/Forbidden-City",
-      "topics": [
-        "3d-reconstruction",
-        "beijing",
-        "chinese-architecture",
-        "cultural-heritage",
-        "forbidden-city",
-        "javascript",
-        "procedural-generation",
-        "single-file",
-        "ssao",
-        "threejs",
-        "webgl"
-      ],
-      "pushed_at": "2026-10-20T08:19:32Z",
-      "langs": {
-        "JavaScript": 606348,
-        "HTML": 42872,
-        "Python": 3718
-      },
-      "empty": false
-    },
-    {
       "name": "Trae-API",
       "desc": "",
       "lang": "JavaScript",
@@ -246,7 +273,7 @@
     }
   ],
   "contributions": {
-    "total": 200,
+    "total": 243,
     "days": [
       {
         "date": "2025-10-19",
@@ -2302,7 +2329,7 @@
       },
       {
         "date": "2026-09-26",
-        "level": 4,
+        "level": 3,
         "id": "contribution-day-component-6-48",
         "count": 38
       },
@@ -2448,10 +2475,16 @@
         "date": "2026-10-20",
         "level": 4,
         "id": "contribution-day-component-2-52",
-        "count": 45
+        "count": 57
+      },
+      {
+        "date": "2026-10-21",
+        "level": 3,
+        "id": "contribution-day-component-3-52",
+        "count": 31
       }
     ],
-    "max": 53,
-    "active_days": 13
+    "max": 57,
+    "active_days": 14
   }
 }

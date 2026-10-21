@@ -103,22 +103,22 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/WorkBuddy-API">
+  <a href="https://github.com/daniei-chen/ZCode-App">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-workbuddyapi-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-workbuddyapi-light.svg">
-      <img src="assets/proj-workbuddyapi-dark.svg" alt="WorkBuddy2API" width="100%">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-zcodeapp-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-zcodeapp-light.svg">
+      <img src="assets/proj-zcodeapp-dark.svg" alt="ZCode-App" width="100%">
     </picture>
   </a>
 </p>
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/ZCode-App">
+  <a href="https://github.com/daniei-chen/WorkBuddy-API">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-zcodeapp-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-zcodeapp-light.svg">
-      <img src="assets/proj-zcodeapp-dark.svg" alt="ZCode-App" width="100%">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-workbuddyapi-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-workbuddyapi-light.svg">
+      <img src="assets/proj-workbuddyapi-dark.svg" alt="WorkBuddy2API" width="100%">
     </picture>
   </a>
 </p>
@@ -147,6 +147,28 @@
 
 
 <p align="center">
+  <a href="https://github.com/daniei-chen/DeepSeek-Harness-APP">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-deepseekharnessapp-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-deepseekharnessapp-light.svg">
+      <img src="assets/proj-deepseekharnessapp-dark.svg" alt="DeepSeek-Harness-APP" width="100%">
+    </picture>
+  </a>
+</p>
+
+
+<p align="center">
+  <a href="https://github.com/daniei-chen/Forbidden-City">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-forbiddencity-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-forbiddencity-light.svg">
+      <img src="assets/proj-forbiddencity-dark.svg" alt="Forbidden-City" width="100%">
+    </picture>
+  </a>
+</p>
+
+
+<p align="center">
   <a href="https://github.com/daniei-chen/Qoder-API">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-qoderapi-dark.svg">
@@ -163,17 +185,6 @@
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-pddshopping-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-pddshopping-light.svg">
       <img src="assets/proj-pddshopping-dark.svg" alt="Pdd-Shopping" width="100%">
-    </picture>
-  </a>
-</p>
-
-
-<p align="center">
-  <a href="https://github.com/daniei-chen/Forbidden-City">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-forbiddencity-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-forbiddencity-light.svg">
-      <img src="assets/proj-forbiddencity-dark.svg" alt="Forbidden-City" width="100%">
     </picture>
   </a>
 </p>
