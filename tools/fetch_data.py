@@ -57,7 +57,7 @@ def fetch_repos() -> list[dict]:
     )
     out = []
     for r in repos:
-        if r["fork"] or r["archived"]:
+        if r["archived"]:
             continue
         langs = {}
         try:
@@ -75,6 +75,8 @@ def fetch_repos() -> list[dict]:
             "topics": r.get("topics", []),
             "pushed_at": r["pushed_at"],
             "langs": langs,
+            # Fork 在主页里单独归类展示，不生成项目大卡。
+            "fork": bool(r["fork"]),
             # 用根目录 contents 是否 404 判定空仓库。
             # 不能用 REST 的 size 字段：刚推送的仓库 size 会滞后为 0
             # （WorkBuddy-API 实际有 2.1MB Go 代码，size 却仍是 0）。

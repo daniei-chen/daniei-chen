@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-21T08:37:34Z",
+  "generated_at": "2026-10-22T02:25:53Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
-    "followers": 0,
+    "followers": 1,
     "following": 1,
-    "public_repos": 14,
+    "public_repos": 15,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -36,6 +36,7 @@
         "Shell": 17061,
         "PowerShell": 3851
       },
+      "fork": false,
       "empty": false
     },
     {
@@ -70,6 +71,7 @@
         "Batchfile": 8205,
         "Standard ML": 384
       },
+      "fork": false,
       "empty": false
     },
     {
@@ -99,6 +101,7 @@
         "PowerShell": 11919,
         "Kotlin": 3828
       },
+      "fork": false,
       "empty": false
     },
     {
@@ -125,33 +128,63 @@
         "Python": 14951,
         "Shell": 2563
       },
+      "fork": false,
       "empty": false
     },
     {
       "name": "DeepSeek-Harness-APP",
-      "desc": "Open-source Android client for self-hosted DeepSeek Harness (DSH). WebView shell, multi-device profiles, task/approval notifications, self-hosted ntfy/UnifiedPush push as a required documented feature (optional to enable). No cloud, telemetry, accounts, or monetization. Unofficial community project.",
+      "desc": "Self-hosted Android client for DeepSeek Harness: LAN/mDNS + relay pairing, actionable approvals, inbox/cockpit, file upload/audit and fleet overview. No cloud, accounts, telemetry or monetization. Unofficial community project.",
       "lang": "Kotlin",
       "stars": 1,
       "forks": 0,
       "license": "MIT",
       "url": "https://github.com/daniei-chen/DeepSeek-Harness-APP",
       "topics": [
+        "ai-agent",
         "android",
+        "approval-workflow",
         "deepseek",
         "dsh",
         "kotlin",
         "ntfy",
         "open-source",
+        "relay",
+        "remote-control",
         "self-hosted",
         "unifiedpush",
         "webview"
       ],
-      "pushed_at": "2026-10-21T08:20:31Z",
+      "pushed_at": "2026-10-22T02:06:36Z",
       "langs": {
-        "Kotlin": 2901177,
-        "JavaScript": 63493,
-        "CSS": 5559
+        "Kotlin": 3059689,
+        "JavaScript": 391841,
+        "CSS": 5559,
+        "PowerShell": 849,
+        "Shell": 127
       },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "daniei-chen",
+      "desc": "个人主页 · 深空极光主题｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
+      "lang": "Python",
+      "stars": 1,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/daniei-chen",
+      "topics": [
+        "github-actions",
+        "github-profile",
+        "profile-readme",
+        "python",
+        "svg"
+      ],
+      "pushed_at": "2026-10-21T08:37:41Z",
+      "langs": {
+        "Python": 68211
+      },
+      "fork": false,
       "empty": false
     },
     {
@@ -181,27 +214,7 @@
         "HTML": 45083,
         "Python": 3718
       },
-      "empty": false
-    },
-    {
-      "name": "daniei-chen",
-      "desc": "个人主页 · 深空极光主题｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
-      "lang": "Python",
-      "stars": 1,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/daniei-chen",
-      "topics": [
-        "github-actions",
-        "github-profile",
-        "profile-readme",
-        "python",
-        "svg"
-      ],
-      "pushed_at": "2026-10-20T08:35:46Z",
-      "langs": {
-        "Python": 68211
-      },
+      "fork": false,
       "empty": false
     },
     {
@@ -222,6 +235,31 @@
         "Shell": 3778,
         "HTML": 2479
       },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "deepseek-harness-phone",
+      "desc": "dsh 安卓壳 APK——WebView UI + 内嵌 Termux 运行时快照（解压即跑），为dsh本地运行设计的高性能方案",
+      "lang": "",
+      "stars": 1,
+      "forks": 0,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/deepseek-harness-phone",
+      "topics": [],
+      "pushed_at": "2026-10-04T04:04:12Z",
+      "langs": {
+        "Kotlin": 2862369,
+        "JavaScript": 2299184,
+        "TypeScript": 1612846,
+        "Python": 100520,
+        "PowerShell": 98970,
+        "HTML": 28563,
+        "Shell": 24522,
+        "CSS": 12615,
+        "AIDL": 4139
+      },
+      "fork": true,
       "empty": false
     },
     {
@@ -237,6 +275,7 @@
       "langs": {
         "PowerShell": 148088
       },
+      "fork": false,
       "empty": false
     },
     {
@@ -250,7 +289,49 @@
       "topics": [],
       "pushed_at": "2026-09-27T06:14:54Z",
       "langs": {},
+      "fork": false,
       "empty": true
+    },
+    {
+      "name": "dsh-token-insight",
+      "desc": "Local-first token usage dashboard for DeepSeek Harness (DSH). AI install guide for the plugin and the companion Android app.",
+      "lang": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/dsh-token-insight",
+      "topics": [
+        "android-app",
+        "dashboard",
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin",
+        "token-usage",
+        "usage-stats"
+      ],
+      "pushed_at": "2026-10-22T02:04:54Z",
+      "langs": {
+        "JavaScript": 77469
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "dsh-purge",
+      "desc": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
+      "lang": "",
+      "stars": 0,
+      "forks": 0,
+      "license": "NOASSERTION",
+      "url": "https://github.com/daniei-chen/dsh-purge",
+      "topics": [],
+      "pushed_at": "2026-10-19T13:53:37Z",
+      "langs": {
+        "JavaScript": 2422398,
+        "Shell": 25046
+      },
+      "fork": true,
+      "empty": false
     },
     {
       "name": "Trae-API",
@@ -269,11 +350,39 @@
         "HTML": 2118,
         "Shell": 1815
       },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "deepseek-harness",
+      "desc": "DeepSeek Harness: Everything is a Plugin.",
+      "lang": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/deepseek-harness",
+      "topics": [],
+      "pushed_at": "2026-10-04T14:29:50Z",
+      "langs": {
+        "TypeScript": 52311003,
+        "JavaScript": 1321847,
+        "CSS": 793087,
+        "Python": 541061,
+        "PowerShell": 121720,
+        "C++": 72030,
+        "Shell": 70257,
+        "NSIS": 48983,
+        "HTML": 19647,
+        "C": 18048,
+        "Batchfile": 1262,
+        "Makefile": 1059
+      },
+      "fork": true,
       "empty": false
     }
   ],
   "contributions": {
-    "total": 243,
+    "total": 346,
     "days": [
       {
         "date": "2025-10-19",
@@ -2461,13 +2570,13 @@
       },
       {
         "date": "2026-10-18",
-        "level": 4,
+        "level": 3,
         "id": "contribution-day-component-0-52",
         "count": 46
       },
       {
         "date": "2026-10-19",
-        "level": 4,
+        "level": 3,
         "id": "contribution-day-component-1-52",
         "count": 53
       },
@@ -2479,12 +2588,18 @@
       },
       {
         "date": "2026-10-21",
-        "level": 3,
+        "level": 4,
         "id": "contribution-day-component-3-52",
-        "count": 31
+        "count": 71
+      },
+      {
+        "date": "2026-10-22",
+        "level": 4,
+        "id": "contribution-day-component-4-52",
+        "count": 63
       }
     ],
-    "max": 57,
-    "active_days": 14
+    "max": 71,
+    "active_days": 15
   }
 }

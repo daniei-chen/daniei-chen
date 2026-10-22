@@ -28,19 +28,34 @@ OUT = os.path.join(ROOT, "assets")
 CFG = {
     "name_en": "DANIEI CHEN",
     "name_zh": "陈丹妮",
-    "chips": ["独立开发者", "Flutter / Dart", "移动端产品"],
+    "chips": ["独立开发者", "Flutter / Dart", "DSH 插件"],
     "typing": [
         "把想法做成能上线的产品",
-        "用 Flutter 写能解决真实问题的小工具",
+        "用 Flutter 写小工具，也用 JS 写 DSH 插件",
         "在写代码，也在做产品",
+        "本地优先，能离线就不上云",
+    ],
+    # 项目卡顺序：现在正在做的 DSH 相关项目优先，其余按 Star / 更新时间。
+    "project_order": [
+        "dsh-token-insight",
+        "DeepSeek-Harness-APP",
+        "ZCode-App",
+        "WorkBuddy-API",
+        "Little-Whale",
+        "solar-system",
+        "Forbidden-City",
+        "Qoder-API",
+        "Pdd-Shopping",
+        "Trae-API",
     ],
     # 方向自评（0-100）。这组数字是主观占比，按自己的感觉改就行。
     "focus": [
-        ("Flutter / Dart 客户端", 100),
+        ("Flutter / Dart 客户端", 92),
+        ("DSH 插件 / 本地优先工具", 78),
         ("产品设计与交互打磨", 72),
         ("独立开发 · 从想法到上线", 80),
-        ("移动端原生能力集成", 60),
-        ("服务端与部署", 45),
+        ("移动端原生能力集成", 58),
+        ("服务端与部署", 42),
     ],
 }
 
@@ -83,16 +98,23 @@ AURORA = {
 
 
 def project_repos(data: dict) -> list[dict]:
-    """真正要展示的项目仓库。排除两类：
+    """真正要展示的项目仓库。排除四类：
 
     1. 与用户名同名的仓库 —— 那是主页 README 的载体，不是项目。
        不排除的话，主页上会冒出一张"关于主页仓库自己"的项目卡，
        语言构成的字节统计也会被 tools/ 里的 Python 带偏。
     2. 空仓库（一个文件都没有）—— 没内容可描述，生成出来的卡片是空壳。
+    3. Fork —— 上游仓库不属于自己的项目；在 README 的仓库索引里单独列出。
+    4. 按 CFG["project_order"] 置顶，其余按 Star / 最近更新排序。
     """
     login = data["user"]["login"].lower()
-    return [r for r in data["repos"]
-            if r["name"].lower() != login and not r.get("empty")]
+    order = {name: i for i, name in enumerate(CFG.get("project_order", []))}
+    rows = [r for r in data["repos"]
+            if r["name"].lower() != login
+            and not r.get("empty")
+            and not r.get("fork")]
+    rows.sort(key=lambda r: (order.get(r["name"], 999), -r["stars"], r["name"]))
+    return rows
 
 
 def esc(s: str) -> str:
@@ -315,6 +337,7 @@ def stats(mode: str, data: dict) -> str:
     stars = sum(r["stars"] for r in project_repos(data))
     days = (date.today() - date.fromisoformat(data["user"]["created_at"][:10])).days
     items = [("项目仓库", len(project_repos(data)), p["cyan"]),
+             ("公开仓库", data["user"]["public_repos"], p["star"]),
              ("获得星标", stars, p["violet2"]),
              ("公开贡献", c["total"], p["teal"]),
              ("加入天数", days, p["pink"])]
@@ -471,6 +494,7 @@ SECTIONS = [
     ("about", "🧑‍💻", "关于我", "About"),
     ("stack", "🛠", "技术栈", "Tech Stack"),
     ("projects", "🚀", "在做的东西", "Projects"),
+    ("repos", "🗂", "全部仓库", "Repositories"),
     ("stats", "📈", "数据与轨迹", "Stats & Activity"),
     ("focus", "🎯", "方向与投入", "Focus"),
 ]
@@ -648,6 +672,16 @@ def lang(mode: str, data: dict) -> str:
 # 9) 项目卡
 # ----------------------------------------------------------------------------
 REPO_META = {
+    "dsh-token-insight": {
+        "display": "DSH Token Insight",
+        "blurb": "DSH 本地使用统计：52 周热力图、每日趋势、模型用量、会话 Top 5、"
+                 "成本与导出，全程只读本地文件。",
+    },
+    "DeepSeek-Harness-APP": {
+        "display": "DeepSeek Harness APP",
+        "blurb": "自托管 DSH 的安卓客户端：WebView UI、扫码/Relay 配对、审批通知、"
+                 "文件上传与多设备管理。",
+    },
     "Little-Whale": {
         "display": "小鲸鱼",
         "blurb": "粘贴链接，保存无水印原片。解析全程在手机本地完成，链接不上传、不经过任何服务器。",
@@ -665,6 +699,39 @@ REPO_META = {
     "ZCode-App": {
         "display": "ZCode-App",
         "blurb": "在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。",
+    },
+    "Forbidden-City": {
+        "display": "紫禁城 · 3D 复原",
+        "blurb": "单文件 Three.js 可漫游的紫禁城程序化场景：七殿室内、四时段、SSAO、"
+                 "NPC 与跳跃，零外部资源。",
+    },
+    "Qoder-API": {
+        "display": "Qoder2API",
+        "blurb": "把 Qoder 账号封装成 OpenAI 兼容 API 的自托管网关，支持多账号与统一入口。",
+    },
+    "Trae-API": {
+        "display": "Trae2API",
+        "blurb": "把 Trae 账号接到 OpenAI 兼容接口的自托管网关，方便接入现有客户端。",
+    },
+    "Pdd-Shopping": {
+        "display": "拼多多研究助手",
+        "blurb": "MuMu 模拟器里的商品搜索、比价、详情参数与评价整理；下单和支付始终由人工完成。",
+    },
+    "QQ-Space-Nostalgia": {
+        "display": "QQ 空间备份",
+        "blurb": "按年份、月份或动态编号归档本人 QQ 空间图片，找回那些年的青春回忆。",
+    },
+    "dsh-purge": {
+        "display": "DSH 破甲",
+        "blurb": "DSH 提示词实验：不同模型可换不同提示词，默认面向国模小码酱。",
+    },
+    "deepseek-harness": {
+        "display": "DeepSeek Harness",
+        "blurb": "DeepSeek Harness 上游仓库的 Fork，用于跟进插件系统与运行时变化。",
+    },
+    "deepseek-harness-phone": {
+        "display": "DSH Phone",
+        "blurb": "DSH 安卓壳实验：WebView UI + 内嵌 Termux 运行时快照，解压即跑。",
     },
 }
 

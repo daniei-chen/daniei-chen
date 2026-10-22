@@ -13,7 +13,7 @@ from __future__ import annotations
 import json
 import os
 
-from make_assets import (CFG, SECTIONS, DATA, ROOT, display_name, project_repos, slug)
+from make_assets import (CFG, SECTIONS, DATA, ROOT, display_name, project_repos, slug, REPO_META)
 
 OUT = os.path.join(ROOT, "README.md")
 
@@ -21,6 +21,7 @@ BULLETS = [
     "🛠 **独立开发者** —— 习惯一个人把一个想法从原型推到能上线的产品",
     "📱 主力技术栈 **Flutter / Dart**，以 Android 端为主，必要时下沉到原生；"
     "服务端写 **Go / Python**",
+    "🧩 最近在做 **DSH 插件与本地优先的 AI 工具**：使用统计、安卓远控、模型网关",
     "🔒 相信工具该在**本地**解决问题：小鲸鱼的解析全程跑在手机上，链接不经过任何第三方服务器",
     "🧪 喜欢把踩过的坑沉淀成能复用的方案，而不是一次性脚本",
     "🚀 信奉「**先做出来，再做好**」",
@@ -39,6 +40,9 @@ STACK_GROUPS = [
     ("服务端与工程", [
         "![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)",
         "![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)",
+        "![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)",
+        "![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)",
+        "![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)",
         "![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)",
         "![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)",
         "![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)",
@@ -50,6 +54,7 @@ TOP_BADGES = [
     "![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)",
     "![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)",
     "![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)",
+    "![DSH](https://img.shields.io/badge/DSH-Plugin-4C8DFF?style=for-the-badge&labelColor=0E1A33)",
     "![独立开发者](https://img.shields.io/badge/独立开发者-22D3EE?style=for-the-badge&labelColor=0E1A33)",
 ]
 
@@ -58,6 +63,97 @@ FOOT_BADGES = [
     "![PRs](https://img.shields.io/badge/PRs-welcome-A78BFA?style=flat-square&labelColor=0E1A33)",
     "![Made with](https://img.shields.io/badge/自绘_SVG-无第三方图床-F472B6?style=flat-square&labelColor=0E1A33)",
 ]
+
+# 全部仓库索引。项目卡只放当前主项目，这里保证每个公开仓库都有入口。
+REPO_GROUPS = [
+    ("DSH / AI 工具", [
+        "dsh-token-insight",
+        "DeepSeek-Harness-APP",
+        "WorkBuddy-API",
+        "Qoder-API",
+        "Trae-API",
+        "dsh-purge",
+    ]),
+    ("移动端 / Flutter", [
+        "ZCode-App",
+        "Little-Whale",
+        "Pdd-Shopping",
+    ]),
+    ("3D / 视觉实验", [
+        "Forbidden-City",
+        "solar-system",
+    ]),
+    ("工具 / 其他", [
+        "QQ-Space-Nostalgia",
+    ]),
+    ("Fork / 实验", [
+        "deepseek-harness",
+        "deepseek-harness-phone",
+    ]),
+]
+
+
+def _md_cell(text: str) -> str:
+    return (text or "").replace("|", "\\|").replace("\n", " ").strip()
+
+
+def _repo_desc(r: dict) -> str:
+    """优先用 REPO_META 的中文简介，避免主页表格里出现英文截断。"""
+    desc = _md_cell(REPO_META.get(r["name"], {}).get("blurb") or r.get("desc") or "等待补充简介")
+    return desc[:57] + "…" if len(desc) > 58 else desc
+
+
+def repo_index(data: dict) -> str:
+    """生成按方向分组的全部仓库表格；新增仓库会自动落到“其他”。"""
+    login = data["user"]["login"].lower()
+    by_name = {
+        r["name"]: r
+        for r in data.get("repos", [])
+        if r["name"].lower() != login
+    }
+    used: set[str] = set()
+    chunks: list[str] = []
+
+    for title, names in REPO_GROUPS:
+        rows = [by_name[n] for n in names if n in by_name]
+        used.update(r["name"] for r in rows)
+        if not rows:
+            continue
+        chunks.append(f"### {title}")
+        chunks.append("")
+        chunks.append("| 仓库 | 语言 | ★ | 最近更新 | 说明 |")
+        chunks.append("| --- | --- | ---: | --- | --- |")
+        for r in rows:
+            name = _md_cell(display_name(r))
+            url = r["url"]
+            tag = " · fork" if r.get("fork") else ""
+            empty = " · 空仓库" if r.get("empty") else ""
+            desc = _repo_desc(r)
+            chunks.append(
+                f"| [{name}]({url}){tag} | `{r.get('lang') or '-'}` | "
+                f"{r.get('stars', 0)} | {r['pushed_at'][:10]} | {desc}{empty} |"
+            )
+        chunks.append("")
+
+    rest = [r for r in data.get("repos", [])
+            if r["name"] not in used and r["name"].lower() != login]
+    if rest:
+        chunks.append("### 其他")
+        chunks.append("")
+        chunks.append("| 仓库 | 语言 | ★ | 最近更新 | 说明 |")
+        chunks.append("| --- | --- | ---: | --- | --- |")
+        for r in rest:
+            name = _md_cell(display_name(r))
+            tag = " · fork" if r.get("fork") else ""
+            empty = " · 空仓库" if r.get("empty") else ""
+            desc = _repo_desc(r)
+            chunks.append(
+                f"| [{name}]({r['url']}){tag} | `{r.get('lang') or '-'}` | "
+                f"{r.get('stars', 0)} | {r['pushed_at'][:10]} | {desc}{empty} |"
+            )
+        chunks.append("")
+
+    return "\n".join(chunks).strip()
 
 
 def pic(name: str, alt: str, width: str = "100%") -> str:
@@ -119,6 +215,12 @@ def build(data: dict) -> str:
     for r in repos:
         parts.append(linked_pic(f"proj-{slug(r['name'])}", r["url"], display_name(r)))
         parts.append("\n")
+
+    parts.append(hdr("repos", "全部仓库"))
+    parts.append("\n")
+    parts.append("> 上面是当前主项目；这里是全部公开仓库，按方向分组，Fork 和空仓库也保留入口。\n")
+    parts.append(repo_index(data))
+    parts.append("\n")
 
     parts.append(hdr("stats", "数据与轨迹"))
     parts.append("\n")
