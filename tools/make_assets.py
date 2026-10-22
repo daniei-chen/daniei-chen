@@ -907,9 +907,16 @@ def project(mode: str, repo: dict) -> str:
                 f'<animate attributeName="x" values="-260;1120" dur="6s" begin="0.6s" '
                 f'repeatCount="indefinite"/></rect></g>')
     body.append(
+        f'<circle cx="66" cy="70" r="40" fill="none" stroke="{p["cyan"]}" stroke-opacity="0.42">'
+        f'<animate attributeName="r" values="40;48;40" dur="3.2s" repeatCount="indefinite"/>'
+        f'<animate attributeName="opacity" values="0.5;0;0.5" dur="3.2s" repeatCount="indefinite"/>'
+        f'</circle>'
         f'<rect x="28" y="32" width="76" height="76" rx="20" fill="url(#pav)"/>'
         f'<text x="66" y="84" text-anchor="middle" font-family="{FONT}" font-size="34" '
         f'font-weight="800" fill="#FFFFFF">{esc(display[0])}</text>')
+    body.append(f'<circle cx="{W-24}" cy="52" r="4" fill="{p["teal"]}">'
+                f'<animate attributeName="opacity" values="0.25;1;0.25" dur="2.2s" '
+                f'repeatCount="indefinite"/></circle>')
     body.append(f'<text x="126" y="60" font-family="{FONT}" font-size="24" font-weight="800" '
                 f'fill="{p["text"]}">{esc(display)}</text>')
     # 元信息行
@@ -930,8 +937,10 @@ def project(mode: str, repo: dict) -> str:
     # topic 标签行：放不下就折叠成 +N
     if topics:
         body.extend(_chips(p, topics, 126, 166, W - 64))
-    body.append(f'<text x="{W-34}" y="96" text-anchor="end" font-family="{FONT}" font-size="26" '
-                f'fill="{p["cyan"]}" opacity="0.85">&#8594;</text>')
+    body.append(f'<g><text x="{W-34}" y="96" text-anchor="end" font-family="{FONT}" font-size="26" '
+                f'fill="{p["cyan"]}" opacity="0.85">&#8594;</text>'
+                f'<animateTransform attributeName="transform" type="translate" '
+                f'values="0 0;6 0;0 0" dur="1.8s" repeatCount="indefinite"/></g>')
     return svg(W, H, f'{display} 项目卡', defs, "".join(body))
 
 

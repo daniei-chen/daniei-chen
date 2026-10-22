@@ -125,7 +125,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/dsh-token-insight">
+  <a href="https://github.com/daniei-chen/dsh-token-insight" title="DSH Token Insight — DSH 本地使用统计：52 周热力图、每日趋势、模型用量、会话 Top 5、成本与导出，全程只读本地文件。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-dshtokeninsight-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-dshtokeninsight-light.svg">
@@ -136,7 +136,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/DeepSeek-Harness-APP">
+  <a href="https://github.com/daniei-chen/DeepSeek-Harness-APP" title="DeepSeek Harness APP — 自托管 DSH 的安卓客户端：WebView UI、扫码/Relay 配对、审批通知、文件上传与多设备管理。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-deepseekharnessapp-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-deepseekharnessapp-light.svg">
@@ -147,7 +147,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/ZCode-App">
+  <a href="https://github.com/daniei-chen/ZCode-App" title="ZCode-App — 在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-zcodeapp-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-zcodeapp-light.svg">
@@ -158,7 +158,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/WorkBuddy-API">
+  <a href="https://github.com/daniei-chen/WorkBuddy-API" title="WorkBuddy2API — 自托管的 OpenAI 兼容网关：把 CodeBuddy 账号包装成统一的 /v1/chat/completions 服务，多账号池轮转 + 会话粘性 + 额度治理。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-workbuddyapi-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-workbuddyapi-light.svg">
@@ -169,7 +169,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/Little-Whale">
+  <a href="https://github.com/daniei-chen/Little-Whale" title="小鲸鱼 — 粘贴链接，保存无水印原片。解析全程在手机本地完成，链接不上传、不经过任何服务器。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-littlewhale-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-littlewhale-light.svg">
@@ -180,7 +180,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/solar-system">
+  <a href="https://github.com/daniei-chen/solar-system" title="太阳系 · 3D 仿真 — 单文件、离线可用的真渲染太阳系仿真：真实星历与 25,791 颗恒星，从日面一路退到 30 kpc 回望银河系。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-solarsystem-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-solarsystem-light.svg">
@@ -191,7 +191,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/Forbidden-City">
+  <a href="https://github.com/daniei-chen/Forbidden-City" title="紫禁城 · 3D 复原 — 单文件 Three.js 可漫游的紫禁城程序化场景：七殿室内、四时段、SSAO、NPC 与跳跃，零外部资源。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-forbiddencity-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-forbiddencity-light.svg">
@@ -202,7 +202,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/Qoder-API">
+  <a href="https://github.com/daniei-chen/Qoder-API" title="Qoder2API — 把 Qoder 账号封装成 OpenAI 兼容 API 的自托管网关，支持多账号与统一入口。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-qoderapi-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-qoderapi-light.svg">
@@ -213,7 +213,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/Pdd-Shopping">
+  <a href="https://github.com/daniei-chen/Pdd-Shopping" title="拼多多研究助手 — MuMu 模拟器里的商品搜索、比价、详情参数与评价整理；下单和支付始终由人工完成。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-pddshopping-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-pddshopping-light.svg">
@@ -224,7 +224,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/Trae-API">
+  <a href="https://github.com/daniei-chen/Trae-API" title="Trae2API — 把 Trae 账号接到 OpenAI 兼容接口的自托管网关，方便接入现有客户端。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-traeapi-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-traeapi-light.svg">

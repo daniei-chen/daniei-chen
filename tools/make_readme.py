@@ -13,7 +13,7 @@ from __future__ import annotations
 import json
 import os
 
-from make_assets import (CFG, SECTIONS, DATA, ROOT, display_name, project_repos, slug, REPO_META)
+from make_assets import (CFG, SECTIONS, DATA, ROOT, display_name, project_repos, slug, REPO_META, esc)
 
 OUT = os.path.join(ROOT, "README.md")
 
@@ -164,9 +164,9 @@ def pic(name: str, alt: str, width: str = "100%") -> str:
             f'</picture>')
 
 
-def linked_pic(name: str, href: str, alt: str) -> str:
-    """整张图可点击的项目卡。"""
-    return (f'<p align="center">\n  <a href="{href}">\n'
+def linked_pic(name: str, href: str, alt: str, title: str = "") -> str:
+    """整张图可点击的项目卡；title 提供浏览器原生悬浮提示。"""
+    return (f'<p align="center">\n  <a href="{href}" title="{esc(title or alt)}">\n'
             f'    <picture>\n'
             f'      <source media="(prefers-color-scheme: dark)" srcset="assets/{name}-dark.svg">\n'
             f'      <source media="(prefers-color-scheme: light)" srcset="assets/{name}-light.svg">\n'
@@ -220,7 +220,11 @@ def build(data: dict) -> str:
     parts.append(hdr("projects", "在做的东西"))
     parts.append("\n")
     for r in repos:
-        parts.append(linked_pic(f"proj-{slug(r['name'])}", r["url"], display_name(r)))
+        blurb = REPO_META.get(r["name"], {}).get("blurb") or r.get("desc") or ""
+        parts.append(linked_pic(
+            f"proj-{slug(r['name'])}", r["url"], display_name(r),
+            f"{display_name(r)} — {blurb}" if blurb else display_name(r),
+        ))
         parts.append("\n")
 
     parts.append(hdr("repos", "全部仓库"))
