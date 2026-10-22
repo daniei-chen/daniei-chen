@@ -547,9 +547,10 @@ TERM_LINES = [
     ("$ whoami", "cmd"),
     ("陈丹妮 · 独立开发者 / Indie Developer", "out"),
     ("$ cat stack.txt", "cmd"),
-    ("Flutter · Dart · Android · WebView · Python", "out"),
+    ("Flutter · Dart · Kotlin · JS / TS · Python", "out"),
     ("$ ls ~/repos", "cmd"),
-    ("小鲸鱼/      ZCode-App/", "out"),
+    ("dsh-token-insight/   DeepSeek-Harness-APP/", "out"),
+    ("ZCode-App/           Little-Whale/", "out"),
 ]
 
 
