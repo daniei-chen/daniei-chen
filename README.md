@@ -53,6 +53,23 @@
   <img src="assets/terminal-dark.svg" alt="终端名片" width="100%">
 </picture>
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-dsh-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hdr-dsh-light.svg">
+  <img src="assets/hdr-dsh-dark.svg" alt="DSH 生态" width="100%">
+</picture>
+
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dsh-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/dsh-light.svg">
+  <img src="assets/dsh-dark.svg" alt="DSH 生态" width="100%">
+</picture>
+
+
+> 统计、远控、插件、中继——都围绕同一个本地 DSH host；数据不离开自己的机器。
+
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-stack-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/hdr-stack-light.svg">
   <img src="assets/hdr-stack-dark.svg" alt="技术栈" width="100%">
@@ -287,7 +304,7 @@
 </picture>
 
 
-> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘，
+> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-10-22`），
 > 素材全部自绘，深浅色模式各一套。
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-focus-dark.svg">

@@ -198,6 +198,13 @@ def build(data: dict) -> str:
     parts.append("\n")
     parts.append(pic("terminal", "终端名片"))
 
+    parts.append(hdr("dsh", "DSH 生态"))
+    parts.append("\n")
+    parts.append(pic("dsh", "DSH 生态"))
+    parts.append("\n")
+    parts.append("> 统计、远控、插件、中继——都围绕同一个本地 DSH host；数据不离开自己的机器。")
+    parts.append("\n")
+
     parts.append(hdr("stack", "技术栈"))
     parts.append("\n")
     parts.append(pic("lang", "代码语言构成"))
@@ -229,7 +236,8 @@ def build(data: dict) -> str:
     parts.append(pic("activity", "加入以来的每日提交"))
     parts.append("\n")
     parts.append("> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action "
-                 "每天重新抓取并重绘，\n> 素材全部自绘，深浅色模式各一套。")
+                 f"每天重新抓取并重绘（最近更新 `{data.get('generated_at', '')[:10]}`），\n"
+                 "> 素材全部自绘，深浅色模式各一套。")
 
     parts.append(hdr("focus", "方向与投入"))
     parts.append("\n")

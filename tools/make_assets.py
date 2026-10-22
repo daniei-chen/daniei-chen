@@ -341,8 +341,17 @@ def stats(mode: str, data: dict) -> str:
              ("获得星标", stars, p["violet2"]),
              ("公开贡献", c["total"], p["teal"]),
              ("加入天数", days, p["pink"])]
-    defs = bg_grad(p, "sbg")
-    body = [panel(p, "sbg", W, H, 18)]
+    defs = (bg_grad(p, "sbg")
+            + '<linearGradient id="ssweep" x1="0" y1="0" x2="1" y2="0">'
+              '<stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
+              '<stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.16"/>'
+              '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>'
+            + f'<clipPath id="sclip"><rect width="{W}" height="{H}" rx="18"/></clipPath>')
+    body = [panel(p, "sbg", W, H, 18),
+            f'<g clip-path="url(#sclip)"><rect x="-220" y="0" width="220" height="{H}" '
+            f'fill="url(#ssweep)" transform="skewX(-18)">'
+            f'<animate attributeName="x" values="-220;1120" dur="6.5s" '
+            f'repeatCount="indefinite"/></rect></g>']
     bw = W / len(items)
     for i, (label, value, color) in enumerate(items):
         cx = bw * (i + 0.5)
@@ -488,10 +497,129 @@ def activity(mode: str, data: dict) -> str:
 
 
 # ----------------------------------------------------------------------------
+# 5.5) DSH 生态：动态轨道 + 呼吸脉冲
+# ----------------------------------------------------------------------------
+def dsh(mode: str) -> str:
+    p = PAL[mode]
+    W, H = 1000, 456
+    cx, cy = 500, 230
+    defs = (bg_grad(p, "dbg")
+            + f'<linearGradient id="dshCore" x1="0" y1="0" x2="1" y2="1">'
+              f'<stop offset="0" stop-color="{p["cyan"]}" stop-opacity="0.24"/>'
+              f'<stop offset="0.55" stop-color="{p["violet"]}" stop-opacity="0.16"/>'
+              f'<stop offset="1" stop-color="{p["teal"]}" stop-opacity="0.12"/></linearGradient>'
+            + f'<linearGradient id="dshLine" x1="0" y1="0" x2="1" y2="0">'
+              f'<stop offset="0" stop-color="{p["cyan"]}" stop-opacity="0.10"/>'
+              f'<stop offset="0.5" stop-color="{p["cyan"]}" stop-opacity="0.55"/>'
+              f'<stop offset="1" stop-color="{p["violet2"]}" stop-opacity="0.10"/></linearGradient>')
+    body = [panel(p, "dbg", W, H, 18)]
+
+    body.append(
+        f'<text x="40" y="42" font-family="{FONT}" font-size="15" font-weight="700" '
+        f'fill="{p["text"]}">DSH 生态</text>'
+        f'<text x="40" y="62" font-family="{FONT}" font-size="11" letter-spacing="2.6" '
+        f'fill="{p["dim"]}">LOCAL-FIRST · ONE ECOSYSTEM</text>'
+        f'<text x="{W-40}" y="42" text-anchor="end" font-family="{FONT}" font-size="12" '
+        f'fill="{p["muted"]}">统计 · 远控 · 插件 · 中继</text>'
+        f'<circle cx="{W-46}" cy="57" r="3" fill="{p["teal"]}">'
+        f'<animate attributeName="opacity" values="0.25;1;0.25" dur="2.2s" '
+        f'repeatCount="indefinite"/></circle>'
+    )
+
+    # 轨道：两层椭圆，反向旋转；粒子沿轨道运动
+    for rx, ry, op, dur in ((342, 150, 0.22, 30), (278, 118, 0.13, 24)):
+        body.append(
+            f'<ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}" fill="none" '
+            f'stroke="{p["cyan"]}" stroke-opacity="{op}" stroke-width="1" '
+            f'stroke-dasharray="3 9">'
+            f'<animateTransform attributeName="transform" type="rotate" '
+            f'from="0 {cx} {cy}" to="360 {cx} {cy}" dur="{dur}s" '
+            f'repeatCount="indefinite"/></ellipse>'
+        )
+
+    orbit_dots = [(cx - 300, cy - 75, 3.2, 0.0), (cx + 286, cy + 54, 2.4, 1.1),
+                  (cx - 180, cy + 124, 2.0, 2.0), (cx + 204, cy - 118, 2.8, 2.8)]
+    body.append(f'<g><animateTransform attributeName="transform" type="rotate" '
+                f'from="0 {cx} {cy}" to="360 {cx} {cy}" dur="26s" repeatCount="indefinite"/>')
+    for ox, oy, r, begin in orbit_dots:
+        body.append(f'<circle cx="{ox}" cy="{oy}" r="{r}" fill="{p["cyan2"]}" opacity="0.7">'
+                    f'<animate attributeName="opacity" values="0.25;1;0.25" dur="2.8s" '
+                    f'begin="{begin}s" repeatCount="indefinite"/></circle>')
+    body.append('</g>')
+
+    # 中心呼吸环
+    for r, begin in ((84, 0.0), (96, 0.8)):
+        body.append(
+            f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{p["cyan"]}" '
+            f'stroke-opacity="0.45" stroke-width="1.2" opacity="0">'
+            f'<animate attributeName="r" values="{r};{r+30}" dur="3.8s" begin="{begin}s" '
+            f'repeatCount="indefinite"/>'
+            f'<animate attributeName="opacity" values="0.55;0" dur="3.8s" begin="{begin}s" '
+            f'repeatCount="indefinite"/></circle>'
+        )
+
+    # 连接线：虚线流动
+    links = [
+        (410, 210, 286, 124), (590, 210, 720, 124),
+        (410, 250, 286, 336), (590, 250, 720, 336),
+    ]
+    for x1, y1, x2, y2 in links:
+        body.append(
+            f'<path d="M{x1} {y1} C{(x1+x2)/2} {y1}, {(x1+x2)/2} {y2}, {x2} {y2}" '
+            f'fill="none" stroke="url(#dshLine)" stroke-width="1.6" stroke-dasharray="6 8">'
+            f'<animate attributeName="stroke-dashoffset" values="0;-28" dur="1.6s" '
+            f'repeatCount="indefinite"/></path>'
+        )
+
+    # 四个卫星卡
+    cards = [
+        (46, 86, "TOKEN INSIGHT", "52 周热力图 · 成本 · 导出", "01", p["cyan"]),
+        (726, 86, "HARNESS APP", "安卓远控 · Relay 配对", "02", p["violet2"]),
+        (46, 306, "PLUGINS", "DSH 插件 · 本地工具", "03", p["teal"]),
+        (726, 306, "RELAY", "多设备 · 安全连接", "04", p["pink"]),
+    ]
+    for x, y, title, sub, idx, color in cards:
+        cw, ch = 228, 84
+        body.append(
+            f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="14" fill="{p["bg1"]}" '
+            f'fill-opacity="0.62" stroke="{p["stroke"]}" stroke-opacity="0.9"/>'
+            f'<rect x="{x}" y="{y}" width="{cw}" height="3" rx="1.5" fill="{color}" '
+            f'opacity="0.8"><animate attributeName="opacity" values="0.3;0.9;0.3" '
+            f'dur="3s" repeatCount="indefinite"/></rect>'
+            f'<text x="{x+18}" y="{y+31}" font-family="{FONT}" font-size="13" '
+            f'font-weight="700" fill="{p["text"]}">{title}</text>'
+            f'<text x="{x+18}" y="{y+54}" font-family="{FONT}" font-size="11" '
+            f'fill="{p["muted"]}">{sub}</text>'
+            f'<text x="{x+cw-18}" y="{y+31}" text-anchor="end" font-family="{FONT}" '
+            f'font-size="11" fill="{color}">{idx}</text>'
+            f'<circle cx="{x+cw-20}" cy="{y+60}" r="3" fill="{color}">'
+            f'<animate attributeName="opacity" values="0.25;1;0.25" dur="2.4s" '
+            f'repeatCount="indefinite"/></circle>'
+        )
+
+    # 中心核心
+    body.append(
+        f'<rect x="410" y="182" width="180" height="96" rx="26" fill="url(#dshCore)" '
+        f'stroke="{p["cyan"]}" stroke-opacity="0.55"/>'
+        f'<text x="{cx}" y="226" text-anchor="middle" font-family="{FONT}" '
+        f'font-size="38" font-weight="800" fill="{p["text"]}">DSH</text>'
+        f'<text x="{cx}" y="248" text-anchor="middle" font-family="{FONT}" '
+        f'font-size="10.5" letter-spacing="2" fill="{p["muted"]}">DEEPSEEK HARNESS</text>'
+        f'<text x="{cx}" y="267" text-anchor="middle" font-family="{FONT}" '
+        f'font-size="10" fill="{p["dim"]}">local-first · no cloud</text>'
+    )
+
+    body.append(f'<text x="{W/2}" y="{H-18}" text-anchor="middle" font-family="{FONT}" '
+                f'font-size="11" fill="{p["dim"]}">数据只在你的机器上流动；插件、App、Relay 都围绕同一个本地 host。</text>')
+    return svg(W, H, "DSH 生态", defs, "".join(body))
+
+
+# ----------------------------------------------------------------------------
 # 6) 章节标题组件
 # ----------------------------------------------------------------------------
 SECTIONS = [
     ("about", "🧑‍💻", "关于我", "About"),
+    ("dsh", "🌌", "DSH 生态", "DSH Ecosystem"),
     ("stack", "🛠", "技术栈", "Tech Stack"),
     ("projects", "🚀", "在做的东西", "Projects"),
     ("repos", "🗂", "全部仓库", "Repositories"),
@@ -856,6 +984,7 @@ def main() -> None:
         "typing": lambda m: typing(m),
         "divider": lambda m: divider(m),
         "terminal": lambda m: terminal(m),
+        "dsh": lambda m: dsh(m),
         "stats": lambda m: stats(m, data),
         "activity": lambda m: activity(m, data),
         "lang": lambda m: lang(m, data),
