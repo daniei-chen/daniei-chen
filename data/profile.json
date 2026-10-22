@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-22T02:35:47Z",
+  "generated_at": "2026-10-22T06:43:06Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 1,
     "following": 1,
-    "public_repos": 15,
+    "public_repos": 14,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -40,6 +40,37 @@
       "empty": false
     },
     {
+      "name": "Little-Whale",
+      "desc": "视频下载去水印",
+      "lang": "Dart",
+      "stars": 4,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/Little-Whale",
+      "topics": [
+        "android",
+        "bilibili",
+        "dart",
+        "douyin",
+        "flutter",
+        "no-watermark",
+        "offline",
+        "privacy",
+        "video-downloader",
+        "xiaohongshu"
+      ],
+      "pushed_at": "2026-10-22T06:26:11Z",
+      "langs": {
+        "Dart": 470346,
+        "HTML": 133107,
+        "Java": 43310,
+        "Kotlin": 23111,
+        "PowerShell": 11919
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
       "name": "WorkBuddy-API",
       "desc": "把 CodeBuddy 账号变成 OpenAI 兼容 API 的自托管网关｜OAuth 登录 · 账号池轮转 · 会话粘性 · 额度治理",
       "lang": "Python",
@@ -56,7 +87,7 @@
         "self-hosted",
         "sse"
       ],
-      "pushed_at": "2026-10-18T11:49:06Z",
+      "pushed_at": "2026-10-22T03:36:23Z",
       "langs": {
         "Python": 4305921,
         "Go": 2183164,
@@ -70,36 +101,6 @@
         "CSS": 11143,
         "Batchfile": 8205,
         "Standard ML": 384
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "Little-Whale",
-      "desc": "视频下载去水印",
-      "lang": "Dart",
-      "stars": 3,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/Little-Whale",
-      "topics": [
-        "android",
-        "bilibili",
-        "dart",
-        "douyin",
-        "flutter",
-        "no-watermark",
-        "offline",
-        "privacy",
-        "video-downloader",
-        "xiaohongshu"
-      ],
-      "pushed_at": "2026-09-26T04:43:56Z",
-      "langs": {
-        "Dart": 446864,
-        "HTML": 133107,
-        "PowerShell": 11919,
-        "Kotlin": 3828
       },
       "fork": false,
       "empty": false
@@ -148,9 +149,9 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-10-22T02:35:39Z",
+      "pushed_at": "2026-10-22T06:42:58Z",
       "langs": {
-        "Python": 82840
+        "Python": 83806
       },
       "fork": false,
       "empty": false
@@ -262,22 +263,6 @@
         "AIDL": 4139
       },
       "fork": true,
-      "empty": false
-    },
-    {
-      "name": "Pdd-Shopping",
-      "desc": "在 MuMu 模拟器里操作拼多多 APP：搜索与排序筛选、结果页比价（单位价归一 元/斤·元/个）、详情页参数与评价深挖、price-log 盯价日志与阈值提醒；下单/支付一律由人工在授权边界内执行。当用户要求\"在拼多多上搜索/对比/购买某商品\"",
-      "lang": "PowerShell",
-      "stars": 1,
-      "forks": 0,
-      "license": "MIT",
-      "url": "https://github.com/daniei-chen/Pdd-Shopping",
-      "topics": [],
-      "pushed_at": "2026-10-03T10:30:21Z",
-      "langs": {
-        "PowerShell": 148088
-      },
-      "fork": false,
       "empty": false
     },
     {
@@ -2476,15 +2461,15 @@
       },
       {
         "date": "2026-10-02",
-        "level": 1,
+        "level": 0,
         "id": "contribution-day-component-5-49",
-        "count": 1
+        "count": 0
       },
       {
         "date": "2026-10-03",
-        "level": 1,
+        "level": 0,
         "id": "contribution-day-component-6-49",
-        "count": 4
+        "count": 0
       },
       {
         "date": "2026-10-04",
@@ -2598,10 +2583,10 @@
         "date": "2026-10-22",
         "level": 4,
         "id": "contribution-day-component-4-52",
-        "count": 65
+        "count": 70
       }
     ],
     "max": 71,
-    "active_days": 15
+    "active_days": 13
   }
 }

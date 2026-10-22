@@ -213,17 +213,6 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/Pdd-Shopping" title="拼多多研究助手 — MuMu 模拟器里的商品搜索、比价、详情参数与评价整理；下单和支付始终由人工完成。">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-pddshopping-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-pddshopping-light.svg">
-      <img src="assets/proj-pddshopping-dark.svg" alt="拼多多研究助手" width="100%">
-    </picture>
-  </a>
-</p>
-
-
-<p align="center">
   <a href="https://github.com/daniei-chen/Trae-API" title="Trae2API — 把 Trae 账号接到 OpenAI 兼容接口的自托管网关，方便接入现有客户端。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-traeapi-dark.svg">
@@ -249,7 +238,7 @@
 | --- | --- | ---: | --- | --- |
 | [DSH Token Insight](https://github.com/daniei-chen/dsh-token-insight) | `JavaScript` | 0 | 2026-10-22 | DSH 本地使用统计：52 周热力图、每日趋势、模型用量、会话 Top 5、成本与导出，全程只读本地文件。 |
 | [DeepSeek Harness APP](https://github.com/daniei-chen/DeepSeek-Harness-APP) | `Kotlin` | 1 | 2026-10-22 | 自托管 DSH 的安卓客户端：WebView UI、扫码/Relay 配对、审批通知、文件上传与多设备管理。 |
-| [WorkBuddy2API](https://github.com/daniei-chen/WorkBuddy-API) | `Python` | 4 | 2026-10-18 | 自托管的 OpenAI 兼容网关：把 CodeBuddy 账号包装成统一的 /v1/chat/completion… |
+| [WorkBuddy2API](https://github.com/daniei-chen/WorkBuddy-API) | `Python` | 4 | 2026-10-22 | 自托管的 OpenAI 兼容网关：把 CodeBuddy 账号包装成统一的 /v1/chat/completion… |
 | [Qoder2API](https://github.com/daniei-chen/Qoder-API) | `JavaScript` | 1 | 2026-10-18 | 把 Qoder 账号封装成 OpenAI 兼容 API 的自托管网关，支持多账号与统一入口。 |
 | [Trae2API](https://github.com/daniei-chen/Trae-API) | `JavaScript` | 0 | 2026-10-19 | 把 Trae 账号接到 OpenAI 兼容接口的自托管网关，方便接入现有客户端。 |
 | [DSH 破甲](https://github.com/daniei-chen/dsh-purge) · fork | `-` | 0 | 2026-10-19 | DSH 提示词实验：不同模型可换不同提示词，默认面向国模小码酱。 |
@@ -259,8 +248,7 @@
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
 | [ZCode-App](https://github.com/daniei-chen/ZCode-App) | `Dart` | 5 | 2026-10-10 | 在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。 |
-| [小鲸鱼](https://github.com/daniei-chen/Little-Whale) | `Dart` | 3 | 2026-09-26 | 粘贴链接，保存无水印原片。解析全程在手机本地完成，链接不上传、不经过任何服务器。 |
-| [拼多多研究助手](https://github.com/daniei-chen/Pdd-Shopping) | `PowerShell` | 1 | 2026-10-03 | MuMu 模拟器里的商品搜索、比价、详情参数与评价整理；下单和支付始终由人工完成。 |
+| [小鲸鱼](https://github.com/daniei-chen/Little-Whale) | `Dart` | 4 | 2026-10-22 | 粘贴链接，保存无水印原片。解析全程在手机本地完成，链接不上传、不经过任何服务器。 |
 
 ### 3D / 视觉实验
 
