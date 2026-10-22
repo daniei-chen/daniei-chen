@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T02:30:49Z",
+  "generated_at": "2026-10-22T02:35:47Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -140,15 +140,17 @@
       "license": null,
       "url": "https://github.com/daniei-chen/daniei-chen",
       "topics": [
+        "deepseek-harness",
+        "dsh",
         "github-actions",
         "github-profile",
         "profile-readme",
         "python",
         "svg"
       ],
-      "pushed_at": "2026-10-22T02:30:40Z",
+      "pushed_at": "2026-10-22T02:35:39Z",
       "langs": {
-        "Python": 75267
+        "Python": 82840
       },
       "fork": false,
       "empty": false
