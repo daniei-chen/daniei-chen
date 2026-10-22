@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T02:25:53Z",
+  "generated_at": "2026-10-22T02:28:21Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -132,6 +132,28 @@
       "empty": false
     },
     {
+      "name": "daniei-chen",
+      "desc": "个人主页 · 深空极光主题｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
+      "lang": "Python",
+      "stars": 1,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/daniei-chen",
+      "topics": [
+        "github-actions",
+        "github-profile",
+        "profile-readme",
+        "python",
+        "svg"
+      ],
+      "pushed_at": "2026-10-22T02:28:13Z",
+      "langs": {
+        "Python": 75201
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
       "name": "DeepSeek-Harness-APP",
       "desc": "Self-hosted Android client for DeepSeek Harness: LAN/mDNS + relay pairing, actionable approvals, inbox/cockpit, file upload/audit and fleet overview. No cloud, accounts, telemetry or monetization. Unofficial community project.",
       "lang": "Kotlin",
@@ -161,28 +183,6 @@
         "CSS": 5559,
         "PowerShell": 849,
         "Shell": 127
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "daniei-chen",
-      "desc": "个人主页 · 深空极光主题｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
-      "lang": "Python",
-      "stars": 1,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/daniei-chen",
-      "topics": [
-        "github-actions",
-        "github-profile",
-        "profile-readme",
-        "python",
-        "svg"
-      ],
-      "pushed_at": "2026-10-21T08:37:41Z",
-      "langs": {
-        "Python": 68211
       },
       "fork": false,
       "empty": false
@@ -382,7 +382,7 @@
     }
   ],
   "contributions": {
-    "total": 346,
+    "total": 347,
     "days": [
       {
         "date": "2025-10-19",
@@ -2596,7 +2596,7 @@
         "date": "2026-10-22",
         "level": 4,
         "id": "contribution-day-component-4-52",
-        "count": 63
+        "count": 64
       }
     ],
     "max": 71,
