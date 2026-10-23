@@ -201,28 +201,6 @@
 </p>
 
 
-<p align="center">
-  <a href="https://github.com/daniei-chen/Qoder-API" title="Qoder2API — 把 Qoder 账号封装成 OpenAI 兼容 API 的自托管网关，支持多账号与统一入口。">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-qoderapi-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-qoderapi-light.svg">
-      <img src="assets/proj-qoderapi-dark.svg" alt="Qoder2API" width="100%">
-    </picture>
-  </a>
-</p>
-
-
-<p align="center">
-  <a href="https://github.com/daniei-chen/Trae-API" title="Trae2API — 把 Trae 账号接到 OpenAI 兼容接口的自托管网关，方便接入现有客户端。">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-traeapi-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-traeapi-light.svg">
-      <img src="assets/proj-traeapi-dark.svg" alt="Trae2API" width="100%">
-    </picture>
-  </a>
-</p>
-
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-repos-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/hdr-repos-light.svg">
@@ -236,11 +214,9 @@
 
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
-| [DSH Token Insight](https://github.com/daniei-chen/dsh-token-insight) | `JavaScript` | 0 | 2026-10-22 | DSH 本地使用统计：52 周热力图、每日趋势、模型用量、会话 Top 5、成本与导出，全程只读本地文件。 |
-| [DeepSeek Harness APP](https://github.com/daniei-chen/DeepSeek-Harness-APP) | `Kotlin` | 1 | 2026-10-22 | 自托管 DSH 的安卓客户端：WebView UI、扫码/Relay 配对、审批通知、文件上传与多设备管理。 |
+| [DSH Token Insight](https://github.com/daniei-chen/dsh-token-insight) | `JavaScript` | 0 | 2026-10-23 | DSH 本地使用统计：52 周热力图、每日趋势、模型用量、会话 Top 5、成本与导出，全程只读本地文件。 |
+| [DeepSeek Harness APP](https://github.com/daniei-chen/DeepSeek-Harness-APP) | `Kotlin` | 1 | 2026-10-23 | 自托管 DSH 的安卓客户端：WebView UI、扫码/Relay 配对、审批通知、文件上传与多设备管理。 |
 | [WorkBuddy2API](https://github.com/daniei-chen/WorkBuddy-API) | `Python` | 4 | 2026-10-22 | 自托管的 OpenAI 兼容网关：把 CodeBuddy 账号包装成统一的 /v1/chat/completion… |
-| [Qoder2API](https://github.com/daniei-chen/Qoder-API) | `JavaScript` | 1 | 2026-10-18 | 把 Qoder 账号封装成 OpenAI 兼容 API 的自托管网关，支持多账号与统一入口。 |
-| [Trae2API](https://github.com/daniei-chen/Trae-API) | `JavaScript` | 0 | 2026-10-19 | 把 Trae 账号接到 OpenAI 兼容接口的自托管网关，方便接入现有客户端。 |
 | [DSH 破甲](https://github.com/daniei-chen/dsh-purge) · fork | `-` | 0 | 2026-10-19 | DSH 提示词实验：不同模型可换不同提示词，默认面向国模小码酱。 |
 
 ### 移动端 / Flutter
@@ -268,7 +244,6 @@
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
 | [DeepSeek Harness](https://github.com/daniei-chen/deepseek-harness) · fork | `TypeScript` | 0 | 2026-10-04 | DeepSeek Harness 上游仓库的 Fork，用于跟进插件系统与运行时变化。 |
-| [DSH Phone](https://github.com/daniei-chen/deepseek-harness-phone) · fork | `-` | 1 | 2026-10-04 | DSH 安卓壳实验：WebView UI + 内嵌 Termux 运行时快照，解压即跑。 |
 
 
 <picture>
@@ -292,7 +267,7 @@
 </picture>
 
 
-> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-10-22`），
+> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-10-23`），
 > 素材全部自绘，深浅色模式各一套。
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-focus-dark.svg">
