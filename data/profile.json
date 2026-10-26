@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T08:28:13Z",
+  "generated_at": "2026-10-26T08:59:24Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -27,7 +27,7 @@
         "webview",
         "zcode"
       ],
-      "pushed_at": "2026-10-25T08:12:23Z",
+      "pushed_at": "2026-10-26T08:51:48Z",
       "langs": {
         "Dart": 1109869,
         "Python": 210028,
@@ -35,6 +35,41 @@
         "Kotlin": 18813,
         "Shell": 17061,
         "PowerShell": 3851
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "WorkBuddy-API",
+      "desc": "把 CodeBuddy 账号变成 OpenAI 兼容 API 的自托管网关｜OAuth 登录 · 账号池轮转 · 会话粘性 · 额度治理",
+      "lang": "Python",
+      "stars": 4,
+      "forks": 0,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/WorkBuddy-API",
+      "topics": [
+        "codebuddy",
+        "docker",
+        "gateway",
+        "go",
+        "openai-api",
+        "self-hosted",
+        "sse"
+      ],
+      "pushed_at": "2026-10-25T21:32:16Z",
+      "langs": {
+        "Python": 4305921,
+        "Go": 2183164,
+        "TypeScript": 1245235,
+        "HTML": 726905,
+        "JavaScript": 375055,
+        "PowerShell": 138156,
+        "C#": 115011,
+        "Shell": 80482,
+        "Dockerfile": 19504,
+        "CSS": 11143,
+        "Batchfile": 8205,
+        "Standard ML": 384
       },
       "fork": false,
       "empty": false
@@ -66,41 +101,6 @@
         "Java": 43310,
         "Kotlin": 23111,
         "PowerShell": 11919
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "WorkBuddy-API",
-      "desc": "把 CodeBuddy 账号变成 OpenAI 兼容 API 的自托管网关｜OAuth 登录 · 账号池轮转 · 会话粘性 · 额度治理",
-      "lang": "Python",
-      "stars": 4,
-      "forks": 0,
-      "license": "MIT",
-      "url": "https://github.com/daniei-chen/WorkBuddy-API",
-      "topics": [
-        "codebuddy",
-        "docker",
-        "gateway",
-        "go",
-        "openai-api",
-        "self-hosted",
-        "sse"
-      ],
-      "pushed_at": "2026-10-24T21:32:14Z",
-      "langs": {
-        "Python": 4305921,
-        "Go": 2183164,
-        "TypeScript": 1245235,
-        "HTML": 726905,
-        "JavaScript": 375055,
-        "PowerShell": 138156,
-        "C#": 115011,
-        "Shell": 80482,
-        "Dockerfile": 19504,
-        "CSS": 11143,
-        "Batchfile": 8205,
-        "Standard ML": 384
       },
       "fork": false,
       "empty": false
@@ -155,7 +155,7 @@
         "unifiedpush",
         "webview"
       ],
-      "pushed_at": "2026-10-25T06:32:32Z",
+      "pushed_at": "2026-10-26T08:57:12Z",
       "langs": {
         "Kotlin": 1818271,
         "JavaScript": 445591,
@@ -182,7 +182,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-10-24T08:10:32Z",
+      "pushed_at": "2026-10-25T08:28:24Z",
       "langs": {
         "Python": 83806
       },
@@ -236,16 +236,24 @@
     {
       "name": "zhihui-gateway",
       "desc": "面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、API 密钥管理、用量统计与运行监控。",
-      "lang": "",
+      "lang": "Python",
       "stars": 0,
       "forks": 0,
       "license": null,
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-10-25T04:20:21Z",
-      "langs": {},
+      "pushed_at": "2026-10-26T07:07:15Z",
+      "langs": {
+        "Python": 6542740,
+        "TypeScript": 2613937,
+        "JavaScript": 907526,
+        "CSS": 47337,
+        "Shell": 33963,
+        "PowerShell": 19723,
+        "HTML": 4544
+      },
       "fork": false,
-      "empty": true
+      "empty": false
     },
     {
       "name": "dsh-token-insight",
@@ -317,7 +325,7 @@
     }
   ],
   "contributions": {
-    "total": 405,
+    "total": 410,
     "days": [
       {
         "date": "2025-10-26",
@@ -2508,9 +2516,15 @@
         "level": 1,
         "id": "contribution-day-component-0-52",
         "count": 12
+      },
+      {
+        "date": "2026-10-26",
+        "level": 1,
+        "id": "contribution-day-component-1-52",
+        "count": 5
       }
     ],
     "max": 87,
-    "active_days": 16
+    "active_days": 17
   }
 }

@@ -201,6 +201,17 @@
 </p>
 
 
+<p align="center">
+  <a href="https://github.com/daniei-chen/zhihui-gateway" title="zhihui-gateway — 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、API 密钥管理、用量统计与运行监控。">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-zhihuigateway-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-zhihuigateway-light.svg">
+      <img src="assets/proj-zhihuigateway-dark.svg" alt="zhihui-gateway" width="100%">
+    </picture>
+  </a>
+</p>
+
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-repos-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/hdr-repos-light.svg">
@@ -215,15 +226,15 @@
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
 | [DSH Token Insight](https://github.com/daniei-chen/dsh-token-insight) | `JavaScript` | 0 | 2026-10-23 | DSH 本地使用统计：52 周热力图、每日趋势、模型用量、会话 Top 5、成本与导出，全程只读本地文件。 |
-| [DeepSeek Harness APP](https://github.com/daniei-chen/DeepSeek-Harness-APP) | `Kotlin` | 1 | 2026-10-25 | 自托管 DSH 的安卓客户端：WebView UI、扫码/Relay 配对、审批通知、文件上传与多设备管理。 |
-| [WorkBuddy2API](https://github.com/daniei-chen/WorkBuddy-API) | `Python` | 4 | 2026-10-24 | 自托管的 OpenAI 兼容网关：把 CodeBuddy 账号包装成统一的 /v1/chat/completion… |
+| [DeepSeek Harness APP](https://github.com/daniei-chen/DeepSeek-Harness-APP) | `Kotlin` | 1 | 2026-10-26 | 自托管 DSH 的安卓客户端：WebView UI、扫码/Relay 配对、审批通知、文件上传与多设备管理。 |
+| [WorkBuddy2API](https://github.com/daniei-chen/WorkBuddy-API) | `Python` | 4 | 2026-10-25 | 自托管的 OpenAI 兼容网关：把 CodeBuddy 账号包装成统一的 /v1/chat/completion… |
 | [DSH 破甲](https://github.com/daniei-chen/dsh-purge) · fork | `-` | 0 | 2026-10-19 | DSH 提示词实验：不同模型可换不同提示词，默认面向国模小码酱。 |
 
 ### 移动端 / Flutter
 
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
-| [ZCode-App](https://github.com/daniei-chen/ZCode-App) | `Dart` | 5 | 2026-10-25 | 在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。 |
+| [ZCode-App](https://github.com/daniei-chen/ZCode-App) | `Dart` | 5 | 2026-10-26 | 在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。 |
 | [小鲸鱼](https://github.com/daniei-chen/Little-Whale) | `Dart` | 4 | 2026-10-25 | 粘贴链接，保存无水印原片。解析全程在手机本地完成，链接不上传、不经过任何服务器。 |
 
 ### 3D / 视觉实验
@@ -249,7 +260,7 @@
 
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
-| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `-` | 0 | 2026-10-25 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… · 空仓库 |
+| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `Python` | 0 | 2026-10-26 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… |
 
 
 <picture>
@@ -273,7 +284,7 @@
 </picture>
 
 
-> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-10-25`），
+> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-10-26`），
 > 素材全部自绘，深浅色模式各一套。
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-focus-dark.svg">
