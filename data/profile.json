@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T08:59:24Z",
+  "generated_at": "2026-10-27T09:03:17Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -56,7 +56,7 @@
         "self-hosted",
         "sse"
       ],
-      "pushed_at": "2026-10-25T21:32:16Z",
+      "pushed_at": "2026-10-26T12:25:39Z",
       "langs": {
         "Python": 4305921,
         "Go": 2183164,
@@ -155,7 +155,7 @@
         "unifiedpush",
         "webview"
       ],
-      "pushed_at": "2026-10-26T08:57:12Z",
+      "pushed_at": "2026-10-27T04:07:11Z",
       "langs": {
         "Kotlin": 1818271,
         "JavaScript": 445591,
@@ -182,9 +182,33 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-10-25T08:28:24Z",
+      "pushed_at": "2026-10-26T08:59:34Z",
       "langs": {
         "Python": 83806
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "dsh-token-insight",
+      "desc": "Local-first token usage dashboard for DeepSeek Harness (DSH). AI install guide for the plugin and the companion Android app.",
+      "lang": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/dsh-token-insight",
+      "topics": [
+        "android-app",
+        "dashboard",
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin",
+        "token-usage",
+        "usage-stats"
+      ],
+      "pushed_at": "2026-10-23T08:48:24Z",
+      "langs": {
+        "JavaScript": 88415
       },
       "fork": false,
       "empty": false
@@ -242,39 +266,16 @@
       "license": null,
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-10-26T07:07:15Z",
+      "pushed_at": "2026-10-27T08:50:36Z",
       "langs": {
-        "Python": 6542740,
-        "TypeScript": 2613937,
-        "JavaScript": 907526,
-        "CSS": 47337,
-        "Shell": 33963,
-        "PowerShell": 19723,
-        "HTML": 4544
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "dsh-token-insight",
-      "desc": "Local-first token usage dashboard for DeepSeek Harness (DSH). AI install guide for the plugin and the companion Android app.",
-      "lang": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "license": "MIT",
-      "url": "https://github.com/daniei-chen/dsh-token-insight",
-      "topics": [
-        "android-app",
-        "dashboard",
-        "deepseek-harness",
-        "dsh",
-        "dsh-plugin",
-        "token-usage",
-        "usage-stats"
-      ],
-      "pushed_at": "2026-10-23T08:48:24Z",
-      "langs": {
-        "JavaScript": 88415
+        "Python": 6478545,
+        "TypeScript": 1364570,
+        "JavaScript": 700479,
+        "Shell": 47943,
+        "PowerShell": 20138,
+        "CSS": 12796,
+        "Batchfile": 4521,
+        "Standard ML": 64
       },
       "fork": false,
       "empty": false
@@ -325,7 +326,7 @@
     }
   ],
   "contributions": {
-    "total": 410,
+    "total": 432,
     "days": [
       {
         "date": "2025-10-26",
@@ -2521,10 +2522,16 @@
         "date": "2026-10-26",
         "level": 1,
         "id": "contribution-day-component-1-52",
-        "count": 5
+        "count": 7
+      },
+      {
+        "date": "2026-10-27",
+        "level": 1,
+        "id": "contribution-day-component-2-52",
+        "count": 20
       }
     ],
     "max": 87,
-    "active_days": 17
+    "active_days": 18
   }
 }
