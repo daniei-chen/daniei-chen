@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T09:43:08Z",
+  "generated_at": "2026-10-29T10:01:28Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -13,7 +13,7 @@
       "name": "ZCode-App",
       "desc": "ZCode App · 在手机或平板上远程管理 ZCode 桌面任务的 Flutter 客户端｜扫码接入，原生外壳 + WebView 会话",
       "lang": "Dart",
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "license": "MIT",
       "url": "https://github.com/daniei-chen/ZCode-App",
@@ -133,6 +133,55 @@
       "empty": false
     },
     {
+      "name": "zhihui-gateway",
+      "desc": "面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、API 密钥管理、用量统计与运行监控。",
+      "lang": "Python",
+      "stars": 1,
+      "forks": 0,
+      "license": "MIT",
+      "url": "https://github.com/daniei-chen/zhihui-gateway",
+      "topics": [],
+      "pushed_at": "2026-10-29T05:55:47Z",
+      "langs": {
+        "Python": 7605100,
+        "TypeScript": 1365838,
+        "JavaScript": 1093191,
+        "HTML": 244485,
+        "PowerShell": 161738,
+        "Shell": 55658,
+        "CSS": 24282,
+        "Dockerfile": 16709,
+        "Batchfile": 5154,
+        "Go": 3835
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "daniei-chen",
+      "desc": "个人主页 · DSH / Flutter / 3D 实验｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
+      "lang": "Python",
+      "stars": 1,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/daniei-chen",
+      "topics": [
+        "deepseek-harness",
+        "dsh",
+        "github-actions",
+        "github-profile",
+        "profile-readme",
+        "python",
+        "svg"
+      ],
+      "pushed_at": "2026-10-28T09:43:16Z",
+      "langs": {
+        "Python": 83806
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
       "name": "DeepSeek-Harness-APP",
       "desc": "Self-hosted Android client for DeepSeek Harness: LAN/mDNS + relay pairing, actionable approvals, inbox/cockpit, file upload/audit and fleet overview. No cloud, accounts, telemetry or monetization. Unofficial community project.",
       "lang": "Kotlin",
@@ -161,30 +210,6 @@
         "JavaScript": 445591,
         "PowerShell": 849,
         "Shell": 127
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "daniei-chen",
-      "desc": "个人主页 · DSH / Flutter / 3D 实验｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
-      "lang": "Python",
-      "stars": 1,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/daniei-chen",
-      "topics": [
-        "deepseek-harness",
-        "dsh",
-        "github-actions",
-        "github-profile",
-        "profile-readme",
-        "python",
-        "svg"
-      ],
-      "pushed_at": "2026-10-27T09:03:26Z",
-      "langs": {
-        "Python": 83806
       },
       "fork": false,
       "empty": false
@@ -258,29 +283,6 @@
       "empty": true
     },
     {
-      "name": "zhihui-gateway",
-      "desc": "面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、API 密钥管理、用量统计与运行监控。",
-      "lang": "Python",
-      "stars": 0,
-      "forks": 0,
-      "license": "MIT",
-      "url": "https://github.com/daniei-chen/zhihui-gateway",
-      "topics": [],
-      "pushed_at": "2026-10-28T00:57:26Z",
-      "langs": {
-        "Python": 6409668,
-        "TypeScript": 1364570,
-        "JavaScript": 700479,
-        "Shell": 47943,
-        "PowerShell": 20138,
-        "CSS": 12796,
-        "Batchfile": 4521,
-        "Standard ML": 64
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
       "name": "dsh-purge",
       "desc": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
       "lang": "",
@@ -326,7 +328,7 @@
     }
   ],
   "contributions": {
-    "total": 446,
+    "total": 456,
     "days": [
       {
         "date": "2025-10-26",
@@ -2535,9 +2537,15 @@
         "level": 1,
         "id": "contribution-day-component-3-52",
         "count": 7
+      },
+      {
+        "date": "2026-10-29",
+        "level": 1,
+        "id": "contribution-day-component-4-52",
+        "count": 10
       }
     ],
     "max": 87,
-    "active_days": 19
+    "active_days": 20
   }
 }
