@@ -136,33 +136,11 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/DeepSeek-Harness-APP" title="DeepSeek Harness APP — 自托管 DSH 的安卓客户端：WebView UI、扫码/Relay 配对、审批通知、文件上传与多设备管理。">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-deepseekharnessapp-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-deepseekharnessapp-light.svg">
-      <img src="assets/proj-deepseekharnessapp-dark.svg" alt="DeepSeek Harness APP" width="100%">
-    </picture>
-  </a>
-</p>
-
-
-<p align="center">
   <a href="https://github.com/daniei-chen/ZCode-App" title="ZCode-App — 在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-zcodeapp-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-zcodeapp-light.svg">
       <img src="assets/proj-zcodeapp-dark.svg" alt="ZCode-App" width="100%">
-    </picture>
-  </a>
-</p>
-
-
-<p align="center">
-  <a href="https://github.com/daniei-chen/WorkBuddy-API" title="WorkBuddy2API — 自托管的 OpenAI 兼容网关：把 CodeBuddy 账号包装成统一的 /v1/chat/completions 服务，多账号池轮转 + 会话粘性 + 额度治理。">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-workbuddyapi-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-workbuddyapi-light.svg">
-      <img src="assets/proj-workbuddyapi-dark.svg" alt="WorkBuddy2API" width="100%">
     </picture>
   </a>
 </p>
@@ -226,8 +204,6 @@
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
 | [DSH Token Insight](https://github.com/daniei-chen/dsh-token-insight) | `JavaScript` | 1 | 2026-10-23 | DSH 本地使用统计：52 周热力图、每日趋势、模型用量、会话 Top 5、成本与导出，全程只读本地文件。 |
-| [DeepSeek Harness APP](https://github.com/daniei-chen/DeepSeek-Harness-APP) | `Kotlin` | 1 | 2026-10-27 | 自托管 DSH 的安卓客户端：WebView UI、扫码/Relay 配对、审批通知、文件上传与多设备管理。 |
-| [WorkBuddy2API](https://github.com/daniei-chen/WorkBuddy-API) | `Python` | 4 | 2026-10-26 | 自托管的 OpenAI 兼容网关：把 CodeBuddy 账号包装成统一的 /v1/chat/completion… |
 | [DSH 破甲](https://github.com/daniei-chen/dsh-purge) · fork | `-` | 0 | 2026-10-19 | DSH 提示词实验：不同模型可换不同提示词，默认面向国模小码酱。 |
 
 ### 移动端 / Flutter
@@ -244,23 +220,11 @@
 | [紫禁城 · 3D 复原](https://github.com/daniei-chen/Forbidden-City) | `JavaScript` | 1 | 2026-10-21 | 单文件 Three.js 可漫游的紫禁城程序化场景：七殿室内、四时段、SSAO、NPC 与跳跃，零外部资源。 |
 | [太阳系 · 3D 仿真](https://github.com/daniei-chen/solar-system) | `HTML` | 2 | 2026-10-07 | 单文件、离线可用的真渲染太阳系仿真：真实星历与 25,791 颗恒星，从日面一路退到 30 kpc 回望银河系。 |
 
-### 工具 / 其他
-
-| 仓库 | 语言 | ★ | 最近更新 | 说明 |
-| --- | --- | ---: | --- | --- |
-| [QQ 空间备份](https://github.com/daniei-chen/QQ-Space-Nostalgia) | `-` | 1 | 2026-09-27 | 按年份、月份或动态编号归档本人 QQ 空间图片，找回那些年的青春回忆。 · 空仓库 |
-
-### Fork / 实验
-
-| 仓库 | 语言 | ★ | 最近更新 | 说明 |
-| --- | --- | ---: | --- | --- |
-| [DeepSeek Harness](https://github.com/daniei-chen/deepseek-harness) · fork | `TypeScript` | 0 | 2026-10-04 | DeepSeek Harness 上游仓库的 Fork，用于跟进插件系统与运行时变化。 |
-
 ### 其他
 
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
-| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `Python` | 1 | 2026-10-29 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… |
+| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `Python` | 1 | 2026-10-30 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… |
 
 
 <picture>
@@ -284,7 +248,7 @@
 </picture>
 
 
-> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-10-29`），
+> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-10-30`），
 > 素材全部自绘，深浅色模式各一套。
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-focus-dark.svg">
