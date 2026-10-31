@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-30T10:04:59Z",
+  "generated_at": "2026-10-31T09:41:48Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 1,
-    "following": 1,
-    "public_repos": 8,
+    "following": 2,
+    "public_repos": 9,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -106,15 +106,15 @@
       "license": "MIT",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-10-30T06:24:10Z",
+      "pushed_at": "2026-10-31T08:07:50Z",
       "langs": {
-        "Python": 8042186,
-        "TypeScript": 1386415,
-        "JavaScript": 1330063,
-        "HTML": 308820,
+        "Python": 8316278,
+        "JavaScript": 1696503,
+        "TypeScript": 1428400,
+        "HTML": 320771,
         "PowerShell": 161738,
+        "CSS": 132224,
         "Shell": 55658,
-        "CSS": 52886,
         "Dockerfile": 16709,
         "Batchfile": 5154,
         "Go": 3835
@@ -139,7 +139,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-10-29T10:01:38Z",
+      "pushed_at": "2026-10-30T10:05:07Z",
       "langs": {
         "Python": 83806
       },
@@ -201,6 +201,20 @@
       "empty": false
     },
     {
+      "name": "zhijing-gateway",
+      "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
+      "lang": "",
+      "stars": 0,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/zhijing-gateway",
+      "topics": [],
+      "pushed_at": "2026-10-30T17:32:58Z",
+      "langs": {},
+      "fork": false,
+      "empty": true
+    },
+    {
       "name": "dsh-purge",
       "desc": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
       "lang": "",
@@ -219,7 +233,7 @@
     }
   ],
   "contributions": {
-    "total": 262,
+    "total": 277,
     "days": [
       {
         "date": "2025-10-26",
@@ -2437,12 +2451,18 @@
       },
       {
         "date": "2026-10-30",
-        "level": 2,
+        "level": 4,
         "id": "contribution-day-component-5-52",
-        "count": 11
+        "count": 19
+      },
+      {
+        "date": "2026-10-31",
+        "level": 2,
+        "id": "contribution-day-component-6-52",
+        "count": 7
       }
     ],
     "max": 57,
-    "active_days": 18
+    "active_days": 19
   }
 }
