@@ -210,7 +210,7 @@
 
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
-| [ZCode-App](https://github.com/daniei-chen/ZCode-App) | `Dart` | 7 | 2026-10-27 | 在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。 |
+| [ZCode-App](https://github.com/daniei-chen/ZCode-App) | `Dart` | 6 | 2026-10-27 | 在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。 |
 | [小鲸鱼](https://github.com/daniei-chen/Little-Whale) | `Dart` | 4 | 2026-10-25 | 粘贴链接，保存无水印原片。解析全程在手机本地完成，链接不上传、不经过任何服务器。 |
 
 ### 3D / 视觉实验
@@ -224,7 +224,7 @@
 
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
-| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `Python` | 1 | 2026-10-31 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… |
+| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `Python` | 2 | 2026-10-31 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… |
 | [zhijing-gateway](https://github.com/daniei-chen/zhijing-gateway) | `-` | 0 | 2026-10-30 | 智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力… · 空仓库 |
 
 
@@ -249,7 +249,7 @@
 </picture>
 
 
-> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-11-01`），
+> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-11-02`），
 > 素材全部自绘，深浅色模式各一套。
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-focus-dark.svg">
