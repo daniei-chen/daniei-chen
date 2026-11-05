@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-04T10:59:05Z",
+  "generated_at": "2026-11-05T10:59:23Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 2,
     "following": 2,
-    "public_repos": 9,
+    "public_repos": 6,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -79,11 +79,11 @@
       "license": "MIT",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-03T18:15:49Z",
+      "pushed_at": "2026-11-04T23:49:28Z",
       "langs": {
-        "Python": 8921754,
-        "JavaScript": 1815552,
-        "TypeScript": 1535670,
+        "Python": 9062299,
+        "JavaScript": 1827268,
+        "TypeScript": 1517197,
         "HTML": 327645,
         "CSS": 205683,
         "PowerShell": 161738,
@@ -96,28 +96,22 @@
       "empty": false
     },
     {
-      "name": "solar-system",
-      "desc": "单文件、离线可用的真渲染太阳系 3D 仿真｜真实星历 · 25,791 颗恒星 · 从日面到 30 kpc 的尺度之旅",
-      "lang": "HTML",
-      "stars": 2,
+      "name": "zhijing-gateway",
+      "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
+      "lang": "Vue",
+      "stars": 1,
       "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/solar-system",
-      "topics": [
-        "astronomy",
-        "offline",
-        "simulation",
-        "single-file",
-        "solar-system",
-        "threejs",
-        "webgl"
-      ],
-      "pushed_at": "2026-10-07T09:53:50Z",
+      "license": "LGPL-3.0",
+      "url": "https://github.com/daniei-chen/zhijing-gateway",
+      "topics": [],
+      "pushed_at": "2026-11-05T07:38:06Z",
       "langs": {
-        "HTML": 766555,
-        "JavaScript": 85040,
-        "Python": 14951,
-        "Shell": 2563
+        "Vue": 6012018,
+        "TypeScript": 4626293,
+        "CSS": 309813,
+        "Python": 63430,
+        "JavaScript": 8482,
+        "HTML": 617
       },
       "fork": false,
       "empty": false
@@ -139,7 +133,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-11-03T10:55:48Z",
+      "pushed_at": "2026-11-04T10:59:18Z",
       "langs": {
         "Python": 83806
       },
@@ -169,71 +163,10 @@
       },
       "fork": false,
       "empty": false
-    },
-    {
-      "name": "Forbidden-City",
-      "desc": "紫禁城程序化 3D 数字复原：单文件 Three.js 可漫游场景（七殿室内 / 四时段 / SSAO / 小人跳跃与 NPC），零外部资源。",
-      "lang": "JavaScript",
-      "stars": 1,
-      "forks": 1,
-      "license": "MIT",
-      "url": "https://github.com/daniei-chen/Forbidden-City",
-      "topics": [
-        "3d-reconstruction",
-        "beijing",
-        "chinese-architecture",
-        "cultural-heritage",
-        "forbidden-city",
-        "javascript",
-        "procedural-generation",
-        "single-file",
-        "ssao",
-        "threejs",
-        "webgl"
-      ],
-      "pushed_at": "2026-10-21T01:29:40Z",
-      "langs": {
-        "JavaScript": 687878,
-        "HTML": 45083,
-        "Python": 3718
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "zhijing-gateway",
-      "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
-      "lang": "",
-      "stars": 0,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/zhijing-gateway",
-      "topics": [],
-      "pushed_at": "2026-10-30T17:32:58Z",
-      "langs": {},
-      "fork": false,
-      "empty": true
-    },
-    {
-      "name": "dsh-purge",
-      "desc": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
-      "lang": "",
-      "stars": 0,
-      "forks": 0,
-      "license": "NOASSERTION",
-      "url": "https://github.com/daniei-chen/dsh-purge",
-      "topics": [],
-      "pushed_at": "2026-10-19T13:53:37Z",
-      "langs": {
-        "JavaScript": 2422398,
-        "Shell": 25046
-      },
-      "fork": true,
-      "empty": false
     }
   ],
   "contributions": {
-    "total": 296,
+    "total": 297,
     "days": [
       {
         "date": "2025-11-02",
@@ -2207,7 +2140,7 @@
         "date": "2026-09-26",
         "level": 4,
         "id": "contribution-day-component-6-46",
-        "count": 37
+        "count": 36
       },
       {
         "date": "2026-09-27",
@@ -2271,9 +2204,9 @@
       },
       {
         "date": "2026-10-07",
-        "level": 1,
+        "level": 0,
         "id": "contribution-day-component-3-48",
-        "count": 1
+        "count": 0
       },
       {
         "date": "2026-10-08",
@@ -2339,7 +2272,7 @@
         "date": "2026-10-18",
         "level": 2,
         "id": "contribution-day-component-0-50",
-        "count": 10
+        "count": 9
       },
       {
         "date": "2026-10-19",
@@ -2351,7 +2284,7 @@
         "date": "2026-10-20",
         "level": 4,
         "id": "contribution-day-component-2-50",
-        "count": 57
+        "count": 56
       },
       {
         "date": "2026-10-21",
@@ -2442,9 +2375,15 @@
         "level": 1,
         "id": "contribution-day-component-3-52",
         "count": 1
+      },
+      {
+        "date": "2026-11-05",
+        "level": 1,
+        "id": "contribution-day-component-4-52",
+        "count": 5
       }
     ],
-    "max": 57,
+    "max": 56,
     "active_days": 23
   }
 }

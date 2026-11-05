@@ -158,33 +158,22 @@
 
 
 <p align="center">
-  <a href="https://github.com/daniei-chen/solar-system" title="太阳系 · 3D 仿真 — 单文件、离线可用的真渲染太阳系仿真：真实星历与 25,791 颗恒星，从日面一路退到 30 kpc 回望银河系。">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-solarsystem-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-solarsystem-light.svg">
-      <img src="assets/proj-solarsystem-dark.svg" alt="太阳系 · 3D 仿真" width="100%">
-    </picture>
-  </a>
-</p>
-
-
-<p align="center">
-  <a href="https://github.com/daniei-chen/Forbidden-City" title="紫禁城 · 3D 复原 — 单文件 Three.js 可漫游的紫禁城程序化场景：七殿室内、四时段、SSAO、NPC 与跳跃，零外部资源。">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-forbiddencity-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/proj-forbiddencity-light.svg">
-      <img src="assets/proj-forbiddencity-dark.svg" alt="紫禁城 · 3D 复原" width="100%">
-    </picture>
-  </a>
-</p>
-
-
-<p align="center">
   <a href="https://github.com/daniei-chen/zhihui-gateway" title="zhihui-gateway — 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、API 密钥管理、用量统计与运行监控。">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/proj-zhihuigateway-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/proj-zhihuigateway-light.svg">
       <img src="assets/proj-zhihuigateway-dark.svg" alt="zhihui-gateway" width="100%">
+    </picture>
+  </a>
+</p>
+
+
+<p align="center">
+  <a href="https://github.com/daniei-chen/zhijing-gateway" title="zhijing-gateway — 智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/proj-zhijinggateway-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/proj-zhijinggateway-light.svg">
+      <img src="assets/proj-zhijinggateway-dark.svg" alt="zhijing-gateway" width="100%">
     </picture>
   </a>
 </p>
@@ -204,7 +193,6 @@
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
 | [DSH Token Insight](https://github.com/daniei-chen/dsh-token-insight) | `JavaScript` | 1 | 2026-10-23 | DSH 本地使用统计：52 周热力图、每日趋势、模型用量、会话 Top 5、成本与导出，全程只读本地文件。 |
-| [DSH 破甲](https://github.com/daniei-chen/dsh-purge) · fork | `-` | 0 | 2026-10-19 | DSH 提示词实验：不同模型可换不同提示词，默认面向国模小码酱。 |
 
 ### 移动端 / Flutter
 
@@ -213,19 +201,12 @@
 | [ZCode-App](https://github.com/daniei-chen/ZCode-App) | `Dart` | 6 | 2026-10-27 | 在手机或平板上远程管理 ZCode 桌面任务。扫码接入，原生 Flutter 外壳 + WebView 会话。 |
 | [小鲸鱼](https://github.com/daniei-chen/Little-Whale) | `Dart` | 4 | 2026-10-25 | 粘贴链接，保存无水印原片。解析全程在手机本地完成，链接不上传、不经过任何服务器。 |
 
-### 3D / 视觉实验
-
-| 仓库 | 语言 | ★ | 最近更新 | 说明 |
-| --- | --- | ---: | --- | --- |
-| [紫禁城 · 3D 复原](https://github.com/daniei-chen/Forbidden-City) | `JavaScript` | 1 | 2026-10-21 | 单文件 Three.js 可漫游的紫禁城程序化场景：七殿室内、四时段、SSAO、NPC 与跳跃，零外部资源。 |
-| [太阳系 · 3D 仿真](https://github.com/daniei-chen/solar-system) | `HTML` | 2 | 2026-10-07 | 单文件、离线可用的真渲染太阳系仿真：真实星历与 25,791 颗恒星，从日面一路退到 30 kpc 回望银河系。 |
-
 ### 其他
 
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
-| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `Python` | 3 | 2026-11-03 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… |
-| [zhijing-gateway](https://github.com/daniei-chen/zhijing-gateway) | `-` | 0 | 2026-10-30 | 智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力… · 空仓库 |
+| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `Python` | 3 | 2026-11-04 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… |
+| [zhijing-gateway](https://github.com/daniei-chen/zhijing-gateway) | `Vue` | 1 | 2026-11-05 | 智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力… |
 
 
 <picture>
@@ -249,7 +230,7 @@
 </picture>
 
 
-> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-11-04`），
+> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-11-05`），
 > 素材全部自绘，深浅色模式各一套。
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-focus-dark.svg">
