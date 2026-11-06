@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-05T10:59:23Z",
+  "generated_at": "2026-11-06T10:57:00Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
-    "followers": 2,
-    "following": 2,
+    "followers": 3,
+    "following": 3,
     "public_repos": 6,
     "created_at": "2026-09-14T04:23:32Z"
   },
@@ -79,17 +79,17 @@
       "license": "MIT",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-04T23:49:28Z",
+      "pushed_at": "2026-11-06T04:23:43Z",
       "langs": {
-        "Python": 9062299,
-        "JavaScript": 1827268,
-        "TypeScript": 1517197,
-        "HTML": 327645,
-        "CSS": 205683,
-        "PowerShell": 161738,
-        "Shell": 55658,
+        "Python": 9711903,
+        "JavaScript": 1927358,
+        "TypeScript": 1558660,
+        "HTML": 327839,
+        "CSS": 206845,
+        "PowerShell": 86449,
+        "Shell": 56038,
         "Dockerfile": 16709,
-        "Batchfile": 5273,
+        "Batchfile": 5154,
         "Go": 3835
       },
       "fork": false,
@@ -98,19 +98,20 @@
     {
       "name": "zhijing-gateway",
       "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
-      "lang": "Vue",
+      "lang": "TypeScript",
       "stars": 1,
       "forks": 0,
       "license": "LGPL-3.0",
       "url": "https://github.com/daniei-chen/zhijing-gateway",
       "topics": [],
-      "pushed_at": "2026-11-05T07:38:06Z",
+      "pushed_at": "2026-11-06T08:52:34Z",
       "langs": {
-        "Vue": 6012018,
-        "TypeScript": 4626293,
-        "CSS": 309813,
-        "Python": 63430,
-        "JavaScript": 8482,
+        "TypeScript": 7099602,
+        "Vue": 6260307,
+        "CSS": 309851,
+        "Python": 165738,
+        "JavaScript": 39560,
+        "Go": 4594,
         "HTML": 617
       },
       "fork": false,
@@ -133,7 +134,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-11-04T10:59:18Z",
+      "pushed_at": "2026-11-05T10:59:29Z",
       "langs": {
         "Python": 83806
       },
@@ -166,7 +167,7 @@
     }
   ],
   "contributions": {
-    "total": 297,
+    "total": 322,
     "days": [
       {
         "date": "2025-11-02",
@@ -2378,12 +2379,18 @@
       },
       {
         "date": "2026-11-05",
-        "level": 1,
+        "level": 2,
         "id": "contribution-day-component-4-52",
-        "count": 5
+        "count": 9
+      },
+      {
+        "date": "2026-11-06",
+        "level": 4,
+        "id": "contribution-day-component-5-52",
+        "count": 21
       }
     ],
     "max": 56,
-    "active_days": 23
+    "active_days": 24
   }
 }
