@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-06T10:57:00Z",
+  "generated_at": "2026-11-07T10:15:31Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 3,
     "following": 3,
-    "public_repos": 6,
+    "public_repos": 7,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -79,9 +79,9 @@
       "license": "MIT",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-06T04:23:43Z",
+      "pushed_at": "2026-11-07T02:48:01Z",
       "langs": {
-        "Python": 9711903,
+        "Python": 9721813,
         "JavaScript": 1927358,
         "TypeScript": 1558660,
         "HTML": 327839,
@@ -91,6 +91,30 @@
         "Dockerfile": 16709,
         "Batchfile": 5154,
         "Go": 3835
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "daniei-chen",
+      "desc": "个人主页 · DSH / Flutter / 3D 实验｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
+      "lang": "Python",
+      "stars": 1,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/daniei-chen",
+      "topics": [
+        "deepseek-harness",
+        "dsh",
+        "github-actions",
+        "github-profile",
+        "profile-readme",
+        "python",
+        "svg"
+      ],
+      "pushed_at": "2026-11-06T10:57:06Z",
+      "langs": {
+        "Python": 83806
       },
       "fork": false,
       "empty": false
@@ -118,30 +142,6 @@
       "empty": false
     },
     {
-      "name": "daniei-chen",
-      "desc": "个人主页 · DSH / Flutter / 3D 实验｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
-      "lang": "Python",
-      "stars": 1,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/daniei-chen",
-      "topics": [
-        "deepseek-harness",
-        "dsh",
-        "github-actions",
-        "github-profile",
-        "profile-readme",
-        "python",
-        "svg"
-      ],
-      "pushed_at": "2026-11-05T10:59:29Z",
-      "langs": {
-        "Python": 83806
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
       "name": "dsh-token-insight",
       "desc": "Local-first token usage dashboard for DeepSeek Harness (DSH). AI install guide for the plugin and the companion Android app.",
       "lang": "JavaScript",
@@ -164,10 +164,24 @@
       },
       "fork": false,
       "empty": false
+    },
+    {
+      "name": "hongguo-duanju",
+      "desc": "红果短剧 Windows 桌面客户端 · 非官方 / 非商业 / 仅供个人学习交流 | 抖音式全屏推荐流、官方真实榜单与评论、本地  转码播放",
+      "lang": "",
+      "stars": 0,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/hongguo-duanju",
+      "topics": [],
+      "pushed_at": "2026-11-07T01:26:41Z",
+      "langs": {},
+      "fork": false,
+      "empty": true
     }
   ],
   "contributions": {
-    "total": 322,
+    "total": 323,
     "days": [
       {
         "date": "2025-11-02",
@@ -2388,9 +2402,15 @@
         "level": 4,
         "id": "contribution-day-component-5-52",
         "count": 21
+      },
+      {
+        "date": "2026-11-07",
+        "level": 1,
+        "id": "contribution-day-component-6-52",
+        "count": 1
       }
     ],
     "max": 56,
-    "active_days": 24
+    "active_days": 25
   }
 }

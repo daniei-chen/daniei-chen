@@ -205,8 +205,9 @@
 
 | 仓库 | 语言 | ★ | 最近更新 | 说明 |
 | --- | --- | ---: | --- | --- |
-| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `Python` | 3 | 2026-11-06 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… |
+| [zhihui-gateway](https://github.com/daniei-chen/zhihui-gateway) | `Python` | 3 | 2026-11-07 | 面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、AP… |
 | [zhijing-gateway](https://github.com/daniei-chen/zhijing-gateway) | `TypeScript` | 1 | 2026-11-06 | 智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力… |
+| [hongguo-duanju](https://github.com/daniei-chen/hongguo-duanju) | `-` | 0 | 2026-11-07 | 红果短剧 Windows 桌面客户端 · 非官方 / 非商业 / 仅供个人学习交流 \| 抖音式全屏推荐流、官方真… · 空仓库 |
 
 
 <picture>
@@ -230,7 +231,7 @@
 </picture>
 
 
-> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-11-06`），
+> 上面的图**不是第三方图床的静态卡片**：数据由本仓库的 GitHub Action 每天重新抓取并重绘（最近更新 `2026-11-07`），
 > 素材全部自绘，深浅色模式各一套。
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-focus-dark.svg">
