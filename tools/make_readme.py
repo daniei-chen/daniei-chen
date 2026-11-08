@@ -22,13 +22,27 @@ FEATURED = (
     ("dsh-token-insight", "DSH Token Insight", "notebook.png", "本地用量统计。", "dsh-token-insight：白色手记与一支蓝色铅笔"),
 )
 GATEWAYS = (
-    ("zhihui-gateway", "智汇", "WorkBuddy、Qoder、Trae 的统一工作台。"),
-    ("zhijing-gateway", "智境", "AI 网关的登录、成员与管理前端。"),
+    ("zhihui-gateway", "智汇 · ZHIHUI", "zhihui-lighthouse.png", "WorkBuddy、Qoder、Trae 的统一工作台。", "智汇 zhihui-gateway：白色灯塔、帆船与蓝色海岸"),
+    ("zhijing-gateway", "智境 · ZHIJING", "zhijing-terrace.png", "AI 网关的登录、成员与管理前端。", "智境 zhijing-gateway：面向海面的白色阅读露台"),
 )
 
 
 def repo_url(name: str) -> str:
     return f"https://github.com/{OWNER}/{name}"
+
+
+def project_table(projects: tuple) -> list[str]:
+    parts = ["<table>", "  <tr>"]
+    for name, label, image, description, alt in projects:
+        parts.extend([
+            f'    <td width="{100 // len(projects)}%" valign="top">',
+            f'      <a href="{repo_url(name)}"><img src="assets/coastal/{image}" width="100%" alt="{alt}"></a>',
+            f'      <p><strong><a href="{repo_url(name)}">{label}</a></strong></p>',
+            f"      <p>{description}</p>",
+            "    </td>",
+        ])
+    parts.extend(["  </tr>", "</table>"])
+    return parts
 
 
 def remaining_repos(data: dict) -> list[dict]:
@@ -62,20 +76,10 @@ def build(data: dict) -> str:
         "",
         "## 最近在做",
         "",
-        "<table>",
-        "  <tr>",
     ]
-    for name, label, image, description, alt in FEATURED:
-        parts.extend([
-            '    <td width="33%" valign="top">',
-            f'      <a href="{repo_url(name)}"><img src="assets/coastal/{image}" width="100%" alt="{alt}"></a>',
-            f'      <p><strong><a href="{repo_url(name)}">{label}</a></strong></p>',
-            f"      <p>{description}</p>",
-            "    </td>",
-        ])
-    parts.extend(["  </tr>", "</table>", "", "## 也在探索", ""])
-    for name, label, description in GATEWAYS:
-        parts.append(f"- [**{label} · {name}**]({repo_url(name)}) — {description}")
+    parts.extend(project_table(GATEWAYS))
+    parts.extend(["", "## 其他作品", ""])
+    parts.extend(project_table(FEATURED))
     parts.extend([
         "",
         "用 Flutter / Dart 做移动应用，也写 Go、Python 和 TypeScript。喜欢把一个想法从原型慢慢打磨成作品。",
@@ -95,7 +99,7 @@ def build(data: dict) -> str:
 
 
 def validate_assets() -> None:
-    names = ["coastal-hero.png", "coastal-hero-mobile.png", *(r[2] for r in FEATURED)]
+    names = ["coastal-hero.png", "coastal-hero-mobile.png", *(r[2] for r in GATEWAYS), *(r[2] for r in FEATURED)]
     missing = [name for name in names if not (ROOT / "assets/coastal" / name).is_file()]
     if missing:
         raise SystemExit("Missing coastal artwork: " + ", ".join(missing))

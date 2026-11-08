@@ -13,6 +13,23 @@
 
 <table>
   <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/daniei-chen/zhihui-gateway"><img src="assets/coastal/zhihui-lighthouse.png" width="100%" alt="智汇 zhihui-gateway：白色灯塔、帆船与蓝色海岸"></a>
+      <p><strong><a href="https://github.com/daniei-chen/zhihui-gateway">智汇 · ZHIHUI</a></strong></p>
+      <p>WorkBuddy、Qoder、Trae 的统一工作台。</p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/daniei-chen/zhijing-gateway"><img src="assets/coastal/zhijing-terrace.png" width="100%" alt="智境 zhijing-gateway：面向海面的白色阅读露台"></a>
+      <p><strong><a href="https://github.com/daniei-chen/zhijing-gateway">智境 · ZHIJING</a></strong></p>
+      <p>AI 网关的登录、成员与管理前端。</p>
+    </td>
+  </tr>
+</table>
+
+## 其他作品
+
+<table>
+  <tr>
     <td width="33%" valign="top">
       <a href="https://github.com/daniei-chen/ZCode-App"><img src="assets/coastal/sea-window.png" width="100%" alt="ZCode-App：一扇面向蓝色海面的白色窗户"></a>
       <p><strong><a href="https://github.com/daniei-chen/ZCode-App">ZCode-App</a></strong></p>
@@ -30,11 +47,6 @@
     </td>
   </tr>
 </table>
-
-## 也在探索
-
-- [**智汇 · zhihui-gateway**](https://github.com/daniei-chen/zhihui-gateway) — WorkBuddy、Qoder、Trae 的统一工作台。
-- [**智境 · zhijing-gateway**](https://github.com/daniei-chen/zhijing-gateway) — AI 网关的登录、成员与管理前端。
 
 用 Flutter / Dart 做移动应用，也写 Go、Python 和 TypeScript。喜欢把一个想法从原型慢慢打磨成作品。
 
