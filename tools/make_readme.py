@@ -17,13 +17,13 @@ DATA = ROOT / "data/profile.json"
 OUT = ROOT / "README.md"
 OWNER = "daniei-chen"
 FEATURED = (
-    ("ZCode-App", "ZCode-App", "sea-window.png", "手机远程任务。", "ZCode-App：一扇面向蓝色海面的白色窗户"),
-    ("Little-Whale", "小鲸鱼", "soft-wave.png", "本地媒体解析。", "Little-Whale：轻柔卷起的蓝白色海浪"),
-    ("dsh-token-insight", "DSH Token Insight", "notebook.png", "本地用量统计。", "dsh-token-insight：白色手记与一支蓝色铅笔"),
+    ("ZCode-App", "ZCode App", "sea-window.png", "扫码连接 ZCode，把桌面任务与会话带到手机上。", "ZCode-App：一扇面向蓝色海面的白色窗户"),
+    ("Little-Whale", "小鲸鱼", "soft-wave.png", "本地解析与下载视频，把喜欢的片段留在身边。", "Little-Whale：轻柔卷起的蓝白色海浪"),
+    ("dsh-token-insight", "DSH Token Insight", "notebook.png", "从 Token 到会话趋势，记录 DSH 的本地使用。", "dsh-token-insight：白色手记与一支蓝色铅笔"),
 )
 GATEWAYS = (
-    ("zhihui-gateway", "智汇 · ZHIHUI", "zhihui-lighthouse.png", "WorkBuddy、Qoder、Trae 的统一工作台。", "智汇 zhihui-gateway：白色灯塔、帆船与蓝色海岸"),
-    ("zhijing-gateway", "智境 · ZHIJING", "zhijing-terrace.png", "AI 网关的登录、成员与管理前端。", "智境 zhijing-gateway：面向海面的白色阅读露台"),
+    ("zhihui-gateway", "智汇", "zhihui-lighthouse.png", "让灵感出发，让工作向前。", "WorkBuddy、Qoder、Trae 的统一工作台。", "访问网站", "https://zhihui.kaogong.art/", "智汇 zhihui-gateway：白色灯塔、帆船与蓝色海岸"),
+    ("zhijing-gateway", "智境", "zhijing-terrace.png", "复杂有序，智能从容。", "AI 网关的登录、成员与管理前端。", "界面一览", "https://github.com/daniei-chen/zhijing-gateway#界面一览", "智境 zhijing-gateway：面向海面的白色阅读露台"),
 )
 
 
@@ -31,17 +31,38 @@ def repo_url(name: str) -> str:
     return f"https://github.com/{OWNER}/{name}"
 
 
-def project_table(projects: tuple) -> list[str]:
+def gateway_gallery() -> list[str]:
     parts = ["<table>", "  <tr>"]
-    for name, label, image, description, alt in projects:
+    for name, label, image, tagline, description, action, target, alt in GATEWAYS:
         parts.extend([
-            f'    <td width="{100 // len(projects)}%" valign="top">',
+            '    <td width="50%" valign="top">',
             f'      <a href="{repo_url(name)}"><img src="assets/coastal/{image}" width="100%" alt="{alt}"></a>',
-            f'      <p><strong><a href="{repo_url(name)}">{label}</a></strong></p>',
+            f'      <h3><a href="{repo_url(name)}">{label}</a></h3>',
+            f"      <p><strong>{tagline}</strong></p>",
             f"      <p>{description}</p>",
+            f'      <p><a href="{target}">{action}</a> · <a href="{repo_url(name)}">查看项目</a></p>',
             "    </td>",
         ])
     parts.extend(["  </tr>", "</table>"])
+    return parts
+
+
+def project_list() -> list[str]:
+    """Keep secondary projects readable without squeezing three mobile columns."""
+    parts = []
+    for name, label, image, description, alt in FEATURED:
+        parts.extend([
+            f'<a href="{repo_url(name)}"><img src="assets/coastal/{image}" align="right" width="28%" alt="{alt}"></a>',
+            "",
+            f"### [{label}]({repo_url(name)})",
+            "",
+            description,
+            "",
+            f"[了解项目]({repo_url(name)}) · [下载版本]({repo_url(name)}/releases)",
+            "",
+            '<br clear="all">',
+            "",
+        ])
     return parts
 
 
@@ -70,21 +91,22 @@ def build(data: dict) -> str:
         '  <img src="assets/coastal/coastal-hero.png" width="100%" alt="Daniei Chen · 让想法慢慢长大。写一点代码，做一些喜欢的东西。蓝色海面上有一叶帆船，小鸟沿白色海岸骑行。">',
         "</picture>",
         "",
-        "独立开发者。做一些有用的东西，也给创造留一点快乐。",
+        '<p align="center">独立开发者。做一些有用的东西，也给创造留一点快乐。</p>',
         "",
-        f"[看看作品](#最近在做) · [全部仓库](https://github.com/{OWNER}?tab=repositories)",
+        f'<p align="center"><a href="#最近在做">看看作品</a> · <a href="#一点关于我">关于我</a> · <a href="https://github.com/{OWNER}?tab=repositories">全部仓库</a></p>',
         "",
         "## 最近在做",
         "",
     ]
-    parts.extend(project_table(GATEWAYS))
-    parts.extend(["", "## 其他作品", ""])
-    parts.extend(project_table(FEATURED))
+    parts.extend(gateway_gallery())
+    parts.extend(["", "## 一些小作品", "", "从远程任务，到日常记录。为遇到的小需求，做一些顺手的东西。", ""])
+    parts.extend(project_list())
     parts.extend([
+        "## 一点关于我",
         "",
-        "用 Flutter / Dart 做移动应用，也写 Go、Python 和 TypeScript。喜欢把一个想法从原型慢慢打磨成作品。",
+        "用 Flutter / Dart 做移动应用，也写 Go、Python 和 TypeScript。喜欢把原型慢慢打磨成作品，让功能与细节一起变好。",
         "",
-        "有建议、遇到问题，欢迎到对应仓库的 Issues 聊聊。",
+        "偏爱蓝与白，也偏爱有呼吸感的界面。欢迎到对应项目的 Issues，聊聊你的想法。",
     ])
     extra = remaining_repos(data)
     if extra:
@@ -95,6 +117,12 @@ def build(data: dict) -> str:
             suffix = " · 筹备中" if repo.get("empty") else " · fork" if repo.get("fork") else ""
             parts.append(f'    <li><a href="{url}">{name}</a>{suffix}</li>')
         parts.extend(["  </ul>", "</details>"])
+    parts.extend([
+        "",
+        "---",
+        "",
+        '<p align="center">谢谢你来这里。愿你的想法，也慢慢长大。</p>',
+    ])
     return "\n".join(parts) + "\n"
 
 

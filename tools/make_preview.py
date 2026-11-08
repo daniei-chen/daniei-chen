@@ -65,6 +65,11 @@ def render(md: str) -> str:
             i += 1
             continue
 
+        if stripped == "---":
+            out.append("<hr>")
+            i += 1
+            continue
+
         m = re.match(r"^(#{1,6})\s+(.*)$", stripped)
         if m:
             lvl = len(m.group(1))
@@ -146,6 +151,7 @@ body { margin:0; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingF
 .content td p { margin: 8px 0; }
 .content details { margin-top: 24px; }
 .content summary { cursor:pointer; }
+.content hr { height:1px; border:0; background:rgba(128,128,128,.25); margin:24px 0; }
 .content a { color:#4493f8; text-decoration:none; }
 .panel.light a { color:#0969da; }
 .content div[align="center"] > p { margin: 8px 0; }

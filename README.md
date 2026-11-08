@@ -5,9 +5,9 @@
   <img src="assets/coastal/coastal-hero.png" width="100%" alt="Daniei Chen · 让想法慢慢长大。写一点代码，做一些喜欢的东西。蓝色海面上有一叶帆船，小鸟沿白色海岸骑行。">
 </picture>
 
-独立开发者。做一些有用的东西，也给创造留一点快乐。
+<p align="center">独立开发者。做一些有用的东西，也给创造留一点快乐。</p>
 
-[看看作品](#最近在做) · [全部仓库](https://github.com/daniei-chen?tab=repositories)
+<p align="center"><a href="#最近在做">看看作品</a> · <a href="#一点关于我">关于我</a> · <a href="https://github.com/daniei-chen?tab=repositories">全部仓库</a></p>
 
 ## 最近在做
 
@@ -15,39 +15,61 @@
   <tr>
     <td width="50%" valign="top">
       <a href="https://github.com/daniei-chen/zhihui-gateway"><img src="assets/coastal/zhihui-lighthouse.png" width="100%" alt="智汇 zhihui-gateway：白色灯塔、帆船与蓝色海岸"></a>
-      <p><strong><a href="https://github.com/daniei-chen/zhihui-gateway">智汇 · ZHIHUI</a></strong></p>
+      <h3><a href="https://github.com/daniei-chen/zhihui-gateway">智汇</a></h3>
+      <p><strong>让灵感出发，让工作向前。</strong></p>
       <p>WorkBuddy、Qoder、Trae 的统一工作台。</p>
+      <p><a href="https://zhihui.kaogong.art/">访问网站</a> · <a href="https://github.com/daniei-chen/zhihui-gateway">查看项目</a></p>
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/daniei-chen/zhijing-gateway"><img src="assets/coastal/zhijing-terrace.png" width="100%" alt="智境 zhijing-gateway：面向海面的白色阅读露台"></a>
-      <p><strong><a href="https://github.com/daniei-chen/zhijing-gateway">智境 · ZHIJING</a></strong></p>
+      <h3><a href="https://github.com/daniei-chen/zhijing-gateway">智境</a></h3>
+      <p><strong>复杂有序，智能从容。</strong></p>
       <p>AI 网关的登录、成员与管理前端。</p>
+      <p><a href="https://github.com/daniei-chen/zhijing-gateway#界面一览">界面一览</a> · <a href="https://github.com/daniei-chen/zhijing-gateway">查看项目</a></p>
     </td>
   </tr>
 </table>
 
-## 其他作品
+## 一些小作品
 
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <a href="https://github.com/daniei-chen/ZCode-App"><img src="assets/coastal/sea-window.png" width="100%" alt="ZCode-App：一扇面向蓝色海面的白色窗户"></a>
-      <p><strong><a href="https://github.com/daniei-chen/ZCode-App">ZCode-App</a></strong></p>
-      <p>手机远程任务。</p>
-    </td>
-    <td width="33%" valign="top">
-      <a href="https://github.com/daniei-chen/Little-Whale"><img src="assets/coastal/soft-wave.png" width="100%" alt="Little-Whale：轻柔卷起的蓝白色海浪"></a>
-      <p><strong><a href="https://github.com/daniei-chen/Little-Whale">小鲸鱼</a></strong></p>
-      <p>本地媒体解析。</p>
-    </td>
-    <td width="33%" valign="top">
-      <a href="https://github.com/daniei-chen/dsh-token-insight"><img src="assets/coastal/notebook.png" width="100%" alt="dsh-token-insight：白色手记与一支蓝色铅笔"></a>
-      <p><strong><a href="https://github.com/daniei-chen/dsh-token-insight">DSH Token Insight</a></strong></p>
-      <p>本地用量统计。</p>
-    </td>
-  </tr>
-</table>
+从远程任务，到日常记录。为遇到的小需求，做一些顺手的东西。
 
-用 Flutter / Dart 做移动应用，也写 Go、Python 和 TypeScript。喜欢把一个想法从原型慢慢打磨成作品。
+<a href="https://github.com/daniei-chen/ZCode-App"><img src="assets/coastal/sea-window.png" align="right" width="28%" alt="ZCode-App：一扇面向蓝色海面的白色窗户"></a>
 
-有建议、遇到问题，欢迎到对应仓库的 Issues 聊聊。
+### [ZCode App](https://github.com/daniei-chen/ZCode-App)
+
+扫码连接 ZCode，把桌面任务与会话带到手机上。
+
+[了解项目](https://github.com/daniei-chen/ZCode-App) · [下载版本](https://github.com/daniei-chen/ZCode-App/releases)
+
+<br clear="all">
+
+<a href="https://github.com/daniei-chen/Little-Whale"><img src="assets/coastal/soft-wave.png" align="right" width="28%" alt="Little-Whale：轻柔卷起的蓝白色海浪"></a>
+
+### [小鲸鱼](https://github.com/daniei-chen/Little-Whale)
+
+本地解析与下载视频，把喜欢的片段留在身边。
+
+[了解项目](https://github.com/daniei-chen/Little-Whale) · [下载版本](https://github.com/daniei-chen/Little-Whale/releases)
+
+<br clear="all">
+
+<a href="https://github.com/daniei-chen/dsh-token-insight"><img src="assets/coastal/notebook.png" align="right" width="28%" alt="dsh-token-insight：白色手记与一支蓝色铅笔"></a>
+
+### [DSH Token Insight](https://github.com/daniei-chen/dsh-token-insight)
+
+从 Token 到会话趋势，记录 DSH 的本地使用。
+
+[了解项目](https://github.com/daniei-chen/dsh-token-insight) · [下载版本](https://github.com/daniei-chen/dsh-token-insight/releases)
+
+<br clear="all">
+
+## 一点关于我
+
+用 Flutter / Dart 做移动应用，也写 Go、Python 和 TypeScript。喜欢把原型慢慢打磨成作品，让功能与细节一起变好。
+
+偏爱蓝与白，也偏爱有呼吸感的界面。欢迎到对应项目的 Issues，聊聊你的想法。
+
+---
+
+<p align="center">谢谢你来这里。愿你的想法，也慢慢长大。</p>
