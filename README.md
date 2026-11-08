@@ -39,11 +39,3 @@
 用 Flutter / Dart 做移动应用，也写 Go、Python 和 TypeScript。喜欢把一个想法从原型慢慢打磨成作品。
 
 有建议、遇到问题，欢迎到对应仓库的 Issues 聊聊。
-
-<details>
-  <summary>更多仓库与小实验</summary>
-
-  <ul>
-    <li><a href="https://github.com/daniei-chen/hongguo-duanju">hongguo-duanju</a> · 筹备中</li>
-  </ul>
-</details>
