@@ -10,11 +10,13 @@ from __future__ import annotations
 import html
 import os
 import re
+import argparse
+from pathlib import Path
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # 仓库根目录
 SRC = os.path.join(ROOT, "README.md")
 # 预览产物刻意写在仓库之外，避免被误提交
-OUT = os.path.join(os.path.dirname(ROOT), "preview", "preview.html")
+OUT = os.path.join(os.path.dirname(ROOT), "preview", "profile.html")
 
 INLINE = [
     (re.compile(r"!\[([^\]]*)\]\(([^)]+)\)"), r'<img alt="\1" src="\2">'),
@@ -66,7 +68,8 @@ def render(md: str) -> str:
         m = re.match(r"^(#{1,6})\s+(.*)$", stripped)
         if m:
             lvl = len(m.group(1))
-            out.append(f"<h{lvl}>{inline(m.group(2))}</h{lvl}>")
+            anchor = re.sub(r"[^\w\-\u4e00-\u9fff ]", "", m.group(2).lower()).replace(" ", "-")
+            out.append(f'<h{lvl} id="{anchor}">{inline(m.group(2))}</h{lvl}>')
             i += 1
             continue
 
@@ -139,7 +142,10 @@ body { margin:0; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingF
                font-size:13px; line-height:1.45; }
 .content code { font-family: ui-monospace,SFMono-Regular,Consolas,monospace; }
 .content table { border-collapse:collapse; width:100%; }
-.content td { padding: 4px 8px; vertical-align: top; }
+.content td { padding: 6px 13px; vertical-align: top; border: 1px solid rgba(128,128,128,.25); }
+.content td p { margin: 8px 0; }
+.content details { margin-top: 24px; }
+.content summary { cursor:pointer; }
 .content a { color:#4493f8; text-decoration:none; }
 .panel.light a { color:#0969da; }
 .content div[align="center"] > p { margin: 8px 0; }
@@ -148,14 +154,19 @@ body { margin:0; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingF
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", default=OUT, help="Output HTML path (outside the repository by default).")
+    args = parser.parse_args()
+    out_path = Path(args.output).resolve()
     with open(SRC, encoding="utf-8") as f:
         md = f.read()
     body = render(md)
     # 预览页在仓库之外（<parent>/preview/），素材在仓库内（<repo>/assets/），
     # 所以相对路径必须是 ../repo/assets/。src 与 srcset 都要改，
     # 否则 pick_theme 会从 srcset 里取回未改写的旧路径。
-    body = body.replace('src="assets/', 'src="../repo/assets/')
-    body = body.replace('srcset="assets/', 'srcset="../repo/assets/')
+    relative_repo = os.path.relpath(ROOT, out_path.parent).replace(os.sep, "/")
+    body = body.replace('src="assets/', f'src="{relative_repo}/assets/')
+    body = body.replace('srcset="assets/', f'srcset="{relative_repo}/assets/')
     panels = []
     for theme, label in (("dark", "GitHub 深色模式"), ("light", "GitHub 浅色模式")):
         panels.append(f'<section class="panel {theme}">'
@@ -165,16 +176,16 @@ def main() -> None:
     doc = (f"<!doctype html><html><head><meta charset='utf-8'>"
            f"<title>README 预览 · daniei-chen</title><style>{CSS}</style></head>"
            f"<body>{''.join(panels)}</body></html>")
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    with open(OUT, "w", encoding="utf-8") as f:
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
         f.write(doc)
-    print(f"wrote {OUT}  {len(doc.encode('utf-8'))} bytes")
+    print(f"wrote {out_path}  {len(doc.encode('utf-8'))} bytes")
 
     # 就地校验：每个被引用的素材路径在磁盘上必须真实存在。
     # 上一版正是因为相对路径写错，预览页里所有 SVG 都成了破图而没人发现。
-    refs = sorted(set(re.findall(r'src="([^"]+\.svg)"', doc)))
+    refs = sorted(set(re.findall(r'src="([^"]+\.(?:svg|png|webp|jpg))"', doc)))
     missing = [r for r in refs
-               if not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(OUT), r)))]
+               if not os.path.exists(os.path.normpath(os.path.join(out_path.parent, r)))]
     print(f"引用素材 {len(refs)} 个，缺失 {len(missing)} 个")
     for m in missing:
         print(f"  MISSING: {m}")
