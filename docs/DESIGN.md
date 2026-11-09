@@ -14,8 +14,6 @@ ZCode App、小鲸鱼、DSH Token Insight 继续逐项介绍，配图占 32%。�
 
 `zhihui-velo-sunset.webp` 原样复用智汇网站已经发布的场景海报，1000 × 720，暖色木栈道、青绿色单车与花篮。该场景由智汇项目改编自 [Jacory Ou / Pelican · Velo](https://github.com/JacoryOu/pelican-velo)，遵循 MIT，完整许可保存在 `assets/coastal/PELICAN-VELO-LICENSE.txt`，页尾同时保留来源链接。它是网站场景海报，不是网关控制台截图。
 
-本轮内置图片服务返回上游连接失败，没有产生新图片，也未使用任何备用 API、外部凭据或手工滤镜来代替。页面通过已有场景完成了暖色引入。
-
 ## 维护
 
 - 修改主页：编辑 `tools/make_readme.py`，运行 `python tools/make_readme.py`。
