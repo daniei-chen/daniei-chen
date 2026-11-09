@@ -73,8 +73,10 @@ def render(md: str) -> str:
         m = re.match(r"^(#{1,6})\s+(.*)$", stripped)
         if m:
             lvl = len(m.group(1))
-            anchor = re.sub(r"[^\w\-\u4e00-\u9fff ]", "", m.group(2).lower()).replace(" ", "-")
-            out.append(f'<h{lvl} id="{anchor}">{inline(m.group(2))}</h{lvl}>')
+            heading = inline(m.group(2))
+            label = html.unescape(re.sub(r"<[^>]+>", "", heading))
+            anchor = re.sub(r"[^\w\-\u4e00-\u9fff ]", "", label.lower()).replace(" ", "-")
+            out.append(f'<h{lvl} id="{anchor}">{heading}</h{lvl}>')
             i += 1
             continue
 
