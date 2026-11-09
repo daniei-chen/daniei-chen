@@ -9,7 +9,7 @@
 
 <p align="center">独立开发者。做一些有用的东西，也给创造留一点快乐。</p>
 
-<p align="center"><a href="#智汇">智汇</a> · <a href="#智境">智境</a> · <a href="#一些小作品">小作品</a> · <a href="#一点关于我">关于我</a></p>
+<p align="center"><a href="#user-content-智汇">智汇</a> · <a href="#user-content-智境">智境</a> · <a href="#user-content-一些小作品">小作品</a> · <a href="#user-content-一点关于我">关于我</a></p>
 
 <br>
 
@@ -80,7 +80,7 @@ AI 网关的登录、成员与管理前端。
 
 喜欢海风、日光，和有呼吸感的界面。欢迎到对应项目的 Issues，聊聊你的想法。
 
-[浏览全部仓库](https://github.com/daniei-chen?tab=repositories) · [回到页首](#daniei-chen)
+[浏览全部仓库](https://github.com/daniei-chen?tab=repositories) · [回到页首](#user-content-daniei-chen)
 
 ---
 

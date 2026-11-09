@@ -76,7 +76,7 @@ def render(md: str) -> str:
             heading = inline(m.group(2))
             label = html.unescape(re.sub(r"<[^>]+>", "", heading))
             anchor = re.sub(r"[^\w\-\u4e00-\u9fff ]", "", label.lower()).replace(" ", "-")
-            out.append(f'<h{lvl} id="{anchor}">{heading}</h{lvl}>')
+            out.append(f'<h{lvl} id="user-content-{anchor}">{heading}</h{lvl}>')
             i += 1
             continue
 
@@ -108,7 +108,7 @@ def render(md: str) -> str:
             # 兜底：任何未被上面分支消费的行都必须让游标前进，否则死循环
             out.append("<p>" + inline(stripped) + "</p>")
             i += 1
-    return "\n".join(out)
+    return re.sub(r'<a id="(?!user-content-)([^"]+)"', r'<a id="user-content-\1"', "\n".join(out))
 
 
 def pick_theme(block: str, theme: str) -> str:

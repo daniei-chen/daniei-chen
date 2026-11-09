@@ -103,7 +103,7 @@ def build(data: dict) -> str:
         "",
         '<p align="center">独立开发者。做一些有用的东西，也给创造留一点快乐。</p>',
         "",
-        f'<p align="center"><a href="#智汇">智汇</a> · <a href="#智境">智境</a> · <a href="#一些小作品">小作品</a> · <a href="#一点关于我">关于我</a></p>',
+        '<p align="center"><a href="#user-content-智汇">智汇</a> · <a href="#user-content-智境">智境</a> · <a href="#user-content-一些小作品">小作品</a> · <a href="#user-content-一点关于我">关于我</a></p>',
         "",
         "<br>",
         "",
@@ -120,7 +120,7 @@ def build(data: dict) -> str:
         "",
         "喜欢海风、日光，和有呼吸感的界面。欢迎到对应项目的 Issues，聊聊你的想法。",
         "",
-        f"[浏览全部仓库](https://github.com/{OWNER}?tab=repositories) · [回到页首](#daniei-chen)",
+        f"[浏览全部仓库](https://github.com/{OWNER}?tab=repositories) · [回到页首](#user-content-daniei-chen)",
     ])
     extra = remaining_repos(data)
     if extra:
