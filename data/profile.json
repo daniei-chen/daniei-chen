@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T11:37:58Z",
+  "generated_at": "2026-11-10T11:16:17Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -76,21 +76,48 @@
       "lang": "Python",
       "stars": 3,
       "forks": 0,
-      "license": "MIT",
+      "license": "NOASSERTION",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-08T05:32:27Z",
+      "pushed_at": "2026-11-09T17:02:31Z",
       "langs": {
-        "Python": 9732067,
-        "JavaScript": 1927358,
+        "Python": 8269502,
         "TypeScript": 1558660,
-        "HTML": 327839,
+        "JavaScript": 1263075,
+        "HTML": 335322,
         "CSS": 206845,
-        "PowerShell": 86449,
-        "Shell": 56038,
+        "PowerShell": 142031,
+        "C#": 115011,
+        "Shell": 43585,
         "Dockerfile": 16709,
-        "Batchfile": 5154,
-        "Go": 3835
+        "Batchfile": 5154
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "zhijing-gateway",
+      "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
+      "lang": "Go",
+      "stars": 1,
+      "forks": 0,
+      "license": "LGPL-3.0",
+      "url": "https://github.com/daniei-chen/zhijing-gateway",
+      "topics": [],
+      "pushed_at": "2026-11-10T06:26:51Z",
+      "langs": {
+        "Go": 33991787,
+        "Vue": 5977083,
+        "TypeScript": 4593561,
+        "PLpgSQL": 126672,
+        "Shell": 98077,
+        "JavaScript": 32007,
+        "CSS": 30111,
+        "Dockerfile": 11407,
+        "Python": 10299,
+        "Makefile": 4413,
+        "HTML": 374,
+        "Go Template": 174
       },
       "fork": false,
       "empty": false
@@ -112,31 +139,9 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-11-09T01:12:58Z",
+      "pushed_at": "2026-11-09T11:38:04Z",
       "langs": {
         "Python": 28890
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "zhijing-gateway",
-      "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
-      "lang": "TypeScript",
-      "stars": 1,
-      "forks": 0,
-      "license": "LGPL-3.0",
-      "url": "https://github.com/daniei-chen/zhijing-gateway",
-      "topics": [],
-      "pushed_at": "2026-11-08T05:13:18Z",
-      "langs": {
-        "TypeScript": 7099602,
-        "Vue": 6260307,
-        "CSS": 309851,
-        "Python": 165748,
-        "JavaScript": 39560,
-        "Go": 4594,
-        "HTML": 617
       },
       "fork": false,
       "empty": false
@@ -167,7 +172,7 @@
     }
   ],
   "contributions": {
-    "total": 334,
+    "total": 336,
     "days": [
       {
         "date": "2025-11-09",
@@ -2361,12 +2366,18 @@
       },
       {
         "date": "2026-11-09",
-        "level": 1,
+        "level": 2,
         "id": "contribution-day-component-1-52",
-        "count": 6
+        "count": 7
+      },
+      {
+        "date": "2026-11-10",
+        "level": 1,
+        "id": "contribution-day-component-2-52",
+        "count": 1
       }
     ],
     "max": 56,
-    "active_days": 26
+    "active_days": 27
   }
 }
