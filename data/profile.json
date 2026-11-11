@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-10T11:16:17Z",
+  "generated_at": "2026-11-11T11:01:51Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 3,
-    "following": 3,
+    "following": 4,
     "public_repos": 6,
     "created_at": "2026-09-14T04:23:32Z"
   },
@@ -96,6 +96,30 @@
       "empty": false
     },
     {
+      "name": "daniei-chen",
+      "desc": "个人主页 · DSH / Flutter / 3D 实验｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
+      "lang": "Python",
+      "stars": 1,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/daniei-chen",
+      "topics": [
+        "deepseek-harness",
+        "dsh",
+        "github-actions",
+        "github-profile",
+        "profile-readme",
+        "python",
+        "svg"
+      ],
+      "pushed_at": "2026-11-10T11:16:23Z",
+      "langs": {
+        "Python": 28890
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
       "name": "zhijing-gateway",
       "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
       "lang": "Go",
@@ -118,30 +142,6 @@
         "Makefile": 4413,
         "HTML": 374,
         "Go Template": 174
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "daniei-chen",
-      "desc": "个人主页 · DSH / Flutter / 3D 实验｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
-      "lang": "Python",
-      "stars": 1,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/daniei-chen",
-      "topics": [
-        "deepseek-harness",
-        "dsh",
-        "github-actions",
-        "github-profile",
-        "profile-readme",
-        "python",
-        "svg"
-      ],
-      "pushed_at": "2026-11-09T11:38:04Z",
-      "langs": {
-        "Python": 28890
       },
       "fork": false,
       "empty": false
@@ -2375,6 +2375,12 @@
         "level": 1,
         "id": "contribution-day-component-2-52",
         "count": 1
+      },
+      {
+        "date": "2026-11-11",
+        "level": 0,
+        "id": "contribution-day-component-3-52",
+        "count": 0
       }
     ],
     "max": 56,
