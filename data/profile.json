@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T11:03:24Z",
+  "generated_at": "2026-11-14T10:30:00Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -40,6 +40,31 @@
       "empty": false
     },
     {
+      "name": "zhihui-gateway",
+      "desc": "面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、API 密钥管理、用量统计与运行监控。",
+      "lang": "Python",
+      "stars": 4,
+      "forks": 0,
+      "license": "NOASSERTION",
+      "url": "https://github.com/daniei-chen/zhihui-gateway",
+      "topics": [],
+      "pushed_at": "2026-11-14T10:14:16Z",
+      "langs": {
+        "Python": 8487524,
+        "TypeScript": 1558898,
+        "JavaScript": 1263129,
+        "HTML": 335322,
+        "CSS": 206845,
+        "PowerShell": 143174,
+        "C#": 115011,
+        "Shell": 45904,
+        "Dockerfile": 8064,
+        "Batchfile": 5154
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
       "name": "Little-Whale",
       "desc": "视频下载去水印",
       "lang": "Dart",
@@ -71,31 +96,6 @@
       "empty": false
     },
     {
-      "name": "zhihui-gateway",
-      "desc": "面向 WorkBuddy、Qoder 和 Trae等多平台 的 AI 网关与管理平台，提供统一入口、平台路由、API 密钥管理、用量统计与运行监控。",
-      "lang": "Python",
-      "stars": 3,
-      "forks": 0,
-      "license": "NOASSERTION",
-      "url": "https://github.com/daniei-chen/zhihui-gateway",
-      "topics": [],
-      "pushed_at": "2026-11-13T11:02:25Z",
-      "langs": {
-        "Python": 8410521,
-        "TypeScript": 1558893,
-        "JavaScript": 1263129,
-        "HTML": 335322,
-        "CSS": 206845,
-        "PowerShell": 142031,
-        "C#": 115011,
-        "Shell": 43585,
-        "Dockerfile": 8105,
-        "Batchfile": 5154
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
       "name": "zhijing-gateway",
       "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
       "lang": "Go",
@@ -104,19 +104,19 @@
       "license": "LGPL-3.0",
       "url": "https://github.com/daniei-chen/zhijing-gateway",
       "topics": [],
-      "pushed_at": "2026-11-13T07:17:18Z",
+      "pushed_at": "2026-11-14T10:29:25Z",
       "langs": {
-        "Go": 34212428,
-        "Vue": 5986348,
-        "TypeScript": 4612234,
+        "Go": 34257267,
+        "Vue": 5986593,
+        "TypeScript": 4613244,
         "PLpgSQL": 126672,
-        "Shell": 98077,
+        "Shell": 105389,
+        "Python": 32961,
         "JavaScript": 32007,
-        "CSS": 30111,
-        "Dockerfile": 11407,
-        "Python": 10299,
+        "CSS": 30116,
+        "Dockerfile": 11694,
         "Makefile": 4413,
-        "HTML": 374,
+        "HTML": 379,
         "Go Template": 174
       },
       "fork": false,
@@ -139,7 +139,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-11-12T11:18:17Z",
+      "pushed_at": "2026-11-13T11:03:29Z",
       "langs": {
         "Python": 28890
       },
@@ -172,7 +172,7 @@
     }
   ],
   "contributions": {
-    "total": 372,
+    "total": 501,
     "days": [
       {
         "date": "2025-11-09",
@@ -2102,7 +2102,7 @@
       },
       {
         "date": "2026-09-26",
-        "level": 4,
+        "level": 2,
         "id": "contribution-day-component-6-45",
         "count": 36
       },
@@ -2234,37 +2234,37 @@
       },
       {
         "date": "2026-10-18",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-0-49",
         "count": 9
       },
       {
         "date": "2026-10-19",
-        "level": 4,
+        "level": 3,
         "id": "contribution-day-component-1-49",
         "count": 50
       },
       {
         "date": "2026-10-20",
-        "level": 4,
+        "level": 3,
         "id": "contribution-day-component-2-49",
         "count": 56
       },
       {
         "date": "2026-10-21",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-3-49",
         "count": 7
       },
       {
         "date": "2026-10-22",
-        "level": 4,
+        "level": 2,
         "id": "contribution-day-component-4-49",
-        "count": 25
+        "count": 26
       },
       {
         "date": "2026-10-23",
-        "level": 3,
+        "level": 1,
         "id": "contribution-day-component-5-49",
         "count": 13
       },
@@ -2288,37 +2288,37 @@
       },
       {
         "date": "2026-10-27",
-        "level": 4,
+        "level": 1,
         "id": "contribution-day-component-2-50",
         "count": 20
       },
       {
         "date": "2026-10-28",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-3-50",
         "count": 7
       },
       {
         "date": "2026-10-29",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-4-50",
         "count": 10
       },
       {
         "date": "2026-10-30",
-        "level": 4,
+        "level": 1,
         "id": "contribution-day-component-5-50",
         "count": 19
       },
       {
         "date": "2026-10-31",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-6-50",
         "count": 9
       },
       {
         "date": "2026-11-01",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-0-51",
         "count": 8
       },
@@ -2342,13 +2342,13 @@
       },
       {
         "date": "2026-11-05",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-4-51",
         "count": 9
       },
       {
         "date": "2026-11-06",
-        "level": 4,
+        "level": 1,
         "id": "contribution-day-component-5-51",
         "count": 21
       },
@@ -2366,7 +2366,7 @@
       },
       {
         "date": "2026-11-09",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-1-52",
         "count": 7
       },
@@ -2374,7 +2374,7 @@
         "date": "2026-11-10",
         "level": 1,
         "id": "contribution-day-component-2-52",
-        "count": 1
+        "count": 2
       },
       {
         "date": "2026-11-11",
@@ -2392,10 +2392,16 @@
         "date": "2026-11-13",
         "level": 4,
         "id": "contribution-day-component-5-52",
-        "count": 36
+        "count": 70
+      },
+      {
+        "date": "2026-11-14",
+        "level": 4,
+        "id": "contribution-day-component-6-52",
+        "count": 93
       }
     ],
-    "max": 56,
-    "active_days": 28
+    "max": 93,
+    "active_days": 29
   }
 }
