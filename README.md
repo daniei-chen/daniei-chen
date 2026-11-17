@@ -82,6 +82,14 @@ AI 网关的登录、成员与管理前端。
 
 [浏览全部仓库](https://github.com/daniei-chen?tab=repositories) · [回到页首](#user-content-daniei-chen)
 
+<details>
+  <summary>更多仓库与小实验</summary>
+
+  <ul>
+    <li><a href="https://github.com/daniei-chen/Xiaonian-AI">Xiaonian-AI</a></li>
+  </ul>
+</details>
+
 ---
 
 <p align="center">谢谢你来这里。愿你的想法，也慢慢长大。</p>

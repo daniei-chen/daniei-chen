@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-16T11:26:30Z",
+  "generated_at": "2026-11-17T11:56:10Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 3,
     "following": 4,
-    "public_repos": 6,
+    "public_repos": 7,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -48,15 +48,15 @@
       "license": "NOASSERTION",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-16T01:05:10Z",
+      "pushed_at": "2026-11-17T06:19:29Z",
       "langs": {
-        "Python": 9415660,
+        "Python": 9415329,
         "TypeScript": 1558897,
         "JavaScript": 1263129,
         "HTML": 335322,
         "CSS": 206845,
         "PowerShell": 143174,
-        "Shell": 118988,
+        "Shell": 115652,
         "C#": 115011,
         "Dockerfile": 8064,
         "Batchfile": 5154
@@ -103,13 +103,13 @@
       "license": "LGPL-3.0",
       "url": "https://github.com/daniei-chen/zhijing-gateway",
       "topics": [],
-      "pushed_at": "2026-11-16T11:21:05Z",
+      "pushed_at": "2026-11-16T12:15:34Z",
       "langs": {
-        "Go": 34309949,
-        "Vue": 5987428,
-        "TypeScript": 4617012,
+        "Go": 34318316,
+        "Vue": 5987784,
+        "TypeScript": 4618737,
         "PLpgSQL": 126672,
-        "Shell": 111301,
+        "Shell": 118076,
         "Python": 58392,
         "JavaScript": 32007,
         "CSS": 30116,
@@ -138,7 +138,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-11-15T10:58:51Z",
+      "pushed_at": "2026-11-16T11:26:43Z",
       "langs": {
         "Python": 28890
       },
@@ -168,10 +168,29 @@
       },
       "fork": false,
       "empty": false
+    },
+    {
+      "name": "Xiaonian-AI",
+      "desc": "小念：会记住你、会忽略事情、能在手机上帮助完成任务的人工智能助手。",
+      "lang": "Kotlin",
+      "stars": 0,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/Xiaonian-AI",
+      "topics": [],
+      "pushed_at": "2026-11-17T10:29:10Z",
+      "langs": {
+        "Kotlin": 227110,
+        "TypeScript": 133315,
+        "JavaScript": 26976,
+        "Python": 2992
+      },
+      "fork": false,
+      "empty": false
     }
   ],
   "contributions": {
-    "total": 685,
+    "total": 702,
     "days": [
       {
         "date": "2025-11-16",
@@ -2367,10 +2386,16 @@
         "date": "2026-11-16",
         "level": 1,
         "id": "contribution-day-component-1-52",
-        "count": 14
+        "count": 30
+      },
+      {
+        "date": "2026-11-17",
+        "level": 1,
+        "id": "contribution-day-component-2-52",
+        "count": 1
       }
     ],
     "max": 149,
-    "active_days": 31
+    "active_days": 32
   }
 }
