@@ -87,6 +87,7 @@ AI 网关的登录、成员与管理前端。
 
   <ul>
     <li><a href="https://github.com/daniei-chen/Xiaonian-AI">Xiaonian-AI</a></li>
+    <li><a href="https://github.com/daniei-chen/ZhiXing">ZhiXing</a></li>
   </ul>
 </details>
 

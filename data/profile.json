@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-19T11:44:12Z",
+  "generated_at": "2026-11-20T11:44:20Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
-    "followers": 3,
+    "followers": 2,
     "following": 4,
-    "public_repos": 7,
+    "public_repos": 8,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -48,12 +48,12 @@
       "license": "NOASSERTION",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-19T11:26:43Z",
+      "pushed_at": "2026-11-20T06:30:07Z",
       "langs": {
-        "Python": 9589756,
-        "TypeScript": 1571837,
-        "JavaScript": 1265230,
-        "HTML": 335322,
+        "Python": 9700064,
+        "TypeScript": 1581131,
+        "JavaScript": 1268086,
+        "HTML": 919880,
         "CSS": 206845,
         "PowerShell": 143174,
         "Shell": 115652,
@@ -111,7 +111,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-11-18T11:46:48Z",
+      "pushed_at": "2026-11-19T11:44:21Z",
       "langs": {
         "Python": 28890
       },
@@ -170,6 +170,25 @@
       "empty": false
     },
     {
+      "name": "ZhiXing",
+      "desc": "知行（ZhiXing）是一款基于 DeepSeek Harness 的 AI 办公助手，支持文档处理、项目工作区、定时任务和本地脱敏。",
+      "lang": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/ZhiXing",
+      "topics": [],
+      "pushed_at": "2026-11-20T06:23:42Z",
+      "langs": {
+        "JavaScript": 650664,
+        "CSS": 82212,
+        "PowerShell": 7853,
+        "HTML": 390
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
       "name": "Xiaonian-AI",
       "desc": "小念：会记住你、会忽略事情、能在手机上帮助完成任务的人工智能助手。",
       "lang": "Kotlin",
@@ -190,7 +209,7 @@
     }
   ],
   "contributions": {
-    "total": 702,
+    "total": 705,
     "days": [
       {
         "date": "2025-11-16",
@@ -2402,12 +2421,18 @@
       },
       {
         "date": "2026-11-19",
-        "level": 0,
+        "level": 1,
         "id": "contribution-day-component-4-52",
-        "count": 0
+        "count": 2
+      },
+      {
+        "date": "2026-11-20",
+        "level": 1,
+        "id": "contribution-day-component-5-52",
+        "count": 1
       }
     ],
     "max": 149,
-    "active_days": 32
+    "active_days": 34
   }
 }
