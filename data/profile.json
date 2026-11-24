@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-23T12:51:24Z",
+  "generated_at": "2026-11-24T13:47:08Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 2,
     "following": 4,
-    "public_repos": 9,
+    "public_repos": 10,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -18,17 +18,17 @@
       "license": "NOASSERTION",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-23T11:37:20Z",
+      "pushed_at": "2026-11-24T12:56:19Z",
       "langs": {
-        "Python": 9862363,
-        "TypeScript": 1580493,
-        "JavaScript": 1270949,
-        "HTML": 850418,
-        "CSS": 206845,
+        "Python": 10110602,
+        "TypeScript": 1601168,
+        "JavaScript": 1272347,
+        "HTML": 333038,
+        "CSS": 205679,
         "PowerShell": 143174,
-        "Shell": 115652,
+        "Shell": 127555,
         "C#": 115011,
-        "Dockerfile": 8064,
+        "Dockerfile": 8062,
         "Batchfile": 5154
       },
       "fork": false,
@@ -95,6 +95,30 @@
       "empty": false
     },
     {
+      "name": "daniei-chen",
+      "desc": "个人主页 · DSH / Flutter / 3D 实验｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
+      "lang": "Python",
+      "stars": 1,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/daniei-chen",
+      "topics": [
+        "deepseek-harness",
+        "dsh",
+        "github-actions",
+        "github-profile",
+        "profile-readme",
+        "python",
+        "svg"
+      ],
+      "pushed_at": "2026-11-23T12:51:33Z",
+      "langs": {
+        "Python": 28890
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
       "name": "zhijing-gateway",
       "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
       "lang": "Go",
@@ -117,30 +141,6 @@
         "Makefile": 4595,
         "HTML": 379,
         "Go Template": 174
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "daniei-chen",
-      "desc": "个人主页 · DSH / Flutter / 3D 实验｜README 素材全部自绘，由 GitHub Action 每日自动刷新",
-      "lang": "Python",
-      "stars": 1,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/daniei-chen",
-      "topics": [
-        "deepseek-harness",
-        "dsh",
-        "github-actions",
-        "github-profile",
-        "profile-readme",
-        "python",
-        "svg"
-      ],
-      "pushed_at": "2026-11-22T11:29:30Z",
-      "langs": {
-        "Python": 28890
       },
       "fork": false,
       "empty": false
@@ -178,16 +178,30 @@
       "license": null,
       "url": "https://github.com/daniei-chen/ZhiXing",
       "topics": [],
-      "pushed_at": "2026-11-23T11:10:56Z",
+      "pushed_at": "2026-11-24T12:36:38Z",
       "langs": {
-        "JavaScript": 1762346,
-        "CSS": 92781,
-        "PowerShell": 67386,
+        "JavaScript": 1794193,
+        "CSS": 93012,
+        "PowerShell": 72831,
         "NSIS": 1045,
         "HTML": 390
       },
       "fork": false,
       "empty": false
+    },
+    {
+      "name": "forbidden-city-reconstruction",
+      "desc": "以公开测绘资料、地图轮廓和实景影像为依据，持续复原北京紫禁城的可编辑 Blender 三维模型、建筑细节与沉浸式漫游",
+      "lang": "",
+      "stars": 0,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/forbidden-city-reconstruction",
+      "topics": [],
+      "pushed_at": "2026-11-23T23:47:22Z",
+      "langs": {},
+      "fork": false,
+      "empty": true
     },
     {
       "name": "Ink-Dream",
@@ -239,7 +253,7 @@
     }
   ],
   "contributions": {
-    "total": 765,
+    "total": 876,
     "days": [
       {
         "date": "2025-11-23",
@@ -2433,12 +2447,18 @@
       },
       {
         "date": "2026-11-23",
-        "level": 1,
+        "level": 2,
         "id": "contribution-day-component-1-52",
-        "count": 26
+        "count": 48
+      },
+      {
+        "date": "2026-11-24",
+        "level": 3,
+        "id": "contribution-day-component-2-52",
+        "count": 89
       }
     ],
     "max": 149,
-    "active_days": 37
+    "active_days": 38
   }
 }
