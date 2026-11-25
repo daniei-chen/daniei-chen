@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T13:47:08Z",
+  "generated_at": "2026-11-25T12:59:38Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -18,18 +18,48 @@
       "license": "NOASSERTION",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-24T12:56:19Z",
+      "pushed_at": "2026-11-25T11:57:40Z",
       "langs": {
-        "Python": 10110602,
-        "TypeScript": 1601168,
-        "JavaScript": 1272347,
+        "Python": 10194079,
+        "TypeScript": 1601150,
+        "JavaScript": 1272430,
         "HTML": 333038,
         "CSS": 205679,
+        "Shell": 152510,
         "PowerShell": 143174,
-        "Shell": 127555,
         "C#": 115011,
         "Dockerfile": 8062,
         "Batchfile": 5154
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
+      "name": "Little-Whale",
+      "desc": "视频下载去水印",
+      "lang": "Dart",
+      "stars": 6,
+      "forks": 0,
+      "license": null,
+      "url": "https://github.com/daniei-chen/Little-Whale",
+      "topics": [
+        "android",
+        "bilibili",
+        "dart",
+        "douyin",
+        "flutter",
+        "no-watermark",
+        "offline",
+        "privacy",
+        "video-downloader",
+        "xiaohongshu"
+      ],
+      "pushed_at": "2026-11-15T12:42:39Z",
+      "langs": {
+        "Dart": 659581,
+        "Java": 43310,
+        "Kotlin": 36791,
+        "PowerShell": 11913
       },
       "fork": false,
       "empty": false
@@ -65,31 +95,28 @@
       "empty": false
     },
     {
-      "name": "Little-Whale",
-      "desc": "视频下载去水印",
-      "lang": "Dart",
-      "stars": 5,
+      "name": "zhijing-gateway",
+      "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
+      "lang": "Go",
+      "stars": 1,
       "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/Little-Whale",
-      "topics": [
-        "android",
-        "bilibili",
-        "dart",
-        "douyin",
-        "flutter",
-        "no-watermark",
-        "offline",
-        "privacy",
-        "video-downloader",
-        "xiaohongshu"
-      ],
-      "pushed_at": "2026-11-15T12:42:39Z",
+      "license": "LGPL-3.0",
+      "url": "https://github.com/daniei-chen/zhijing-gateway",
+      "topics": [],
+      "pushed_at": "2026-11-24T23:27:02Z",
       "langs": {
-        "Dart": 659581,
-        "Java": 43310,
-        "Kotlin": 36791,
-        "PowerShell": 11913
+        "Go": 34346060,
+        "Vue": 5987784,
+        "TypeScript": 4618737,
+        "PLpgSQL": 126672,
+        "Shell": 125191,
+        "Python": 58392,
+        "JavaScript": 32007,
+        "CSS": 30116,
+        "Dockerfile": 12077,
+        "Makefile": 4595,
+        "HTML": 379,
+        "Go Template": 174
       },
       "fork": false,
       "empty": false
@@ -111,36 +138,9 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-11-23T12:51:33Z",
+      "pushed_at": "2026-11-24T13:47:16Z",
       "langs": {
         "Python": 28890
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "zhijing-gateway",
-      "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
-      "lang": "Go",
-      "stars": 1,
-      "forks": 0,
-      "license": "LGPL-3.0",
-      "url": "https://github.com/daniei-chen/zhijing-gateway",
-      "topics": [],
-      "pushed_at": "2026-11-22T19:47:17Z",
-      "langs": {
-        "Go": 34318316,
-        "Vue": 5987784,
-        "TypeScript": 4618737,
-        "PLpgSQL": 126672,
-        "Shell": 118076,
-        "Python": 58392,
-        "JavaScript": 32007,
-        "CSS": 30116,
-        "Dockerfile": 12077,
-        "Makefile": 4595,
-        "HTML": 379,
-        "Go Template": 174
       },
       "fork": false,
       "empty": false
@@ -178,11 +178,11 @@
       "license": null,
       "url": "https://github.com/daniei-chen/ZhiXing",
       "topics": [],
-      "pushed_at": "2026-11-24T12:36:38Z",
+      "pushed_at": "2026-11-25T12:57:31Z",
       "langs": {
-        "JavaScript": 1794193,
-        "CSS": 93012,
-        "PowerShell": 72831,
+        "JavaScript": 2031967,
+        "CSS": 96039,
+        "PowerShell": 78973,
         "NSIS": 1045,
         "HTML": 390
       },
@@ -192,16 +192,18 @@
     {
       "name": "forbidden-city-reconstruction",
       "desc": "以公开测绘资料、地图轮廓和实景影像为依据，持续复原北京紫禁城的可编辑 Blender 三维模型、建筑细节与沉浸式漫游",
-      "lang": "",
+      "lang": "Python",
       "stars": 0,
       "forks": 0,
       "license": null,
       "url": "https://github.com/daniei-chen/forbidden-city-reconstruction",
       "topics": [],
-      "pushed_at": "2026-11-23T23:47:22Z",
-      "langs": {},
+      "pushed_at": "2026-11-25T03:55:23Z",
+      "langs": {
+        "Python": 603306
+      },
       "fork": false,
-      "empty": true
+      "empty": false
     },
     {
       "name": "Ink-Dream",
@@ -253,7 +255,7 @@
     }
   ],
   "contributions": {
-    "total": 876,
+    "total": 1145,
     "days": [
       {
         "date": "2025-11-23",
@@ -2237,13 +2239,13 @@
       },
       {
         "date": "2026-10-19",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-1-47",
         "count": 50
       },
       {
         "date": "2026-10-20",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-2-47",
         "count": 56
       },
@@ -2393,13 +2395,13 @@
       },
       {
         "date": "2026-11-14",
-        "level": 4,
+        "level": 2,
         "id": "contribution-day-component-6-50",
         "count": 114
       },
       {
         "date": "2026-11-15",
-        "level": 4,
+        "level": 3,
         "id": "contribution-day-component-0-51",
         "count": 149
       },
@@ -2447,18 +2449,24 @@
       },
       {
         "date": "2026-11-23",
-        "level": 2,
+        "level": 1,
         "id": "contribution-day-component-1-52",
         "count": 48
       },
       {
         "date": "2026-11-24",
-        "level": 3,
+        "level": 2,
         "id": "contribution-day-component-2-52",
-        "count": 89
+        "count": 103
+      },
+      {
+        "date": "2026-11-25",
+        "level": 4,
+        "id": "contribution-day-component-3-52",
+        "count": 255
       }
     ],
-    "max": 149,
-    "active_days": 38
+    "max": 255,
+    "active_days": 39
   }
 }
