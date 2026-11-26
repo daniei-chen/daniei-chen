@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-25T12:59:38Z",
+  "generated_at": "2026-11-26T12:40:23Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
     "followers": 2,
     "following": 4,
-    "public_repos": 10,
+    "public_repos": 9,
     "created_at": "2026-09-14T04:23:32Z"
   },
   "repos": [
@@ -18,14 +18,14 @@
       "license": "NOASSERTION",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-25T11:57:40Z",
+      "pushed_at": "2026-11-26T11:44:14Z",
       "langs": {
-        "Python": 10194079,
-        "TypeScript": 1601150,
+        "Python": 10284931,
+        "TypeScript": 1603397,
         "JavaScript": 1272430,
         "HTML": 333038,
         "CSS": 205679,
-        "Shell": 152510,
+        "Shell": 179596,
         "PowerShell": 143174,
         "C#": 115011,
         "Dockerfile": 8062,
@@ -98,18 +98,18 @@
       "name": "zhijing-gateway",
       "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
       "lang": "Go",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "license": "LGPL-3.0",
       "url": "https://github.com/daniei-chen/zhijing-gateway",
       "topics": [],
-      "pushed_at": "2026-11-24T23:27:02Z",
+      "pushed_at": "2026-11-26T00:23:03Z",
       "langs": {
-        "Go": 34346060,
-        "Vue": 5987784,
-        "TypeScript": 4618737,
+        "Go": 34359482,
+        "Vue": 5988230,
+        "TypeScript": 4619352,
+        "Shell": 153991,
         "PLpgSQL": 126672,
-        "Shell": 125191,
         "Python": 58392,
         "JavaScript": 32007,
         "CSS": 30116,
@@ -138,7 +138,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-11-24T13:47:16Z",
+      "pushed_at": "2026-11-25T12:59:46Z",
       "langs": {
         "Python": 28890
       },
@@ -178,10 +178,10 @@
       "license": null,
       "url": "https://github.com/daniei-chen/ZhiXing",
       "topics": [],
-      "pushed_at": "2026-11-25T12:57:31Z",
+      "pushed_at": "2026-11-26T12:33:07Z",
       "langs": {
-        "JavaScript": 2031967,
-        "CSS": 96039,
+        "JavaScript": 2278984,
+        "CSS": 102924,
         "PowerShell": 78973,
         "NSIS": 1045,
         "HTML": 390
@@ -233,29 +233,10 @@
       },
       "fork": false,
       "empty": false
-    },
-    {
-      "name": "Xiaonian-AI",
-      "desc": "小念：会记住你、会忽略事情、能在手机上帮助完成任务的人工智能助手。",
-      "lang": "Kotlin",
-      "stars": 0,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/Xiaonian-AI",
-      "topics": [],
-      "pushed_at": "2026-11-17T14:04:51Z",
-      "langs": {
-        "Kotlin": 315242,
-        "TypeScript": 133315,
-        "JavaScript": 26976,
-        "Python": 2992
-      },
-      "fork": false,
-      "empty": false
     }
   ],
   "contributions": {
-    "total": 1145,
+    "total": 1312,
     "days": [
       {
         "date": "2025-11-23",
@@ -2413,9 +2394,9 @@
       },
       {
         "date": "2026-11-17",
-        "level": 1,
+        "level": 0,
         "id": "contribution-day-component-2-51",
-        "count": 1
+        "count": 0
       },
       {
         "date": "2026-11-18",
@@ -2463,10 +2444,16 @@
         "date": "2026-11-25",
         "level": 4,
         "id": "contribution-day-component-3-52",
-        "count": 255
+        "count": 272
+      },
+      {
+        "date": "2026-11-26",
+        "level": 3,
+        "id": "contribution-day-component-4-52",
+        "count": 151
       }
     ],
-    "max": 255,
+    "max": 272,
     "active_days": 39
   }
 }
