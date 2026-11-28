@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T12:27:04Z",
+  "generated_at": "2026-11-28T11:51:32Z",
   "user": {
     "login": "daniei-chen",
     "avatar": "https://avatars.githubusercontent.com/u/328942951?v=4",
@@ -18,17 +18,17 @@
       "license": "NOASSERTION",
       "url": "https://github.com/daniei-chen/zhihui-gateway",
       "topics": [],
-      "pushed_at": "2026-11-27T12:05:53Z",
+      "pushed_at": "2026-11-28T11:49:34Z",
       "langs": {
-        "Python": 10620874,
-        "TypeScript": 1610536,
-        "JavaScript": 1311428,
+        "Python": 10974000,
+        "TypeScript": 1620653,
+        "JavaScript": 1319413,
         "HTML": 333038,
         "CSS": 205679,
-        "Shell": 184823,
-        "PowerShell": 143174,
+        "Shell": 193006,
+        "PowerShell": 145726,
         "C#": 115011,
-        "Dockerfile": 8062,
+        "Dockerfile": 8259,
         "Batchfile": 5154
       },
       "fork": false,
@@ -95,6 +95,22 @@
       "empty": false
     },
     {
+      "name": "forbidden-city-reconstruction",
+      "desc": "以公开测绘资料、地图轮廓和实景影像为依据，持续复原北京紫禁城的可编辑 Blender 三维模型、建筑细节与沉浸式漫游",
+      "lang": "Python",
+      "stars": 3,
+      "forks": 1,
+      "license": null,
+      "url": "https://github.com/daniei-chen/forbidden-city-reconstruction",
+      "topics": [],
+      "pushed_at": "2026-11-28T09:10:32Z",
+      "langs": {
+        "Python": 1049586
+      },
+      "fork": false,
+      "empty": false
+    },
+    {
       "name": "zhijing-gateway",
       "desc": "智境（ZHIJING）是面向 Codex 与高阶 AI 编码场景打造的专业智能网关平台，致力于让先进的人工智能能力，以更简洁、更可靠、更可控的方式融入开发者工作流。",
       "lang": "Go",
@@ -103,12 +119,12 @@
       "license": "LGPL-3.0",
       "url": "https://github.com/daniei-chen/zhijing-gateway",
       "topics": [],
-      "pushed_at": "2026-11-27T12:12:06Z",
+      "pushed_at": "2026-11-28T11:30:56Z",
       "langs": {
-        "Go": 34359482,
-        "Vue": 5988230,
-        "TypeScript": 4619352,
-        "Shell": 153991,
+        "Go": 34816419,
+        "Vue": 5990143,
+        "TypeScript": 4635651,
+        "Shell": 202810,
         "PLpgSQL": 126672,
         "Python": 58392,
         "JavaScript": 32007,
@@ -138,7 +154,7 @@
         "python",
         "svg"
       ],
-      "pushed_at": "2026-11-26T12:40:31Z",
+      "pushed_at": "2026-11-27T12:27:10Z",
       "langs": {
         "Python": 28890
       },
@@ -178,29 +194,13 @@
       "license": null,
       "url": "https://github.com/daniei-chen/ZhiXing",
       "topics": [],
-      "pushed_at": "2026-11-27T12:11:39Z",
+      "pushed_at": "2026-11-28T06:50:55Z",
       "langs": {
-        "JavaScript": 2943502,
-        "CSS": 110498,
+        "JavaScript": 3121676,
+        "CSS": 111979,
         "PowerShell": 79154,
         "NSIS": 1045,
         "HTML": 390
-      },
-      "fork": false,
-      "empty": false
-    },
-    {
-      "name": "forbidden-city-reconstruction",
-      "desc": "以公开测绘资料、地图轮廓和实景影像为依据，持续复原北京紫禁城的可编辑 Blender 三维模型、建筑细节与沉浸式漫游",
-      "lang": "Python",
-      "stars": 0,
-      "forks": 0,
-      "license": null,
-      "url": "https://github.com/daniei-chen/forbidden-city-reconstruction",
-      "topics": [],
-      "pushed_at": "2026-11-25T03:55:23Z",
-      "langs": {
-        "Python": 603306
       },
       "fork": false,
       "empty": false
@@ -236,7 +236,7 @@
     }
   ],
   "contributions": {
-    "total": 1359,
+    "total": 1652,
     "days": [
       {
         "date": "2025-11-23",
@@ -2454,12 +2454,18 @@
       },
       {
         "date": "2026-11-27",
-        "level": 1,
+        "level": 2,
         "id": "contribution-day-component-5-52",
-        "count": 33
+        "count": 85
+      },
+      {
+        "date": "2026-11-28",
+        "level": 4,
+        "id": "contribution-day-component-6-52",
+        "count": 241
       }
     ],
     "max": 272,
-    "active_days": 40
+    "active_days": 41
   }
 }
